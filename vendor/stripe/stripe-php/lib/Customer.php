@@ -37,6 +37,7 @@ namespace Stripe;
  * @property \Stripe\StripeObject $tax
  * @property null|string $tax_exempt Describes the customer's tax exemption status. One of <code>none</code>, <code>exempt</code>, or <code>reverse</code>. When set to <code>reverse</code>, invoice and receipt PDFs include the text <strong>&quot;Reverse charge&quot;</strong>.
  * @property \Stripe\Collection<\Stripe\TaxId> $tax_ids The customer's tax IDs.
+ * @property null|string|\Stripe\TestHelpers\TestClock $test_clock ID of the test clock this customer belongs to.
  */
 class Customer extends ApiResource
 {
@@ -47,6 +48,7 @@ class Customer extends ApiResource
     use ApiOperations\Delete;
     use ApiOperations\NestedResource;
     use ApiOperations\Retrieve;
+    use ApiOperations\Search;
     use ApiOperations\Update;
 
     const TAX_EXEMPT_EXEMPT = 'exempt';
@@ -97,6 +99,21 @@ class Customer extends ApiResource
         $obj->setLastResponse($response);
 
         return $obj;
+    }
+
+    /**
+     * @param null|array $params
+     * @param null|array|string $opts
+     *
+     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     *
+     * @return \Stripe\SearchResult<Customer> the customer search results
+     */
+    public static function search($params = null, $opts = null)
+    {
+        $url = '/v1/customers/search';
+
+        return self::_searchResource($url, $params, $opts);
     }
 
     const PATH_BALANCE_TRANSACTIONS = '/balance_transactions';

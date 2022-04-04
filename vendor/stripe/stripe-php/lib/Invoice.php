@@ -104,6 +104,7 @@ namespace Stripe;
  * @property int $subscription_proration_date Only set for upcoming invoices that preview prorations. The time used to calculate prorations.
  * @property int $subtotal Total of all subscriptions, invoice items, and prorations on the invoice before any invoice level discount or tax is applied. Item discounts are already incorporated
  * @property null|int $tax The amount of tax on this invoice. This is the sum of all the tax amounts on this invoice.
+ * @property null|string|\Stripe\TestHelpers\TestClock $test_clock ID of the test clock this invoice belongs to.
  * @property \Stripe\StripeObject $threshold_reason
  * @property int $total Total after discounts and taxes.
  * @property null|\Stripe\StripeObject[] $total_discount_amounts The aggregate amounts calculated per discount across all line items.
@@ -118,6 +119,7 @@ class Invoice extends ApiResource
     use ApiOperations\Create;
     use ApiOperations\Delete;
     use ApiOperations\Retrieve;
+    use ApiOperations\Search;
     use ApiOperations\Update;
 
     const BILLING_CHARGE_AUTOMATICALLY = 'charge_automatically';
@@ -261,5 +263,20 @@ class Invoice extends ApiResource
         $this->refreshFrom($response, $opts);
 
         return $this;
+    }
+
+    /**
+     * @param null|array $params
+     * @param null|array|string $opts
+     *
+     * @throws \Stripe\Exception\ApiErrorException if the request fails
+     *
+     * @return \Stripe\SearchResult<Invoice> the invoice search results
+     */
+    public static function search($params = null, $opts = null)
+    {
+        $url = '/v1/invoices/search';
+
+        return self::_searchResource($url, $params, $opts);
     }
 }

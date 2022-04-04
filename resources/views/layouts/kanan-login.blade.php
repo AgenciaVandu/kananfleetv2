@@ -10,15 +10,20 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="stylesheet" href="{{ asset('css/fleet-style.css') }}">
-    @stack('css')
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://js.openpay.mx/openpay.v1.min.js"></script>
     <script type='text/javascript' src="https://js.openpay.mx/openpay-data.v1.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="checkout.js" defer></script>
     @livewireStyles
     @include('sweetalert::alert')
+
+    @stack('css')
+
 </head>
 
 <body>
@@ -98,11 +103,11 @@
         })
     </script>
     <script src="/js/carrusel.js"></script>
-    <script src="https://js.stripe.com/v3/"></script>
-
     @stack('scripts')
 
     @livewireScripts
+
+
 </body>
 
 </html>
