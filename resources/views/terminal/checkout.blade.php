@@ -1,41 +1,41 @@
 @extends('layouts.kanan-login')
+@push('css')
+    <style>
+        .bg-kanan {
+            background-color: #004c98;
+        }
+
+        #checkout-f {
+            padding-top: 50px
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .card {
+            border-radius: 1em;
+        }
+
+    </style>
+@endpush
 @section('contenido')
-    @push('css')
-        <style>
-            .bg-kanan {
-                background-color: #004c98;
-            }
-
-            #checkout-f {
-                padding-top: 50px
-            }
-
-            .bd-placeholder-img {
-                font-size: 1.125rem;
-                text-anchor: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-
-            @media (min-width: 768px) {
-                .bd-placeholder-img-lg {
-                    font-size: 3.5rem;
-                }
-            }
-
-            .card {
-                border-radius: 1em;
-            }
-
-        </style>
-    @endpush
     <div id="checkout-f" class="container mb-3">
         <div class="py-5 text-center">
             <h2 class="source-bold">Terminal de pago Virtual <br>
-            <small>Pánel de usuario</small>
-        </h2>
+                <small>Pánel de usuario</small>
+            </h2>
             <p class="source-regular">Recuerde comprobar que todos los datos incluidos son correctos, en caso contrario
                 comuniquese al
                 <span class="source-regular" style="color: gray;">
@@ -97,9 +97,9 @@
                     </li>
                 </ul>
             </div>
-
+            {{ $paymentIntent->client_secret }}
             <div class="col-md-8 order-md-1">
-                <form class="needs-validation" action="{{ route('terminal.payment') }}" method="POST" id="payment-form">
+                {{-- <form class="needs-validation" action="{{ route('terminal.payment') }}" method="POST" id="payment-form">
                     @csrf
                     <div class="row">
                         <div class="col-6">
@@ -112,9 +112,6 @@
                             <li>
                                 Tarjetas de débito: <br>
                                 <img src="{{ asset('/img/cards_vm1.png') }}" class="img-fluid" alt="">
-                                {{-- <img src="{{ asset('/img/cards2_1.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('/img/cards2_2.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('/img/cards2_3.png') }}" class="img-fluid" alt=""> --}}
                             </li>
                         </div>
                         <input type="hidden" name="token_id" id="token_id">
@@ -130,8 +127,8 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="cc-number">Número de la tarjeta</label>
-                            <input type="text" class="form-control" autocomplete="off" data-openpay-card="card_number" name="card"
-                                required>
+                            <input type="text" class="form-control" autocomplete="off" data-openpay-card="card_number"
+                                name="card" required>
                             <div class="invalid-feedback">
                                 Credit card number is required
                             </div>
@@ -187,55 +184,170 @@
                         </div>
                     </div>
 
-                    {{-- <h5 class="pt-3 mb-3 source-bold">Método de pago</h5>
-                    <div class="d-block my-3">
-                        <div class="custom-control custom-radio">
-                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked
-                                required>
-                            <label class="custom-control-label" for="credit">Tarjeta de crédito</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                            <label class="custom-control-label" for="debit">Tarjeta de débito</label>
-                        </div>
-                    </div> --}}
                     <small class="text-success mt-3">Tus pagos se realizan de forma segura con encriptación de 256
                         bits</small>
                     <hr class="mb-4">
                     <button class="btn btn-primary btn-lg btn-block" id="pay-button">Pagar</button>
                     <div class="text-center mt-2">
-                        <a  class="source-semibold" style="color: #004c98; text-decoration:none;" href="javascript:history.back()">Regresar</a>
+                        <a class="source-semibold" style="color: #004c98; text-decoration:none;"
+                            href="javascript:history.back()">Regresar</a>
                     </div>
+                </form> --}}
+                <!-- Display a payment form -->
+                <form action="{{ route('terminal.payment') }}" method="POST" id="payment-form">
+                    @csrf
+                    {{-- <div class="form-row">
+                        <label for="card-element">
+                            Credit or debit card
+                        </label>
+                        <div class="form-control" id="card-element"></div>
+
+                        <!-- Used to display Element errors. -->
+                        <div id="card-errors" role="alert"></div>
+                    </div>
+
+                    <button>Submit Payment</button> --}}
+                    <div id="payment-element">
+                        <!--Stripe.js injects the Payment Element-->
+                    </div>
+                    <button id="submit" data-secret="{{ $paymentIntent->client_secret }}">
+                        <div class="spinner hidden" id="spinner"></div>
+                        <span id="button-text">Pay now</span>
+                    </button>
+                    <div id="payment-message" class="hidden"></div>
                 </form>
             </div>
         </div>
     @endsection
 
-    @push('scripts')
-      {{--   <script type="text/javascript">
-            $(document).ready(function() {
-                OpenPay.setId('m14onoajhzhe0as1ot5v');
-                OpenPay.setApiKey('pk_2769fbba1b22423ca49e9280111c9ce9');
-                OpenPay.setSandboxMode(true);
-                //Se genera el id de dispositivo
-                var deviceSessionId = OpenPay.deviceData.setup("payment-form", "deviceIdHiddenFieldName");
-                //console.log(deviceSessionId);
-                $('#pay-button').on('click', function(event) {
-                    event.preventDefault();
-                    $("#pay-button").prop("disabled", true);
-                    OpenPay.token.extractFormAndCreate('payment-form', sucess_callbak, error_callbak);
+    @push('stripe')
+        <script>
+            // This is your test publishable API key.
+            const stripe = Stripe(
+                "pk_test_51KULvVKf8f7JJzzS15c3gCM9SIi2mjtryY82DnPxpVjrDUcMyWCnNqKvwD4KEV10y3sHfk1to6OkaGc32kQGRZfp00O3CfpLip"
+            );
+
+            // The items the customer wants to buy
+            const items = [{
+                id: "xl-tshirt"
+            }];
+
+            let elements;
+
+            initialize();
+            checkStatus();
+
+            document
+                .querySelector("#payment-form")
+                .addEventListener("submit", handleSubmit);
+
+            // Fetches a payment intent and captures the client secret
+            async function initialize() {
+                const {
+                    clientSecret
+                } = await fetch("{{ route('terminal.payment') }}", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        'X-CSRF-TOKEN': window.CSRF_TOKEN
+                    },
+                    body: JSON.stringify({
+                        items
+                    }),
+                }).then((r) => r.json());
+
+                elements = stripe.elements({
+                    clientSecret
                 });
-                var sucess_callbak = function(response) {
-                    var token_id = response.data.id;
-                    $('#token_id').val(token_id);
-                    $('#payment-form').submit();
-                };
-                var error_callbak = function(response) {
-                    var desc = response.data.description != undefined ? response.data.description : response
-                        .message;
-                    alert("ERROR [" + response.status + "] " + desc);
-                    $("#pay-button").prop("disabled", false);
-                };
-            });
-        </script> --}}
+
+                const paymentElement = elements.create("payment");
+                paymentElement.mount("#payment-element");
+            }
+
+            async function handleSubmit(e) {
+                e.preventDefault();
+                setLoading(true);
+
+                const {
+                    error
+                } = await stripe.confirmPayment({
+                    elements,
+                    confirmParams: {
+                        // Make sure to change this to your payment completion page
+                        return_url: "http://localhost:4242/public/checkout.html",
+                    },
+                });
+
+                // This point will only be reached if there is an immediate error when
+                // confirming the payment. Otherwise, your customer will be redirected to
+                // your `return_url`. For some payment methods like iDEAL, your customer will
+                // be redirected to an intermediate site first to authorize the payment, then
+                // redirected to the `return_url`.
+                if (error.type === "card_error" || error.type === "validation_error") {
+                    showMessage(error.message);
+                } else {
+                    showMessage("An unexpected error occured.");
+                }
+
+                setLoading(false);
+            }
+
+            // Fetches the payment intent status after payment submission
+            async function checkStatus() {
+                const clientSecret = new URLSearchParams(window.location.search).get(
+                    "payment_intent_client_secret"
+                );
+
+                if (!clientSecret) {
+                    return;
+                }
+
+                const {
+                    paymentIntent
+                } = await stripe.retrievePaymentIntent(clientSecret);
+
+                switch (paymentIntent.status) {
+                    case "succeeded":
+                        showMessage("Payment succeeded!");
+                        break;
+                    case "processing":
+                        showMessage("Your payment is processing.");
+                        break;
+                    case "requires_payment_method":
+                        showMessage("Your payment was not successful, please try again.");
+                        break;
+                    default:
+                        showMessage("Something went wrong.");
+                        break;
+                }
+            }
+
+            // ------- UI helpers -------
+
+            function showMessage(messageText) {
+                const messageContainer = document.querySelector("#payment-message");
+
+                messageContainer.classList.remove("hidden");
+                messageContainer.textContent = messageText;
+
+                setTimeout(function() {
+                    messageContainer.classList.add("hidden");
+                    messageText.textContent = "";
+                }, 4000);
+            }
+
+            // Show a spinner on payment submission
+            function setLoading(isLoading) {
+                if (isLoading) {
+                    // Disable the button and show a spinner
+                    document.querySelector("#submit").disabled = true;
+                    document.querySelector("#spinner").classList.remove("hidden");
+                    document.querySelector("#button-text").classList.add("hidden");
+                } else {
+                    document.querySelector("#submit").disabled = false;
+                    document.querySelector("#spinner").classList.add("hidden");
+                    document.querySelector("#button-text").classList.remove("hidden");
+                }
+            }
+        </script>
     @endpush

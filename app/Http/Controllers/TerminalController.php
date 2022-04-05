@@ -7,6 +7,7 @@ use App\Models\Currency;
 use App\Models\Order;
 use App\Models\Reference;
 use App\Models\Voucher;
+use Error;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Openpay\Data\Openpay;
@@ -49,55 +50,54 @@ class TerminalController extends Controller
             'references'=> $references,
             'total' => $total
         ]);
-        return view('terminal.checkout',compact('total','splits','references','order'));
+
+                // This is your test secret API key.
+        \Stripe\Stripe::setApiKey('sk_test_51KULvVKf8f7JJzzSjcPs9vldR1BNXfH0X0LSTmCgo9CzxP9izxkB0lu7eEhG8CWRYsPkYWegiiUlZ70sXShDHqH0009iagICz8');
+
+
+        header('Content-Type: application/json');
+
+        try {
+            // retrieve JSON from POST body
+            $jsonStr = file_get_contents('php://input');
+            /* $jsonObj = json_decode($jsonStr); */
+
+            // Create a PaymentIntent with amount and currency
+            $paymentIntent = \Stripe\PaymentIntent::create([
+                'amount' => 2000,
+                'currency' => 'usd',
+                'payment_method_types' => [
+                    'card',
+                ],
+            ]);
+
+            $output = [
+                'clientSecret' => $paymentIntent->client_secret,
+            ];
+
+            $intent = json_encode($output);
+
+        } catch (Error $e) {
+            http_response_code(500);
+            echo json_encode(['error' => $e->getMessage()]);
+        }
+        return view('terminal.checkout',compact('total','splits','references','order','paymentIntent'));
     }
 
     public function payment(Request $request){
         $currency_base = Currency::find(1);
-        /* return $request->all(); */
-        /* return $request->all();
-        $openpay = Openpay::getInstance(config('openpay.merchant_id'), config('openpay.private_key'), config('openpay.country_code'));
-        $voucher = Voucher::create();
-        $customer = [
-            'name' => $request->name,
-            'last_name' => $user->last_name,
-            'phone_number' => auth()->user()->phone,
-            'email' => auth()->user()->email,
-            'requires_account' => false,
-        ];
-        $chargeData = [
-            'method' => 'card',
-            'source_id' => $request->token_id,
-            'amount' =>  session()->get('total'),
-            'currency' => 'USD',
-            'confirm' => false,
-            'description' => session()->get('description'),
-            'order_id' => $voucher->id,
-            'device_session_id' => $request->deviceIdHiddenFieldName,
-            'redirect_url' => config('app.url') . '/checkout/directChargeOpenpay/responsepayment',
-            'use_3d_secure' => 'true',
-            'customer' => $customer
-        ];
 
-        $charge = $openpay->charges->create($chargeData);
-        $url3D = $charge->serializableData["payment_method"]->url;
-        return redirect($url3D); */
+        return $request->all();
+       /*  \Stripe\Stripe::setApiKey('sk_test_51KULvVKf8f7JJzzSjcPs9vldR1BNXfH0X0LSTmCgo9CzxP9izxkB0lu7eEhG8CWRYsPkYWegiiUlZ70sXShDHqH0009iagICz8');
 
-        $stripe = new StripeClient(config('stripe.stripe_secret'));
-        $token = $stripe->tokens->create([
-            'card' => [
-                'number' => $request->card,
-                'exp_month' => $request->expiration_month,
-                'exp_year' => $request->expiration_year,
-                'cvc' => $request->cvv,
-            ],
-        ]);
+        // Token is created using Stripe Checkout or Elements!
+        // Get the payment token ID submitted by the form:
 
         try {
-            $charge = $stripe->charges->create([
+            $charge = \Stripe\Charge::create([
                 'amount' => (session()->get('total')*100)*$currency_base->mxn,
                 'currency' => 'mxn',
-                'source' => $token->id,
+                'source' => $request->stripeToken,
                 'description' => session()->get('description'),
             ]);
 
@@ -107,7 +107,6 @@ class TerminalController extends Controller
 
 
         if ($charge->captured) {
-            /* return session()->get('references'); */
         foreach (['asistente@vectiumsureste.com','recheverria@etecno.com.mx','jestefani@etecno.com.mx',auth()->user()->email] as $emails) {
             Mail::to($emails)->send(new OrderShipped(session()->get('references')));
         }
@@ -120,6 +119,7 @@ class TerminalController extends Controller
         }else{
             return redirect()->route('terminal.reject');
         }
+ */
     }
 
     public function validateChargeOpenPay()
