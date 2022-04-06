@@ -1,8 +1,6 @@
 @extends('layouts.kanan-login')
 <?php
 
-
-
 ?>
 @push('css')
     <style>
@@ -351,23 +349,11 @@
                     </div>
                 </form> --}}
                 <!-- Display a payment form -->
-                <form method="POST" id="payment-form">
-                    @csrf
-                    {{-- <div class="form-row">
-                        <label for="card-element">
-                            Credit or debit card
-                        </label>
-                        <div class="form-control" id="card-element"></div>
-
-                        <!-- Used to display Element errors. -->
-                        <div id="card-errors" role="alert"></div>
-                    </div>
-
-                    <button>Submit Payment</button> --}}
+                <form id="payment-form">
                     <div id="payment-element">
                         <!--Stripe.js injects the Payment Element-->
                     </div>
-                    <button id="submit" data-secret="{{ $paymentIntent->client_secret }}">
+                    <button id="submit">
                         <div class="spinner hidden" id="spinner"></div>
                         <span id="button-text">Pay now</span>
                     </button>
@@ -378,7 +364,7 @@
     @endsection
 
     @push('stripe')
-        <script>
+        {{-- <script>
             // This is your test publishable API key.
             const stripe = Stripe(
                 "pk_test_51KULvVKf8f7JJzzS15c3gCM9SIi2mjtryY82DnPxpVjrDUcMyWCnNqKvwD4KEV10y3sHfk1to6OkaGc32kQGRZfp00O3CfpLip"
@@ -431,7 +417,7 @@
                     elements,
                     confirmParams: {
                         // Make sure to change this to your payment completion page
-                        return_url: "{{ route('terminal.aproved') }}",
+                        return_url: "{{ route('terminal.webhook') }}",
                     },
                 });
 
@@ -506,5 +492,5 @@
                     document.querySelector("#button-text").classList.remove("hidden");
                 }
             }
-        </script>
+        </script> --}}
     @endpush

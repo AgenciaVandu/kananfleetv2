@@ -50,8 +50,24 @@ class TerminalController extends Controller
             'references'=> $references,
             'total' => $total
         ]);
-        // This is your test secret API key.
+
+        return view('terminal.checkout',compact('total','splits','references','order'));
+    }
+
+    public function payment(){
+        $currency_base = Currency::find(1);
+        // This is a public sample test API key.
+        // Don’t submit any personally identifiable information in requests made with this key.
+        // Sign in to see your own test API key embedded in code samples.
         \Stripe\Stripe::setApiKey('sk_test_51KULvVKf8f7JJzzSjcPs9vldR1BNXfH0X0LSTmCgo9CzxP9izxkB0lu7eEhG8CWRYsPkYWegiiUlZ70sXShDHqH0009iagICz8');
+
+        function calculateOrderAmount(array $items): int {
+            $currency_base = Currency::find(1);
+            // Replace this constant with a calculation of the order's amount
+            // Calculate the order total on the server to prevent
+            // people from directly manipulating the amount on the client
+            return (session()->get('total')*100)*$currency_base->mxn;
+        }
 
         header('Content-Type: application/json');
 
@@ -62,28 +78,23 @@ class TerminalController extends Controller
 
             // Create a PaymentIntent with amount and currency
             $paymentIntent = \Stripe\PaymentIntent::create([
-                'amount' => 2000,
-                'currency' => 'usd',
-                'payment_method_types' => ['card'],
+                'amount' => calculateOrderAmount($jsonObj->items),
+                'currency' => 'mxn',
+                'automatic_payment_methods' => [
+                    'enabled' => true,
+                ],
             ]);
 
             $output = [
                 'clientSecret' => $paymentIntent->client_secret,
             ];
 
-            $intent = json_encode($output);
+            echo json_encode($output);
         } catch (Error $e) {
             http_response_code(500);
             echo json_encode(['error' => $e->getMessage()]);
-}
-
-        return view('terminal.checkout',compact('total','splits','references','order','paymentIntent'));
-    }
-
-    public function payment(Request $request){
-        $currency_base = Currency::find(1);
-
-        return $request->all();
+        }
+        /* return $request->all(); */
        /*  \Stripe\Stripe::setApiKey('sk_test_51KULvVKf8f7JJzzSjcPs9vldR1BNXfH0X0LSTmCgo9CzxP9izxkB0lu7eEhG8CWRYsPkYWegiiUlZ70sXShDHqH0009iagICz8');
 
         // Token is created using Stripe Checkout or Elements!
