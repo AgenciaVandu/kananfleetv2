@@ -82,7 +82,7 @@ Route::get('/politica-de-privacidad', function() {
 Route::middleware('auth')->get('/orders',[TerminalController::class,'index'])->name('terminal.index');
 Route::middleware('auth')->get('/bill/{order}',[TerminalController::class,'order'])->name('terminal.order');
 Route::middleware('auth')->any('/checkout', [TerminalController::class,'checkout'])->name('terminal.checkout');
-Route::middleware('auth')->post('/payment',[TerminalController::class,'payment'])->name('terminal.payment');
+Route::middleware('auth')->any('/payment',[TerminalController::class,'payment'])->name('terminal.payment');
 Route::middleware(['auth'])->post('/updatePassword', [TerminalController::class, 'updatePassword'])->name('user.update.password');
 Route::get('checkout/directChargeOpenpay/responsepayment/', [TerminalController::class, 'validateChargeOpenPay']);
 
