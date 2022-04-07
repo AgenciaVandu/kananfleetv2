@@ -102,6 +102,8 @@ Route::get('/gracias-por-tu-pago', function () {
             $reference->update();
         }
         return view('terminal.bill-pagada',compact('r'));
+    }else{
+        return redirect()->route('terminal.reject');
     }
 
 })->name('terminal.aproved');
