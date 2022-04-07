@@ -365,132 +365,125 @@
 
     @push('stripe')
         {{-- <script>
-            // This is your test publishable API key.
-            const stripe = Stripe(
-                "pk_test_51KULvVKf8f7JJzzS15c3gCM9SIi2mjtryY82DnPxpVjrDUcMyWCnNqKvwD4KEV10y3sHfk1to6OkaGc32kQGRZfp00O3CfpLip"
-            );
 
-            // The items the customer wants to buy
-            const items = [{
-                id: "xl-tshirt"
-            }];
+window.onload = function () {
+    // This is a public sample test API key.
+    // Don’t submit any personally identifiable information in requests made with this key.
+    // Sign in to see your own test API key embedded in code samples.
+    const stripe = Stripe("pk_test_51KULvVKf8f7JJzzS15c3gCM9SIi2mjtryY82DnPxpVjrDUcMyWCnNqKvwD4KEV10y3sHfk1to6OkaGc32kQGRZfp00O3CfpLip");
 
-            let elements;
+    // The items the customer wants to buy
+    const items = [
+        {
+            id: "xl-tshirt"
+        }
+    ];
 
-            initialize();
-            checkStatus();
+    let elements;
 
-            document
-                .querySelector("#payment-form")
-                .addEventListener("submit", handleSubmit);
+    initialize();
+    checkStatus();
 
-            // Fetches a payment intent and captures the client secret
-            async function initialize() {
-                const {
-                    clientSecret
-                } = await fetch("{{ route('terminal.payment') }}", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        'X-CSRF-TOKEN': window.CSRF_TOKEN
-                    },
-                    body: JSON.stringify({
-                        items
-                    }),
-                }).then((r) => r.json());
+    document
+        .querySelector("#payment-form")
+        .addEventListener("submit", handleSubmit);
 
-                elements = stripe.elements({
-                    clientSecret: "{{ $paymentIntent->client_secret }}"
-                });
-                console.log(clientSecret);
-                const paymentElement = elements.create("payment");
-                paymentElement.mount("#payment-element");
-            }
+    // Fetches a payment intent and captures the client secret
+    async function initialize() {
+        const { clientSecret } = await fetch("https://kananfleetv2.test/payment", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ items }),
+        }).then((r) => r.json());
 
-            async function handleSubmit(e) {
-                e.preventDefault();
-                setLoading(true);
+        elements = stripe.elements({ clientSecret });
 
-                const {
-                    error
-                } = await stripe.confirmPayment({
-                    elements,
-                    confirmParams: {
-                        // Make sure to change this to your payment completion page
-                        return_url: "{{ route('terminal.webhook') }}",
-                    },
-                });
+        const paymentElement = elements.create("payment");
+        paymentElement.mount("#payment-element");
+    }
 
-                // This point will only be reached if there is an immediate error when
-                // confirming the payment. Otherwise, your customer will be redirected to
-                // your `return_url`. For some payment methods like iDEAL, your customer will
-                // be redirected to an intermediate site first to authorize the payment, then
-                // redirected to the `return_url`.
-                if (error.type === "card_error" || error.type === "validation_error") {
-                    showMessage(error.message);
-                } else {
-                    showMessage("An unexpected error occured.");
-                }
+    async function handleSubmit(e) {
+        e.preventDefault();
+        setLoading(true);
 
-                setLoading(false);
-            }
+        const { error } = await stripe.confirmPayment({
+            elements,
+            confirmParams: {
+                // Make sure to change this to your payment completion page
+                return_url: "https://kananfleetv2.test/gracias-por-tu-pago",
+            },
+        });
 
-            // Fetches the payment intent status after payment submission
-            async function checkStatus() {
-                const clientSecret = new URLSearchParams(window.location.search).get(
-                    "payment_intent_client_secret"
-                );
+        // This point will only be reached if there is an immediate error when
+        // confirming the payment. Otherwise, your customer will be redirected to
+        // your `return_url`. For some payment methods like iDEAL, your customer will
+        // be redirected to an intermediate site first to authorize the payment, then
+        // redirected to the `return_url`.
+        if (error.type === "card_error" || error.type === "validation_error") {
+            showMessage(error.message);
+        } else {
+            showMessage("An unexpected error occured.");
+        }
 
-                if (!clientSecret) {
-                    return 'algo paso';
-                }
+        setLoading(false);
+    }
 
-                const {
-                    paymentIntent
-                } = await stripe.retrievePaymentIntent(clientSecret);
+    // Fetches the payment intent status after payment submission
+    async function checkStatus() {
+        const clientSecret = new URLSearchParams(window.location.search).get(
+            "payment_intent_client_secret"
+        );
 
-                switch (paymentIntent.status) {
-                    case "succeeded":
-                        showMessage("Payment succeeded!");
-                        break;
-                    case "processing":
-                        showMessage("Your payment is processing.");
-                        break;
-                    case "requires_payment_method":
-                        showMessage("Your payment was not successful, please try again.");
-                        break;
-                    default:
-                        showMessage("Something went wrong.");
-                        break;
-                }
-            }
+        if (!clientSecret) {
+            return;
+        }
 
-            // ------- UI helpers -------
+        const { paymentIntent } = await stripe.retrievePaymentIntent(clientSecret);
 
-            function showMessage(messageText) {
-                const messageContainer = document.querySelector("#payment-message");
+        switch (paymentIntent.status) {
+            case "succeeded":
+                showMessage("Payment succeeded!");
+                break;
+            case "processing":
+                showMessage("Your payment is processing.");
+                break;
+            case "requires_payment_method":
+                showMessage("Your payment was not successful, please try again.");
+                break;
+            default:
+                showMessage("Something went wrong.");
+                break;
+        }
+    }
 
-                messageContainer.classList.remove("hidden");
-                messageContainer.textContent = messageText;
+    // ------- UI helpers -------
 
-                setTimeout(function() {
-                    messageContainer.classList.add("hidden");
-                    messageText.textContent = "";
-                }, 4000);
-            }
+    function showMessage(messageText) {
+        const messageContainer = document.querySelector("#payment-message");
 
-            // Show a spinner on payment submission
-            function setLoading(isLoading) {
-                if (isLoading) {
-                    // Disable the button and show a spinner
-                    document.querySelector("#submit").disabled = true;
-                    document.querySelector("#spinner").classList.remove("hidden");
-                    document.querySelector("#button-text").classList.add("hidden");
-                } else {
-                    document.querySelector("#submit").disabled = false;
-                    document.querySelector("#spinner").classList.add("hidden");
-                    document.querySelector("#button-text").classList.remove("hidden");
-                }
-            }
-        </script> --}}
+        messageContainer.classList.remove("hidden");
+        messageContainer.textContent = messageText;
+
+        setTimeout(function () {
+            messageContainer.classList.add("hidden");
+            messageText.textContent = "";
+        }, 4000);
+    }
+
+    // Show a spinner on payment submission
+    function setLoading(isLoading) {
+        if (isLoading) {
+            // Disable the button and show a spinner
+            document.querySelector("#submit").disabled = true;
+            document.querySelector("#spinner").classList.remove("hidden");
+            document.querySelector("#button-text").classList.add("hidden");
+        } else {
+            document.querySelector("#submit").disabled = false;
+            document.querySelector("#spinner").classList.add("hidden");
+            document.querySelector("#button-text").classList.remove("hidden");
+        }
+    }
+}
+
+        </script>
     @endpush
