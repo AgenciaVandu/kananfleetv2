@@ -43,7 +43,7 @@ window.onload = function () {
             elements,
             confirmParams: {
                 // Make sure to change this to your payment completion page
-                return_url: "./gracias-por-tu-pago",
+                return_url: "https://kananfleet.testvandu.com/checkout/gracias-por-tu-pago",
             },
         });
 
