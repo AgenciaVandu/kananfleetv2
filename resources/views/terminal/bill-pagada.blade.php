@@ -34,7 +34,6 @@
             <p class="source-regular">Su pago ha sido procesado con éxito <br> su comprobante será enviado al correo
                 registrado en el portal</p>
             <a href="{{ route('terminal.index') }}" class="btn btn-outline-dark source-bold">Ir a mis cuentas</a>
-            {{ $r }}
         </div>
 
 

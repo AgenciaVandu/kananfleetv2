@@ -2,12 +2,15 @@
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\TerminalController;
+use App\Mail\OrderShipped;
+use App\Models\Reference;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,7 +91,19 @@ Route::get('checkout/directChargeOpenpay/responsepayment/', [TerminalController:
 
 Route::get('/gracias-por-tu-pago', function () {
     $r = $_GET['redirect_status'];
-    return view('terminal.bill-pagada',compact('r'));
+    if ($r == 'succeeded') {
+        foreach (['asistente@vectiumsureste.com','recheverria@etecno.com.mx','jestefani@etecno.com.mx',auth()->user()->email] as $emails) {
+            Mail::to($emails)->send(new OrderShipped(session()->get('references')));
+        }
+
+        foreach (session()->get('references') as $reference) {
+            $reference = Reference::find($reference->id);
+            $reference->status = 2;
+            $reference->update();
+        }
+        return view('terminal.bill-pagada',compact('r'));
+    }
+
 })->name('terminal.aproved');
 
 Route::get('/error-de-pago', function () {
