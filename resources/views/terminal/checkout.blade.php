@@ -48,8 +48,8 @@
         }
 
         form {
-            width: 30vw;
-            min-width: 500px;
+            width: 100%;
+            /* min-width: 500px; */
             align-self: center;
             box-shadow: 0px 0px 0px 0.5px rgba(50, 50, 93, 0.1),
                 0px 2px 5px 0px rgba(50, 50, 93, 0.1), 0px 1px 1.5px 0px rgba(0, 0, 0, 0.07);
@@ -178,7 +178,7 @@
 
         @media only screen and (max-width: 600px) {
             form {
-                width: 80vw;
+                /* width: 80vw; */
                 min-width: initial;
             }
         }
@@ -202,7 +202,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4 order-md-2 mb-4">
+            <div class="col-md-12 order-md-1 mb-4">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                     <span class="text-muted">Información de pago</span>
                 </h4>
@@ -253,7 +253,7 @@
                 </ul>
             </div>
             {{-- {{ $paymentIntent->client_secret }} --}}
-            <div class="col-md-8 order-md-1">
+            <div class="col-md-12 order-md-1">
                 {{-- <form class="needs-validation" action="{{ route('terminal.payment') }}" method="POST" id="payment-form">
                     @csrf
                     <div class="row">
