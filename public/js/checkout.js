@@ -23,7 +23,7 @@ window.onload = function () {
 
     // Fetches a payment intent and captures the client secret
     async function initialize() {
-        const { clientSecret } = await fetch("https://kananfleetv2.test/payment", {
+        const { clientSecret } = await fetch("./payment", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ items }),
@@ -43,7 +43,7 @@ window.onload = function () {
             elements,
             confirmParams: {
                 // Make sure to change this to your payment completion page
-                return_url: "https://kananfleetv2.test/gracias-por-tu-pago",
+                return_url: "https://kananfleet.testvandu.com/gracias-por-tu-pago",
             },
         });
 
