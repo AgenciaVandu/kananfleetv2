@@ -15,22 +15,32 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1860.7463088893987!2d-89.78005230301599!3d21.132785234797836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567791c4d2d3b5%3A0x6f93f9dac2ae79bd!2sKananfleet!5e0!3m2!1ses-419!2smx!4v1640612399449!5m2!1ses-419!2smx"
                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="row pt-5 pb-5">
+
                 <div class="col-lg-6 col-md-12 col-sm-12 info-1">
                     <form action="{{ route('sendemail') }}" method="POST">
                         @csrf
                         <div class="form-row">
                             <div class="col source-bold">
                                 <label for="formGroupExampleInput">Nombres*</label>
-                                <input type="text" class="form-control" name="name" required>
+                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                             </div>
                             <div class="col source-bold">
                                 <label for="formGroupExampleInput">Apellidos*</label>
-                                <input type="text" class="form-control" name="lastname" required>
+                                <input type="text" class="form-control" name="lastname" value="{{ old('lastname') }}">
                             </div>
                             <div class="col source-bold">
                                 <label for="phone">Teléfono</label>
-                                <input type="tel" id="phone" class="form-control" name="phone" required>
+                                <input type="tel" id="phone" class="form-control" name="phone" value="{{ old('phone') }}">
                             </div>
                         </div>
                         <div class="pt-3 source-bold" id="f-emprendedor">
@@ -38,21 +48,20 @@
                             <div>
                                 <label for="formGroupExampleInput">Correo electrónico*</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" name="email">
+                                    aria-describedby="emailHelp" name="email" value="{{ old('email') }}">
                                 <small id="emailHelp" class="form-text text-muted">No lo compartiremos con nadie
                                     más.</small>
                             </div>
                             <label class="pt-3" for="formGroupExampleInput">Nombre de su empresa*</label>
-                            <input type="text" class="form-control" required name="bussines">
+                            <input type="text" class="form-control" name="bussines" value="{{ old('bussines') }}">
                             <div class="pt-3">
                                 <label for="formGroupExampleInput">Página web</label>
-                                <input type="text" class="form-control" name="web">
+                                <input type="text" class="form-control" name="web" value="{{ old('web') }}">
                             </div>
                         </div>
                         <div class="form-group source-bold pt-3">
                             <label for="inputCity">Ciudad*</label>
-                            <input type="text" class="form-control" id="inputCity" placeholder="México" required
-                                name="city">
+                            <input type="text" class="form-control" id="inputCity" placeholder="México" name="city" value="{{ old('city') }}">
                         </div>
                         <div class="pt-1">
                             <label class="source-bold" for="formGroupExampleInput">¿En qué plan está interesado?*</label>
@@ -68,6 +77,18 @@
                                     value="Addon Kananfleet para SAPB1">
                                 <label class="form-check-label source-bold" for="option2">
                                     Addon Kananfleet para SAPB1
+                                </label>
+                            </div>
+                        </div>
+                        <div class="pt-1">
+                            <label class="source-bold" for="formGroupExampleInput">¿En qué plan está interesado?*</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="policy" id="policy">
+                                <label class="form-check-label source-bold" for="policy">
+                                    Acepto que Kananfleet use mis datos únicamente para fines contacto y envío de
+                                    información relacionada con esta solicitud
+                                    NOTA: Sus datos están protegidos de acuerdo a la Ley de Protección de de Datos
+                                    Personales.
                                 </label>
                             </div>
                         </div>
@@ -93,8 +114,8 @@
                             </div>
                             <div class="col-11 pl-5 m-auto">
                                 Dirección: Parque Científico y Tecnológico, Centro Heuristic Km. 5.5 Carretera Sierra
-                                Papacal, Mérida Yucatán, México. <br> CP. 97302. <img src="{{ asset('/img/Mexico.png') }}" class="img-fluid"
-                                alt="Bandera de México">
+                                Papacal, Mérida Yucatán, México. <br> CP. 97302. <img src="{{ asset('/img/Mexico.png') }}"
+                                    class="img-fluid" alt="Bandera de México">
                             </div>
                         </div>
                     </li>

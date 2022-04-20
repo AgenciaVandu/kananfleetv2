@@ -32,10 +32,22 @@ class PageController extends Controller
 
     public function sendmail(Request $request){
 
-        Mail::to('recheverria@etecno.com.mx')->send(new NewClient($request));
-        Mail::to('info@administraflotilla.com')->send(new NewClient($request));
-        Mail::to('alianzas@etecno.com.mx')->send(new NewClient($request));
-        Mail::to('jestefani@etecno.com.mx')->send(new NewClient($request));
+        $request->validate([
+            'name' => 'required',
+            'lastname' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'bussines' => 'required',
+            'city' => 'required',
+            'option' => 'required',
+            'policy' => 'required',
+        ]);
+        if ($request->policy == 'on') {
+            Mail::to('recheverria@etecno.com.mx')->send(new NewClient($request));
+            Mail::to('info@administraflotilla.com')->send(new NewClient($request));
+            Mail::to('alianzas@etecno.com.mx')->send(new NewClient($request));
+            Mail::to('jestefani@etecno.com.mx')->send(new NewClient($request));
+        }
         /* Mail::to('ripmarenko@gmail.com')->send(new NewClient($request)); */
         return back();
     }
