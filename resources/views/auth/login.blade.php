@@ -84,7 +84,7 @@
         <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
         <div class="checkbox">
             <label>
-                <input type="checkbox" value="remember-me"> Recordarme
+                <input type="checkbox" name="remember" value="remember-me"> Recordarme
             </label>
         </div>
         <div class="text-center mb-3">
