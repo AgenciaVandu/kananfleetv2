@@ -59,7 +59,7 @@ class TerminalController extends Controller
         // This is a public sample test API key.
         // Don’t submit any personally identifiable information in requests made with this key.
         // Sign in to see your own test API key embedded in code samples.
-        \Stripe\Stripe::setApiKey('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');
+        \Stripe\Stripe::setApiKey('sk_test_51KULvVKf8f7JJzzSjcPs9vldR1BNXfH0X0LSTmCgo9CzxP9izxkB0lu7eEhG8CWRYsPkYWegiiUlZ70sXShDHqH0009iagICz8');
 
         function calculateOrderAmount(array $items): int {
             $currency_base = Currency::find(1);

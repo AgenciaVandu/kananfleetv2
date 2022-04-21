@@ -3,7 +3,7 @@ window.onload = function () {
     // This is a public sample test API key.
     // Don’t submit any personally identifiable information in requests made with this key.
     // Sign in to see your own test API key embedded in code samples.
-    const stripe = Stripe("pk_live_51KVkNdKlr6VY84OEfHynMI7kTjkhBA0krOvrmOxjCYxnNNzovanKUA6f6E8mVO7BjXuQle6sSafecTe6JjrlBcy500IKnyRO1O");
+    const stripe = Stripe("pk_test_51KULvVKf8f7JJzzS15c3gCM9SIi2mjtryY82DnPxpVjrDUcMyWCnNqKvwD4KEV10y3sHfk1to6OkaGc32kQGRZfp00O3CfpLip");
 
     // The items the customer wants to buy
     const items = [
