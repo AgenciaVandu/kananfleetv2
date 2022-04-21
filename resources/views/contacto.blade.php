@@ -81,10 +81,9 @@
                             </div>
                         </div>
                         <div class="pt-1">
-                            <label class="source-bold" for="formGroupExampleInput">¿En qué plan está interesado?*</label>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="policy" id="policy">
-                                <label class="form-check-label source-bold" for="policy">
+                                <label class="form-check-label source-regular" style="font-size: 12px; text-align: justify;" for="policy">
                                     Acepto que Kananfleet use mis datos únicamente para fines contacto y envío de
                                     información relacionada con esta solicitud
                                     NOTA: Sus datos están protegidos de acuerdo a la Ley de Protección de de Datos

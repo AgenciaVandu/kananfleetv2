@@ -196,6 +196,17 @@
                                         Addon Kananfleet para SAPB1
                                     </label>
                                 </div>
+                                <div class="pt-1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="policy" id="policy">
+                                        <label class="form-check-label source-regular" style="font-size: 12px; text-align: justify;" for="policy">
+                                            Acepto que Kananfleet use mis datos únicamente para fines contacto y envío de
+                                            información relacionada con esta solicitud
+                                            NOTA: Sus datos están protegidos de acuerdo a la Ley de Protección de de Datos
+                                            Personales.
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-primary mt-3">Enviar mensaje</button>
                         </form>
