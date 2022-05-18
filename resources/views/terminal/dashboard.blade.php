@@ -95,11 +95,7 @@
                     </li>
                     <button type="button" class="btn btn-light btn-sm mt-2" data-toggle="modal"
                         data-target="#cambiar-password">Cambiar contraseña</button>
-                    @if (auth()->user()->hasRole('admin'))
-                        <div>
-                            <a href="{{ route('dashboard') }}" class="btn btn-outline-success">Panel Admin</a>
-                        </div>
-                    @endif
+                   
                 </div>
                 {{-- <div class="col-6 text-right m-auto">
                    <figure>
@@ -140,13 +136,19 @@
         </div>
         </div>
         <div class="col m-auto text-center">
+            @if (auth()->user()->hasRole('admin'))
+            <div class="mb-2">
+                <a href="{{ route('dashboard') }}" class="btn btn-primary">Panel Admin</a>
+            </div>
+        @endif
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <a href="" class="btn btn-outline-dark" href="{{ route('logout') }}"
+                <a href="" class="btn btn-secondary" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                                                                                             this.closest('form').submit();">Cerrar
                     sesión</a>
             </form>
+            
         </div>
     </section>
 @endsection
