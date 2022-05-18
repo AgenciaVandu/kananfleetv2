@@ -64,6 +64,7 @@
                         <button type="submit" class="btn btn-primary mb-4">Cambiar contraseña</button>
                     </form>
                 </div>
+
                 {{-- <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button>
@@ -94,6 +95,11 @@
                     </li>
                     <button type="button" class="btn btn-light btn-sm mt-2" data-toggle="modal"
                         data-target="#cambiar-password">Cambiar contraseña</button>
+                    @if (auth()->user()->hasRole('admin'))
+                        <div>
+                            <a href="{{ route('dashboard') }}" class="btn btn-outline-success">Panel Admin</a>
+                        </div>
+                    @endif
                 </div>
                 {{-- <div class="col-6 text-right m-auto">
                    <figure>
@@ -105,7 +111,7 @@
     </header>
     <section id="ordenes">
         <div class="container">
-            @foreach ($orders as $order)
+            @foreach (auth()->user()->orders as $order)
                 <div class="card mb-3"> {{-- titulo de orden de compra --}}
                     <div class="row pt-3 pb-4">
                         <div class="col-lg-8 m-auto">
@@ -136,8 +142,10 @@
         <div class="col m-auto text-center">
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <a href="" class="btn btn-outline-dark" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                    this.closest('form').submit();">Cerrar sesión</a>
+                <a href="" class="btn btn-outline-dark" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                                                                            this.closest('form').submit();">Cerrar
+                    sesión</a>
             </form>
         </div>
     </section>

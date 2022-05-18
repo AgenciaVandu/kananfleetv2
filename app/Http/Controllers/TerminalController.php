@@ -19,9 +19,14 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class TerminalController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index(){
-        $orders = Order::where('user_id',auth()->user()->id)->get();
-        return view('terminal.dashboard',compact('orders'));
+        /* $orders = Order::where('user_id',auth()->user()->id)->get(); */
+        return view('terminal.dashboard');
     }
 
     public function order(Order $order){

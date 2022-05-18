@@ -3,6 +3,7 @@
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\TerminalController;
 use App\Mail\OrderShipped;
+use App\Models\Order;
 use App\Models\Reference;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
@@ -82,11 +83,11 @@ Route::get('/politica-de-privacidad', function() {
 /* Route::get('/login', function () {
     return view('terminal.login');
 }); */
-Route::middleware('auth')->get('/orders',[TerminalController::class,'index'])->name('terminal.index');
-Route::middleware('auth')->get('/bill/{order}',[TerminalController::class,'order'])->name('terminal.order');
-Route::middleware('auth')->any('/checkout', [TerminalController::class,'checkout'])->name('terminal.checkout');
-Route::middleware('auth')->any('/payment',[TerminalController::class,'payment'])->name('terminal.payment');
-Route::middleware(['auth'])->post('/updatePassword', [TerminalController::class, 'updatePassword'])->name('user.update.password');
+Route::get('/orders',[TerminalController::class,'index'])->name('terminal.index');
+Route::get('/bill/{order}',[TerminalController::class,'order'])->name('terminal.order');
+Route::any('/checkout', [TerminalController::class,'checkout'])->name('terminal.checkout');
+Route::any('/payment',[TerminalController::class,'payment'])->name('terminal.payment');
+Route::post('/updatePassword', [TerminalController::class, 'updatePassword'])->name('user.update.password');
 Route::get('checkout/directChargeOpenpay/responsepayment/', [TerminalController::class, 'validateChargeOpenPay']);
 
 Route::get('/gracias-por-tu-pago', function () {
@@ -160,3 +161,5 @@ Route::post('/reset-password', function (Request $request) {
                 ? redirect()->route('login')->with('status', __($status))
                 : back()->withErrors(['email' => [__($status)]]);
 })->middleware('guest')->name('password.update');
+
+

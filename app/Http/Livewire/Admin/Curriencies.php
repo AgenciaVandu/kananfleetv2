@@ -16,7 +16,7 @@ class Curriencies extends Component
                 return redirect()->route('pages.index');
             }
         }else{
-            return redirect()->route('index');
+            return redirect()->route('terminal.dashboard');
         }
         $this->mxn = Currency::find(1)->mxn;
         $this->usd = Currency::find(1)->usd;

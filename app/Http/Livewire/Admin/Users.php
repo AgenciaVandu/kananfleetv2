@@ -17,7 +17,7 @@ class Users extends Component
                 return redirect()->route('pages.index');
             }
         }else{
-            return redirect()->route('index');
+            return redirect()->route('terminal.dashboard');
         }
         $this->roles = Role::all();
         $this->users = User::all();

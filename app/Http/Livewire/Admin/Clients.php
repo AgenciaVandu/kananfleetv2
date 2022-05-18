@@ -73,7 +73,7 @@ class Clients extends Component
             }
 
         }else{
-            return redirect()->route('index');
+            return redirect()->route('terminal.dashboard');
         }
         $this->rand = rand();
     }
