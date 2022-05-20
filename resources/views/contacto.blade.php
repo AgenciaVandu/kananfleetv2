@@ -124,8 +124,17 @@
                                 <img src="/img/Telefono.svg" width="50">
                             </div>
                             <div class="col-11 pl-5 m-auto">
-                                Teléfono: <span><a href="tel:+529999306745"
-                                        style="color: rgb(48, 48, 48); text-decoration:none;">+52 999 9306745</a></span>
+                              
+                                {{-- <span><a href="tel:+529999306745"
+                                        style="color: rgb(48, 48, 48); text-decoration:none;">+52 999 9306745</a>
+                                </span> --}}
+                                <span class="source-regular" >Oficina:
+                                    <a href="tel:529999306745" style="color: rgb(23, 23, 23); text-decoration:none;">+52 999 930 6745</a>
+                                </span> <br>
+                                <span class="source-regular">Celular:
+                                    <a href="https://api.whatsapp.com/send/?phone=5219992005672" style="color: rgb(23, 23, 23); text-decoration:none;">+52 999
+                                        200 5672</a>
+                                </span>
                             </div>
                         </div>
                     </li>

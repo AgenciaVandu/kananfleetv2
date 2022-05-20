@@ -129,9 +129,12 @@
                                 alt="Bandera de México">
                         </span>
                     </li>
-                    <li class="source-semibold" style="color: #fff;">Teléfono: <br>
-                        <span class="source-regular" style="color: gray; font-size: .8em;">
-                            <a href="https://api.whatsapp.com/send/?phone=5219992005672" style="color: gray;">+52 1 999
+                    <li class="source-semibold" style="color: #fff;">Teléfonos: <br>
+                        <span class="source-regular" style="color: gray; font-size: .8em;">Oficina:
+                            <a href="tel:529999306745" style="color: gray;">+52 999 930 6745</a>
+                        </span> <br>
+                        <span class="source-regular" style="color: gray; font-size: .8em;">Celular:
+                            <a href="https://api.whatsapp.com/send/?phone=5219992005672" style="color: gray;">+52 999
                                 200 5672</a>
                         </span>
                     </li>
