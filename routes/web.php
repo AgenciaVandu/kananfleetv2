@@ -93,9 +93,14 @@ Route::get('checkout/directChargeOpenpay/responsepayment/', [TerminalController:
 Route::get('/gracias-por-tu-pago', function () {
     $r = $_GET['redirect_status'];
     if ($r == 'succeeded') {
-        foreach (['asistente@vectiumsureste.com','recheverria@etecno.com.mx','jestefani@etecno.com.mx',auth()->user()->email] as $emails) {
+        /* foreach (['asistente@vectiumsureste.com','recheverria@etecno.com.mx','jestefani@etecno.com.mx',auth()->user()->email] as $emails) {
             Mail::to($emails)->send(new OrderShipped(session()->get('references')));
-        }
+        } */
+
+        Mail::to('asistente@vectiumsureste.com')->send(new OrderShipped(session()->get('references')));
+        Mail::to('recheverria@etecno.com.mx')->send(new OrderShipped(session()->get('references')));
+        Mail::to('jestefani@etecno.com.mx')->send(new OrderShipped(session()->get('references')));
+        Mail::to('auth()->user()->email')->send(new OrderShipped(session()->get('references')));
 
         foreach (session()->get('references') as $reference) {
             $reference = Reference::find($reference->id);
