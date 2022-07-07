@@ -74,7 +74,7 @@ class Users extends Component
     {
         return view('livewire.admin.users',[
             'users' => User::withTrashed()->where('id','!=',auth()->user()->id)->paginate(10),
-            'roles' => Role::where('name','!=','user')->get(),
+            'roles' => Role::all(),
         ]);
     }
 }
