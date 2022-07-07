@@ -65,16 +65,6 @@ class Clients extends Component
     }
 
     public function mount(){
-        if (auth()->user()->hasRole('admin') || auth()->user()->hasRole('contenido')) {
-            if (auth()->user()->hasRole('admin')) {
-
-            }else{
-                return redirect()->route('pages.index');
-            }
-
-        }else{
-            return redirect()->route('terminal.dashboard');
-        }
         $this->rand = rand();
     }
     //Funciones para agregar clientes

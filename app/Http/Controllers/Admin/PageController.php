@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function index(){
-        if (auth()->user()->hasRole('admin') || auth()->user()->hasRole('contenido')) {
-            return view('admin.pages.index');
-        }else{
-            return redirect()->route('index');
-        }
+    public function __construct()
+    {
+        $this->middleware('role:superadmin|admin|editor');
+    }
 
+    public function index(){
+        return view('admin.pages.index');
     }
 }
