@@ -24,7 +24,6 @@
             .btn-outline-dark:hover {
                 color: #fff;
             }
-
         </style>
     @endpush
     <!-- Button trigger modal -->
@@ -95,7 +94,7 @@
                     </li>
                     <button type="button" class="btn btn-light btn-sm mt-2" data-toggle="modal"
                         data-target="#cambiar-password">Cambiar contraseña</button>
-                   
+
                 </div>
                 {{-- <div class="col-6 text-right m-auto">
                    <figure>
@@ -136,11 +135,11 @@
         </div>
         </div>
         <div class="col m-auto text-center">
-            @if (auth()->user()->hasRole('admin'))
-            <div class="mb-2">
-                <a href="{{ route('dashboard') }}" class="btn btn-primary">Panel Admin</a>
-            </div>
-        @endif
+            @hasanyrole('superadmin|admin|editor')
+                <div class="mb-2">
+                    <a href="{{ route('dashboard') }}" class="btn btn-primary">Panel Admin</a>
+                </div>
+            @endhasanyrole
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <a href="" class="btn btn-secondary" href="{{ route('logout') }}"
@@ -148,7 +147,7 @@
                                                                                             this.closest('form').submit();">Cerrar
                     sesión</a>
             </form>
-            
+
         </div>
     </section>
 @endsection
