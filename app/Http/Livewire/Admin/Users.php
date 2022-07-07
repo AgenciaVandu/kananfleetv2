@@ -15,6 +15,7 @@ class Users extends Component
     public $name,$email,$password,$password_confirmation,$role="";
     public $user,$user_restore;
     public $check=0;
+    public $show=false,$show_confirmation=false;
 
     public function store(){
         $this->validate([
@@ -46,7 +47,7 @@ class Users extends Component
             'name'=>'required',
             'email'=>'required|email|unique:users,email,'.$this->user->id,
             'password'=>'nullable|min:6',
-            'password_confirmation'=>'nullable|same:password',
+            'password_confirmation'=>'same:password',
             'role'=>'required',
         ]);
         $this->user->update([

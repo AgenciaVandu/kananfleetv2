@@ -31,75 +31,73 @@
                                     </thead>
                                     <tbody class="bg-white divide-y divide-gray-200">
                                         @foreach ($users as $user)
-
-                                                <tr>
-                                                    <td class="px-6 py-4 whitespace-nowrap">
-                                                        <div class="flex items-center">
-                                                            <div class="flex-shrink-0 h-10 w-10">
-                                                                <img class="h-8 w-8 rounded-full object-cover"
-                                                                    src="https://ui-avatars.com/api/?name={{ $user->name }}&color=7F9CF5&background=random" />
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap">
+                                                    <div class="flex items-center">
+                                                        <div class="flex-shrink-0 h-10 w-10">
+                                                            <img class="h-8 w-8 rounded-full object-cover"
+                                                                src="https://ui-avatars.com/api/?name={{ $user->name }}&color=7F9CF5&background=random" />
+                                                        </div>
+                                                        <div class="ml-4">
+                                                            <div class="text-sm font-medium text-gray-900">
+                                                                {{ $user->name }}
                                                             </div>
-                                                            <div class="ml-4">
-                                                                <div class="text-sm font-medium text-gray-900">
-                                                                    {{ $user->name }}
-                                                                </div>
-                                                                <div class="text-sm text-gray-500">
-                                                                    {{ $user->email }}
-                                                                </div>
+                                                            <div class="text-sm text-gray-500">
+                                                                {{ $user->email }}
                                                             </div>
                                                         </div>
-                                                    </td>
-                                                    <td class="px-6 py-4 whitespace-nowrap">
-                                                        @foreach ($user->roles as $role)
-                                                            @switch($role->name)
-                                                                @case('superadmin')
-                                                                    <span
-                                                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                                                        {{ $role->name }}</span>
-                                                                @break
+                                                    </div>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap">
+                                                    @foreach ($user->roles as $role)
+                                                        @switch($role->name)
+                                                            @case('superadmin')
+                                                                <span
+                                                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                                                    {{ $role->name }}</span>
+                                                            @break
 
-                                                                @case('admin')
-                                                                    <span
-                                                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
-                                                                        {{ $role->name }}
-                                                                    </span>
-                                                                @break
+                                                            @case('admin')
+                                                                <span
+                                                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
+                                                                    {{ $role->name }}
+                                                                </span>
+                                                            @break
 
-                                                                @case('editor')
-                                                                    <span
-                                                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">
-                                                                        {{ $role->name }}
-                                                                    </span>
-                                                                @break
+                                                            @case('editor')
+                                                                <span
+                                                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">
+                                                                    {{ $role->name }}
+                                                                </span>
+                                                            @break
 
-                                                                @case('user')
-                                                                    <span
-                                                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800">
-                                                                        {{ $role->name }}
-                                                                    </span>
-                                                                @break
-                                                            @endswitch
-                                                        @endforeach
-                                                    </td>
-                                                    <td
-                                                        class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                        @if ($user->trashed())
-                                                            <div class="text-sm text-gray-500 flex">
-                                                                <a
-                                                                    wire:click="restoreUser({{ $user->id }})" class="cursor-pointer">{{ __('Restore') }}</a>
-                                                            </div>
-                                                        @else
-                                                            <div class="text-sm text-gray-500 flex">
-                                                                <a class="cursor-pointer text-indigo-600 block"
-                                                                    wire:click="edit({{ $user }})">{{ __('Edit') }}</a>
-                                                                    @hasrole('superadmin')
+                                                            @case('user')
+                                                                <span
+                                                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800">
+                                                                    {{ $role->name }}
+                                                                </span>
+                                                            @break
+                                                        @endswitch
+                                                    @endforeach
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                                    @if ($user->trashed())
+                                                        <div class="text-sm text-gray-500 flex">
+                                                            <a wire:click="restoreUser({{ $user->id }})"
+                                                                class="cursor-pointer">{{ __('Restore') }}</a>
+                                                        </div>
+                                                    @else
+                                                        <div class="text-sm text-gray-500 flex">
+                                                            <a class="cursor-pointer text-indigo-600 block"
+                                                                wire:click="edit({{ $user }})">{{ __('Edit') }}</a>
+                                                            @hasrole('superadmin')
                                                                 <a class="cursor-pointer text-red-600 block mx-2"
                                                                     wire:click="delete({{ $user }})">{{ __('Delete') }}</a>
-                                                                    @endhasrole
-                                                            </div>
-                                                        @endif
-                                                    </td>
-                                                </tr>
+                                                            @endhasrole
+                                                        </div>
+                                                    @endif
+                                                </td>
+                                            </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
@@ -131,22 +129,39 @@
                                                     </div>
                                                     <div class="col-span-1">
                                                         <x-jet-label for="password" value="{{ __('Password') }}" />
-                                                        <x-jet-input id="password" type="password"
-                                                            class="mt-1 block w-full" wire:model="password" />
+                                                        <div class="flex items-center">
+                                                            <x-jet-input id="password"
+                                                            type="{{ $show ? 'text' : 'password' ; }}"
+                                                            class="mt-1 block w-full" wire:model.defer="password" />
+                                                        @if ($show)
+                                                            <i class="fas fa-eye-slash ml-2 cursor-pointer"
+                                                                wire:click="$set('show', false)"></i>
+                                                        @else
+                                                            <i class="fas fa-eye ml-2 cursor-pointer"
+                                                                wire:click="$set('show', true)"></i>
+                                                        @endif
+                                                        </div>
                                                         @error('password')
-                                                            <span
-                                                                class="error text-red-500 text-sm">{{ $message }}</span>
+                                                            <span class="error text-red-500 text-sm">{{ $message }}</span>
                                                         @enderror
                                                     </div>
                                                     <div class="col-span-1">
                                                         <x-jet-label for="password_confirmation"
                                                             value="{{ __('Confirm Password') }}" />
-                                                        <x-jet-input id="password_confirmation" type="password"
-                                                            class="mt-1 block w-full"
-                                                            wire:model="password_confirmation" />
+                                                            <div class="flex items-center">
+                                                                <x-jet-input id="password_confirmation"
+                                                                type="{{ $show_confirmation ? 'text' : 'password' ; }}"
+                                                                class="mt-1 block w-full" wire:model.defer="password_confirmation" />
+                                                            @if ($show_confirmation)
+                                                                <i class="fas fa-eye-slash ml-2 cursor-pointer"
+                                                                    wire:click="$set('show_confirmation', false)"></i>
+                                                            @else
+                                                                <i class="fas fa-eye ml-2 cursor-pointer"
+                                                                    wire:click="$set('show_confirmation', true)"></i>
+                                                            @endif
+                                                            </div>
                                                         @error('password_confirmation')
-                                                            <span
-                                                                class="error text-red-500 text-sm">{{ $message }}</span>
+                                                            <span class="error text-red-500 text-sm">{{ $message }}</span>
                                                         @enderror
                                                     </div>
                                                     <div class="col-span-1">
@@ -207,8 +222,18 @@
                                             </div>
                                             <div class="col-span-1">
                                                 <x-jet-label for="password" value="{{ __('Password') }}" />
-                                                <x-jet-input id="password" type="password" class="mt-1 block w-full"
-                                                    wire:model.defer="password" />
+                                                <div class="flex items-center">
+                                                    <x-jet-input id="password"
+                                                    type="{{ $show ? 'text' : 'password' ; }}"
+                                                    class="mt-1 block w-full" wire:model.defer="password" />
+                                                @if ($show)
+                                                    <i class="fas fa-eye-slash ml-2 cursor-pointer"
+                                                        wire:click="$set('show', false)"></i>
+                                                @else
+                                                    <i class="fas fa-eye ml-2 cursor-pointer"
+                                                        wire:click="$set('show', true)"></i>
+                                                @endif
+                                                </div>
                                                 @error('password')
                                                     <span class="error text-red-500 text-sm">{{ $message }}</span>
                                                 @enderror
@@ -216,9 +241,18 @@
                                             <div class="col-span-1">
                                                 <x-jet-label for="password_confirmation"
                                                     value="{{ __('Confirm Password') }}" />
-                                                <x-jet-input id="password_confirmation" type="password"
-                                                    class="mt-1 block w-full"
-                                                    wire:model.defer="password_confirmation" />
+                                                    <div class="flex items-center">
+                                                        <x-jet-input id="password_confirmation"
+                                                        type="{{ $show_confirmation ? 'text' : 'password' ; }}"
+                                                        class="mt-1 block w-full" wire:model.defer="password_confirmation" />
+                                                    @if ($show_confirmation)
+                                                        <i class="fas fa-eye-slash ml-2 cursor-pointer"
+                                                            wire:click="$set('show_confirmation', false)"></i>
+                                                    @else
+                                                        <i class="fas fa-eye ml-2 cursor-pointer"
+                                                            wire:click="$set('show_confirmation', true)"></i>
+                                                    @endif
+                                                    </div>
                                                 @error('password_confirmation')
                                                     <span class="error text-red-500 text-sm">{{ $message }}</span>
                                                 @enderror
