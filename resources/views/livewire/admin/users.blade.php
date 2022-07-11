@@ -127,7 +127,7 @@
                                                                 class="error text-red-500 text-sm">{{ $message }}</span>
                                                         @enderror
                                                     </div>
-                                                    <div class="col-span-1">
+                                                    {{-- <div class="col-span-1">
                                                         <x-jet-label for="password" value="{{ __('Password') }}" />
                                                         <div class="flex items-center">
                                                             <x-jet-input id="password"
@@ -163,7 +163,7 @@
                                                         @error('password_confirmation')
                                                             <span class="error text-red-500 text-sm">{{ $message }}</span>
                                                         @enderror
-                                                    </div>
+                                                    </div> --}}
                                                     <div class="col-span-1">
                                                         <x-jet-label for="role" value="{{ __('Role') }}" />
                                                         <select wire:model="role"

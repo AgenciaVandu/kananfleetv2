@@ -46,14 +46,14 @@ class Users extends Component
         $this->validate([
             'name'=>'required',
             'email'=>'required|email|unique:users,email,'.$this->user->id,
-            'password'=>'nullable|min:6',
-            'password_confirmation'=>'same:password',
+            /* 'password'=>'nullable|min:6',
+            'password_confirmation'=>'same:password', */
             'role'=>'required',
         ]);
         $this->user->update([
             'name'=>$this->name,
             'email'=>$this->email,
-            'password'=>$this->password ? bcrypt($this->password) : $this->user->password,
+            /* 'password'=>$this->password ? bcrypt($this->password) : $this->user->password, */
         ]);
         $this->user->syncRoles($this->role);
         $this->reset('name','email','password','password_confirmation','role');
