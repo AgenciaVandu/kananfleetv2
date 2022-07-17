@@ -63,14 +63,14 @@
                 Este aviso de privacidad podrá ser modificado por ETECNO SA DE CV, dichas modificaciones serán oportunamente informadas a través de correo electrónico, teléfono, o cualquier otro medio de comunicación que ETECNO SA DE CV determine para tal efecto.
             </p>
             <p class="source-regular text-right">
-                Última fecha de modificación: 20 Agosto de 2021
+                Última fecha de modificación: 01 Julio de 2022
             </p>
             <p class="source-bold text-center pt-3">
                 ATENTAMENTE <br>
                 ETECNO SA DE CV
                <hr>
             </p>
-            <p class="source-bold text-center pb-5">Calle 27 No. 273 x 30 y 32 Fracc. Montecarlo Norte C.P. 97130 Mérida, Yucatán, México. <br> Tel. (999) 9306745 / RFC: ETE110426UT6</p>
+            <p class="source-bold text-center pb-5">Calle 17 No. 474 x DEPTO 5 EDIFICIO 90 GRADOS x 20 y 22 Col. Altabrisa, C.P. 97130 Yucatán, México. <br> Tel. (999) 9306745 / RFC: ETE110426UT6</p>
         </div>
     </main>
 @endsection
