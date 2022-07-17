@@ -20,7 +20,7 @@
     <main>
         <div class="container pt-3">
             <p class="source-regular text-justify">
-                De acuerdo a lo Previsto en la "Ley Federal de Protección de Datos Personales", declara ETECNO SA DE CV, ser una empresa legalmente constituida de conformidad con las leyes mexicanas, con domicilio en Calle 27 No. 273 por 30 y 32 Fraccionamiento Montecarlo Norte, C.P. 97130 Mérida, Yucatán, México; y como responsable del tratamiento de sus datos personales, hace de su conocimiento que la información de nuestros clientes es tratada estrictamente confidencial por lo que al proporcionar sus datos personales, tales como:
+                De acuerdo a lo Previsto en la "Ley Federal de Protección de Datos Personales", declara ETECNO SA DE CV, ser una empresa legalmente constituida de conformidad con las leyes mexicanas, con domicilio en Calle 17 No. 474 x DEPTO 5 EDIFICIO 90 GRADOS x 20 y 22 Col. Altabrisa, C.P. 97130 Mérida, Yucatán, México; y como responsable del tratamiento de sus datos personales, hace de su conocimiento que la información de nuestros clientes es tratada estrictamente confidencial por lo que al proporcionar sus datos personales, tales como:
             </p>
             <ul>
                 <li class="source-regular">* Nombre Completo</li>
