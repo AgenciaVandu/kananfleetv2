@@ -314,7 +314,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="" class="btn btn-google source-bold" title="Google Play">
+                        <a href="https://play.google.com/store/apps/details?id=etecno.agg.kananfleet.mob&hl=es" class="btn btn-google source-bold" title="Google Play">
                             Google Play
                         </a>
                         <small class="source-light">Descárguela aquí</small>
