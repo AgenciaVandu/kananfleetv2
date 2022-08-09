@@ -36,13 +36,14 @@ class Clients extends Component
             //'legal_representative_name' => 'required',
     ];
     public $editForm = [
+            'name' => '',
             'company_name' => null,
             'bussiness_name' => null,
             'RFC' => null,
             'email' => null,
             'legal_representative_name' => null
     ];
-     public $editOrder = [
+    public $editOrder = [
             'open'=> false,
             'contract' => null
     ];
@@ -88,6 +89,7 @@ class Clients extends Component
         $this->client = $user;
         $this->orders = $user->orders;
         /* $this->references = $user->references; */
+        $this->editForm['name'] = $user->name;
         $this->editForm['company_name'] = $user->company_name;
         $this->editForm['bussiness_name'] = $user->bussiness_name;
         $this->editForm['RFC'] = $user->RFC;
@@ -97,6 +99,7 @@ class Clients extends Component
 
     public function update(){
         $rules = [
+            'editForm.name' => 'required',
             'editForm.company_name' => 'required',
             'editForm.bussiness_name' => 'required',
             'editForm.RFC' => 'required',

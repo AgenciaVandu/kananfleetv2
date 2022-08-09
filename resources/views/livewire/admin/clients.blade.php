@@ -178,6 +178,12 @@
 
                             <x-slot name="form">
                                 <div class="col-span-6 sm:col-span-4">
+                                    <x-jet-label value="Nombre" />
+                                    <x-jet-input type="text" wire:model="editForm.name" class="w-full"
+                                        placeholder="Nombre del cliente" />
+                                    <x-jet-input-error for="editForm.name" />
+                                </div>
+                                <div class="col-span-6 sm:col-span-4">
                                     <x-jet-label value="Empresa" />
                                     <x-jet-input type="text" wire:model="editForm.company_name" class="w-full"
                                         placeholder="Nombre del cliente" />
