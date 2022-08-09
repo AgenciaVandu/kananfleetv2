@@ -101,6 +101,7 @@ class Clients extends Component
             'editForm.bussiness_name' => 'required',
             'editForm.RFC' => 'required',
             'editForm.legal_representative_name' => 'required',
+            'editForm.email' => 'required|email|unique:users,email,'.$this->client->id,
 
         ];
 

@@ -182,7 +182,6 @@
                 min-width: initial;
             }
         }
-
     </style>
 @endpush
 @section('contenido')
@@ -222,13 +221,13 @@
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                             <h6 class="my-0">Razón social</h6>
-                            <small class="text-muted">{{ auth()->user()->bussiness_name }}</small>
+                            <small class="text-muted">{{ auth()->user()->legal_representative_name }}</small>
                         </div>
                     </li>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                             <h6 class="my-0">Puesto</h6>
-                            <small class="text-muted">{{ auth()->user()->legal_representative_name }}</small>
+                            <small class="text-muted">{{ auth()->user()->bussiness_name }}</small>
                         </div>
                     </li>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -254,6 +253,9 @@
             </div>
             {{-- {{ $paymentIntent->client_secret }} --}}
             <div class="col-md-12 order-md-1">
+                <div class="alert alert-warning mx-auto" role="alert">
+                    Espere un periodo de 10 seg hasta que estén disponibles los campos de información de pago
+                </div>
                 {{-- <form class="needs-validation" action="{{ route('terminal.payment') }}" method="POST" id="payment-form">
                     @csrf
                     <div class="row">

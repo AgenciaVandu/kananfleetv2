@@ -197,7 +197,7 @@
                                 </div>
                                 <div class="col-span-6 sm:col-span-4">
                                     <x-jet-label value="Email" />
-                                    <x-jet-input type="text" wire:model="editForm.email" disabled
+                                    <x-jet-input type="text" wire:model="editForm.email"
                                         class="w-full bg-gray-100" placeholder="Email" />
                                     <x-jet-input-error for="editForm.email" />
                                 </div>
