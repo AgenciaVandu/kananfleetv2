@@ -253,7 +253,7 @@
             </div>
             {{-- {{ $paymentIntent->client_secret }} --}}
             <div class="col-md-12 order-md-1">
-                <div class="alert alert-warning mx-auto" role="alert">
+                <div class="alert alert-warning mx-auto text-center" role="alert">
                     Espere un periodo de 10 seg hasta que estén disponibles los campos de información de pago
                 </div>
                 {{-- <form class="needs-validation" action="{{ route('terminal.payment') }}" method="POST" id="payment-form">
