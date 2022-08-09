@@ -41,7 +41,7 @@
                             Empresa: <span class="source-regular">{{ auth()->user()->company_name }}</span>
                         </li>
                         <li class="source-semibold">
-                            Razón social: <span class="source-regular">{{ auth()->user()->bussiness_name }}</span>
+                            Representante legal: <span class="source-regular">{{ auth()->user()->legal_representative_name  }}</span>
                         </li>
                         <li class="source-semibold">
                             TAX ID (RFC, RUC, RTN, NIT, etc.): <span
