@@ -75,6 +75,11 @@ class TerminalController extends Controller
             $conversion = Http::get("https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43784/datos/".now()->format('Y-m-d')."/".now()->format('Y-m-d')."/?token=570f63e4e5caaa0a8848bcc07e31ba64774bfb9838a9940cba6b5003cb6bcfc8");//SF43784
             $conversion = json_decode($conversion);
             $valor = $currency_base->mxn;
+            foreach ($conversion->bmx->series as $valor) {
+                foreach($valor->datos as $dato){
+                    $valor = $dato->dato;
+                }
+            }
 
             // Replace this constant with a calculation of the order's amount
             // Calculate the order total on the server to prevent
