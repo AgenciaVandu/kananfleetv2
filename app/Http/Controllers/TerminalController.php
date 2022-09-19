@@ -14,6 +14,7 @@ use Openpay\Data\Openpay;
 use Stripe\StripeClient;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Password;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -36,6 +37,7 @@ class TerminalController extends Controller
     }
 
     public function checkout(Request $request){
+
         $request->validate([
             'splits'=> 'required'
         ]);
@@ -44,6 +46,8 @@ class TerminalController extends Controller
         $order= json_decode($request->order);
         $splits = $request->splits;
         $references = [];
+
+
         foreach ($request->splits as $split) {
             $reference = Reference::find($split);
             array_push($references,$reference);
@@ -60,7 +64,7 @@ class TerminalController extends Controller
     }
 
     public function payment(){
-        $currency_base = Currency::find(1);
+
         // This is a public sample test API key.
         // Don’t submit any personally identifiable information in requests made with this key.
         // Sign in to see your own test API key embedded in code samples.
@@ -68,10 +72,14 @@ class TerminalController extends Controller
 
         function calculateOrderAmount(array $items): int {
             $currency_base = Currency::find(1);
+            $conversion = Http::get("https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43784/datos/".now()->format('Y-m-d')."/".now()->format('Y-m-d')."/?token=570f63e4e5caaa0a8848bcc07e31ba64774bfb9838a9940cba6b5003cb6bcfc8");//SF43784
+            $conversion = json_decode($conversion);
+            $valor = $currency_base->mxn;
+
             // Replace this constant with a calculation of the order's amount
             // Calculate the order total on the server to prevent
             // people from directly manipulating the amount on the client
-            return (session()->get('total')*100)*$currency_base->mxn;
+            return (session()->get('total')*100)*$valor;
         }
 
         header('Content-Type: application/json');

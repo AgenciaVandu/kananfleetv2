@@ -3,11 +3,13 @@
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\TerminalController;
 use App\Mail\OrderShipped;
+use App\Models\Currency;
 use App\Models\Order;
 use App\Models\Reference;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -168,3 +170,18 @@ Route::post('/reset-password', function (Request $request) {
                 ? redirect()->route('login')->with('status', __($status))
                 : back()->withErrors(['email' => [__($status)]]);
 })->middleware('guest')->name('password.update');
+
+
+Route::get('/dolar',function(){
+    /* return now()->format('Y-m-d'); */
+    $currency_base = Currency::find(1);
+    $conversion = Http::get("https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43784/datos/".now()->format('Y-m-d')."/".now()->format('Y-m-d')."/?token=570f63e4e5caaa0a8848bcc07e31ba64774bfb9838a9940cba6b5003cb6bcfc8");//SF43784
+    $conversion = json_decode($conversion);
+    $valor = $currency_base->mxn;
+    foreach ($conversion->bmx->series as $valor) {
+        foreach($valor->datos as $dato){
+            $valor = $dato->dato;
+        }
+    }
+    return $valor;
+});
