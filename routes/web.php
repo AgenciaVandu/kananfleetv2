@@ -101,10 +101,14 @@ Route::get('/gracias-por-tu-pago', function () {
             $reference->status = 2;
             $reference->update();
         }
-        Mail::to('asistente@vectiumsureste.com')->send(new OrderShipped(session()->get('references')));
-        Mail::to('recheverria@etecno.com.mx')->send(new OrderShipped(session()->get('references')));
-        Mail::to('jestefani@etecno.com.mx')->send(new OrderShipped(session()->get('references')));
-        Mail::to(auth()->user()->email)->send(new OrderShipped(session()->get('references')));
+        try {
+            Mail::to('asistente@vectiumsureste.com')->send(new OrderShipped(session()->get('references')));
+            Mail::to('recheverria@etecno.com.mx')->send(new OrderShipped(session()->get('references')));
+            Mail::to('jestefani@etecno.com.mx')->send(new OrderShipped(session()->get('references')));
+            Mail::to(auth()->user()->email)->send(new OrderShipped(session()->get('references')));
+        } catch (\Throwable $th) {
+            return view('terminal.bill-pagada',compact('r'));
+        }
         return view('terminal.bill-pagada',compact('r'));
     }else{
         return redirect()->route('terminal.reject');
@@ -164,5 +168,3 @@ Route::post('/reset-password', function (Request $request) {
                 ? redirect()->route('login')->with('status', __($status))
                 : back()->withErrors(['email' => [__($status)]]);
 })->middleware('guest')->name('password.update');
-
-

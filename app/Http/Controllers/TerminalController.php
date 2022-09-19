@@ -100,7 +100,7 @@ class TerminalController extends Controller
             echo json_encode(['error' => $e->getMessage()]);
         }
         /* return $request->all(); */
-       /*  \Stripe\Stripe::setApiKey('sk_test_51KULvVKf8f7JJzzSjcPs9vldR1BNXfH0X0LSTmCgo9CzxP9izxkB0lu7eEhG8CWRYsPkYWegiiUlZ70sXShDHqH0009iagICz8');
+        /*  \Stripe\Stripe::setApiKey('sk_test_51KULvVKf8f7JJzzSjcPs9vldR1BNXfH0X0LSTmCgo9CzxP9izxkB0lu7eEhG8CWRYsPkYWegiiUlZ70sXShDHqH0009iagICz8');
 
         // Token is created using Stripe Checkout or Elements!
         // Get the payment token ID submitted by the form:
