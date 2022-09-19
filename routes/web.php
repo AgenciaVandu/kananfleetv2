@@ -116,8 +116,8 @@ Route::get('/gracias-por-tu-pago', function () {
             Mail::to('asistente@vectiumsureste.com')->send(new OrderShipped(session()->get('references'),$valor));
             Mail::to('recheverria@etecno.com.mx')->send(new OrderShipped(session()->get('references'),$valor));
             Mail::to('jestefani@etecno.com.mx')->send(new OrderShipped(session()->get('references'),$valor));
-            Mail::to('alvarbu@gmail.com')->send(new OrderShipped(session()->get('references'),$valor));
-            Mail::to('marencocode@gmail.com')->send(new OrderShipped(session()->get('references'),$valor));
+            /* Mail::to('alvarbu@gmail.com')->send(new OrderShipped(session()->get('references'),$valor));
+            Mail::to('marencocode@gmail.com')->send(new OrderShipped(session()->get('references'),$valor)); */
             Mail::to(auth()->user()->email)->send(new OrderShipped(session()->get('references'),$valor));
         } catch (\Throwable $th) {
             return view('terminal.bill-pagada',compact('r'));
