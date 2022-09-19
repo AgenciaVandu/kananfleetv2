@@ -84,7 +84,7 @@ class TerminalController extends Controller
             // Replace this constant with a calculation of the order's amount
             // Calculate the order total on the server to prevent
             // people from directly manipulating the amount on the client
-            return (session()->get('total')*100)*$valor;
+            return (session()->get('total')*100)*$currency_base->mxn;
         }
 
         header('Content-Type: application/json');
