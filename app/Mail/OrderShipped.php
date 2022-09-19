@@ -18,9 +18,11 @@ class OrderShipped extends Mailable
      *
      */
     protected $references;
-    public function __construct($references = [])
+    protected $cambio;
+    public function __construct($references = [],$cambio)
     {
         $this->references = $references;
+        $this->cambio = $cambio;
     }
 
     /**
@@ -32,7 +34,8 @@ class OrderShipped extends Mailable
     {
         return $this->/* from('terminalcobroKF@etecno.com.mx')
         -> */markdown('emails.orders.shipped',[
-            'references' => $this->references
+            'references' => $this->references,
+            'cambio' => $this->cambio
         ]);
     }
 }

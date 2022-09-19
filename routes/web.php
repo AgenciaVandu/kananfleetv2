@@ -94,6 +94,15 @@ Route::get('checkout/directChargeOpenpay/responsepayment/', [TerminalController:
 
 Route::get('/gracias-por-tu-pago', function () {
     $r = $_GET['redirect_status'];
+    $currency_base = Currency::find(1);
+    $conversion = Http::get("https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43784/datos/".now()->format('Y-m-d')."/".now()->format('Y-m-d')."/?token=570f63e4e5caaa0a8848bcc07e31ba64774bfb9838a9940cba6b5003cb6bcfc8");//SF43784
+    $conversion = json_decode($conversion);
+    $valor = $currency_base->mxn;
+    foreach ($conversion->bmx->series as $valor) {
+        foreach($valor->datos as $dato){
+            $valor = $dato->dato;
+        }
+    }
     if ($r == 'succeeded') {
         /* foreach (['asistente@vectiumsureste.com','recheverria@etecno.com.mx','jestefani@etecno.com.mx',auth()->user()->email] as $emails) {
             Mail::to($emails)->send(new OrderShipped(session()->get('references')));
@@ -104,10 +113,12 @@ Route::get('/gracias-por-tu-pago', function () {
             $reference->update();
         }
         try {
-            Mail::to('asistente@vectiumsureste.com')->send(new OrderShipped(session()->get('references')));
-            Mail::to('recheverria@etecno.com.mx')->send(new OrderShipped(session()->get('references')));
-            Mail::to('jestefani@etecno.com.mx')->send(new OrderShipped(session()->get('references')));
-            Mail::to(auth()->user()->email)->send(new OrderShipped(session()->get('references')));
+            Mail::to('asistente@vectiumsureste.com')->send(new OrderShipped(session()->get('references'),$valor));
+            Mail::to('recheverria@etecno.com.mx')->send(new OrderShipped(session()->get('references'),$valor));
+            Mail::to('jestefani@etecno.com.mx')->send(new OrderShipped(session()->get('references'),$valor));
+            Mail::to('alvarbu@gmail.com')->send(new OrderShipped(session()->get('references'),$valor));
+            Mail::to('marencocode@gmail.com')->send(new OrderShipped(session()->get('references'),$valor));
+            Mail::to(auth()->user()->email)->send(new OrderShipped(session()->get('references'),$valor));
         } catch (\Throwable $th) {
             return view('terminal.bill-pagada',compact('r'));
         }

@@ -12,7 +12,10 @@ Button Text
 | {{ $reference->id }}      | {{ $reference->description }}      | ${{ $reference->amount }}      |
 @endforeach
 @endcomponent
-
+<br>
+<p>
+    Cobro hecho con tipo de cambio a ${{ number_format($cambio,2) }}
+</p>
 <br>
 {{ config('app.name') }}
 @endcomponent
