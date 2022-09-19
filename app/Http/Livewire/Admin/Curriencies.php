@@ -35,7 +35,7 @@ class Curriencies extends Component
             }
         }
         $currency_base->update([
-                'mxn' => 23.50
+                'mxn' => $valor
         ]);
         return view('livewire.admin.curriencies')->layout('layouts.app');
     }
