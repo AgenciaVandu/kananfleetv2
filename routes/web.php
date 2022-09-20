@@ -95,7 +95,7 @@ Route::get('checkout/directChargeOpenpay/responsepayment/', [TerminalController:
 Route::get('/gracias-por-tu-pago', function () {
     $r = $_GET['redirect_status'];
     $currency_base = Currency::find(1);
-    $conversion = Http::get("https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43784/datos/".now()->format('Y-m-d')."/".now()->format('Y-m-d')."/?token=570f63e4e5caaa0a8848bcc07e31ba64774bfb9838a9940cba6b5003cb6bcfc8");//SF43784
+    $conversion = Http::get("https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF60653/datos/".now()->format('Y-m-d')."/".now()->format('Y-m-d')."/?token=570f63e4e5caaa0a8848bcc07e31ba64774bfb9838a9940cba6b5003cb6bcfc8");//SF43784
     $conversion = json_decode($conversion);
     $valor = $currency_base->mxn;
     foreach ($conversion->bmx->series as $valor) {
