@@ -9,12 +9,9 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="grid grid-cols-1 p-4">
-                    <div>{!! $chart->container() !!}</div>
+                    
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="{{ $chart->cdn() }}"></script>
-    {{ $chart->script() }}
 </x-app-layout>

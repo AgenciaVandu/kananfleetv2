@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Charts\ReferencesChart;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -11,6 +12,7 @@ class PageController extends Controller
     {
         $this->middleware('role:superadmin|admin|editor');
     }
+
 
     public function index(){
         return view('admin.pages.index');
