@@ -36,13 +36,19 @@ class DashboardComponent extends Component
 
     public function export()
     {
-        return Excel::download(new ReferencesExport($this->start_date, $this->end_date), 'prueba.xlsx');
+        $total = 0;
+        $references = Reference::where('status','like','1')->whereBetween('created_at',[$this->start_date.'00:00:00', $this->end_date])->get();
+
+        foreach ($references as $reference) {
+            $total = $total+$reference->amount;
+        }
+        return Excel::download(new ReferencesExport($this->start_date.'00:00:00', $this->end_date,$total), 'reporte_partidas_pendientes_'.now().'.xlsx');
     }
 
     public function render()
     {
         $total = 0;
-        $references = Reference::where('status','like','1')->whereBetween('created_at',[$this->start_date, $this->end_date])->get();
+        $references = Reference::where('status','like','1')->whereBetween('created_at',[$this->start_date.'00:00:00', $this->end_date])->get();
 
         foreach ($references as $reference) {
             $total = $total+$reference->amount;

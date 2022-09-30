@@ -52,7 +52,7 @@
                                             {{ __('Order') }}</th>
                                         <th scope="col"
                                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            {{ __('Reference') }}</th>
+                                            {{ __('Partidas') }}</th>
                                         <th scope="col"
                                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             {{ __('Monto') }}</th>
@@ -60,20 +60,22 @@
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
                                     @foreach ($references as $reference)
-                                        <tr>
-                                            <td class="px-6 py-4 whitespace-nowrap">
-                                                {{ $reference->order->user->name }}
-                                            </td>
-                                            <td class="px-6 py-4 whitespace-nowrap">
-                                                {{ $reference->order->contract }}
-                                            </td>
-                                            <td class="px-6 py-4 whitespace-nowrap">
-                                                {{ $reference->description }}
-                                            </td>
-                                            <td class="px-6 py-4 whitespace-nowrap">
-                                                ${{ number_format($reference->amount, 2) }}
-                                            </td>
-                                        </tr>
+                                        @if ($reference->order->user)
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap">
+                                                    {{ $reference->order->user->name }}
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap">
+                                                    {{ $reference->order->contract }}
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap">
+                                                    {{ $reference->description }}
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap">
+                                                    ${{ number_format($reference->amount, 2) }}
+                                                </td>
+                                            </tr>
+                                        @endif
                                     @endforeach
                                     <tr>
                                         <td class="px-6 py-4 whitespace-nowrap">

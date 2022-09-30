@@ -7,12 +7,13 @@
     <tbody>
         <tr>
             <td>
-                REPORTE DE REFERENCIAS PENDIENTES POR FECHA
+                REPORTE DE PARTIDAS PENDIENTES POR FECHA
             </td>
         </tr>
         <tr>
             <td>
-                Rango de fecha: {{ \Carbon\Carbon::parse($start_date)->toDateTimeString() }} - {{ \Carbon\Carbon::parse($end_date)->toDateTimeString() }}
+                Rango de fecha: {{ \Carbon\Carbon::parse($start_date)->toDateTimeString() }} -
+                {{ \Carbon\Carbon::parse($end_date)->toDateTimeString() }}
             </td>
         </tr>
     </tbody>
@@ -23,18 +24,34 @@
         <tr>
             <th>Cliente</th>
             <th>Orden</th>
-            <th>Referencia</th>
+            <th>Partidas</th>
             <th>Monto</th>
         </tr>
     </thead>
     <tbody>
         @foreach ($references as $reference)
-            <tr>
-                <td>{{ $reference->order->user->name }}</td>
-                <td>{{ $reference->order->contract }}</td>
-                <td>{{ $reference->description }}</td>
-                <td>${{ number_format($reference->amount, 2) }}</td>
-            </tr>
+            @if ($reference->order->user)
+                <tr>
+                    <td>{{ $reference->order->user->name }}</td>
+                    <td>{{ $reference->order->contract }}</td>
+                    <td>{{ $reference->description }}</td>
+                    <td>${{ number_format($reference->amount, 2) }}</td>
+                </tr>
+            @endif
         @endforeach
+        <tr>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                TOTAL
+            </td>
+            <td>
+                ${{ number_format($total, 2) }}
+            </td>
+        </tr>
     </tbody>
 </table>

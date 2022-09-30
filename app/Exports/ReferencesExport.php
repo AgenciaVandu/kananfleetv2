@@ -5,22 +5,26 @@ namespace App\Exports;
 use App\Models\Reference;
 use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\FromView;
+use Maatwebsite\Excel\Concerns\WithColumnFormatting;
 use Maatwebsite\Excel\Concerns\WithStyles;
+use PhpOffice\PhpSpreadsheet\Reader\Xml\Style\NumberFormat;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
 class ReferencesExport implements FromView,WithStyles
 {
 
-    public $start_date,$end_date;
+    public $start_date,$end_date,$total;
     /**
     * @return \Illuminate\Support\Collection
     */
 
 
-    public function __construct($start_date, $end_date){
+    public function __construct($start_date, $end_date,$total){
         $this->start_date = $start_date;
         $this->end_date = $end_date;
+        $this->total = $total;
     }
+
 
     public function styles(Worksheet $sheet)
     {
@@ -38,9 +42,10 @@ class ReferencesExport implements FromView,WithStyles
     public function view(): View
     {
         return view('exports.references-pending',[
-            'references' => Reference::where('status','like','1')->whereBetween('created_at',[$this->start_date, $this->end_date])->get(),
+            'references' => Reference::where('status','like','1')->whereBetween('created_at',[$this->start_date.'00:00:00', $this->end_date.'23:59:59'])->get(),
             'start_date' => $this->start_date,
-            'end_date' => $this->end_date
+            'end_date' => $this->end_date,
+            'total' => $this->total
         ]);
     }
 }
