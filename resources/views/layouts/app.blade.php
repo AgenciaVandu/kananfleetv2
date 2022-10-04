@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -21,6 +22,7 @@
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
+
 </head>
 
 <body class="font-sans antialiased">
@@ -48,7 +50,7 @@
 
     @livewireScripts
     @livewireChartsScripts
-
+    @method('js')
 </body>
 
 </html>

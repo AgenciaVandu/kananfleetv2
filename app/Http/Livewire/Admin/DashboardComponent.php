@@ -18,6 +18,7 @@ class DashboardComponent extends Component
 {
     public $start_date;
     public $end_date;
+    public $modal = false;
 
     public function mount(){
         $this->start_date = Carbon::today()->subDay()->format('Y-m-d H:i:s');
@@ -42,7 +43,12 @@ class DashboardComponent extends Component
         foreach ($references as $reference) {
             $total = $total+$reference->amount;
         }
+        $this->modal = false;
         return Excel::download(new ReferencesExport($this->start_date, $this->end_date,$total), 'reporte_partidas_pendientes_'.now().'.xlsx');
+    }
+
+    public function modal(){
+        $this->modal = true;
     }
 
     public function render()

@@ -14,4 +14,7 @@
             </div>
         </div>
     </div>
+    <script>
+        Swal.fire('Any fool can use a computer')
+    </script>
 </x-app-layout>
