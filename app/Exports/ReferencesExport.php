@@ -42,7 +42,7 @@ class ReferencesExport implements FromView,WithStyles
     public function view(): View
     {
         return view('exports.references-pending',[
-            'references' => Reference::where('status','like','1')->whereBetween('created_at',[$this->start_date.'00:00:00', $this->end_date.'23:59:59'])->get(),
+            'references' => Reference::where('status','like','1')->whereBetween('created_at',[$this->start_date, $this->end_date])->get(),
             'start_date' => $this->start_date,
             'end_date' => $this->end_date,
             'total' => $this->total

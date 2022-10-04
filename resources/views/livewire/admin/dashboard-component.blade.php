@@ -14,9 +14,9 @@
                 <div class="flex items-center p-4 justify-between">
                     <div class="flex items-center">
                         <x-jet-label class="mx-3" value="De" />
-                        <x-jet-input class="mx-3" type="date" wire:model="start_date" />
+                        <x-jet-input class="mx-3" type="datetime-local" wire:model="start_date" />
                         <x-jet-label class="mx-3" value="a" />
-                        <x-jet-input class="mx-3" type="date" max="{{ now()->format('Y-m-d') }}"
+                        <x-jet-input class="mx-3" type="datetime-local" max="{{ now()->format('Y-m-d') }}"
                             wire:model="end_date" />
                         <x-jet-button class="mx-3" wire:click="allTime">
                             Todo el tiempo

@@ -20,35 +20,35 @@ class DashboardComponent extends Component
     public $end_date;
 
     public function mount(){
-        $this->start_date = Carbon::now()->subDay()->format('Y-m-d');
-        $this->end_date = Carbon::now()->format('Y-m-d');
+        $this->start_date = Carbon::today()->subDay()->format('Y-m-d H:i:s');
+        $this->end_date = Carbon::now()->format('Y-m-d H:i:s');
     }
 
     public function allTime(){
-        $this->start_date = Carbon::parse('1985-10-05')->format('Y-m-d');
-        $this->end_date = Carbon::now()->format('Y-m-d');
+        $this->start_date = Carbon::parse('1985-10-05 00:00:00')->format('Y-m-d H:i:s');
+        $this->end_date = Carbon::now()->format('Y-m-d H:i:s');
     }
 
     public function today(){
-        $this->start_date = Carbon::now()->format('Y-m-d');
-        $this->end_date = Carbon::now()->format('Y-m-d');
+        $this->start_date = Carbon::today()->format('Y-m-d H:i:s');;
+        $this->end_date = Carbon::now()->format('Y-m-d H:i:s');;
     }
 
     public function export()
     {
         $total = 0;
-        $references = Reference::where('status','like','1')->whereBetween('created_at',[$this->start_date.'00:00:00', $this->end_date])->get();
+        $references = Reference::where('status','like','1')->whereBetween('created_at',[$this->start_date, $this->end_date])->get();
 
         foreach ($references as $reference) {
             $total = $total+$reference->amount;
         }
-        return Excel::download(new ReferencesExport($this->start_date.'00:00:00', $this->end_date,$total), 'reporte_partidas_pendientes_'.now().'.xlsx');
+        return Excel::download(new ReferencesExport($this->start_date, $this->end_date,$total), 'reporte_partidas_pendientes_'.now().'.xlsx');
     }
 
     public function render()
     {
         $total = 0;
-        $references = Reference::where('status','like','1')->whereBetween('created_at',[$this->start_date.'00:00:00', $this->end_date])->get();
+        $references = Reference::where('status','like','1')->whereBetween('created_at',[$this->start_date, $this->end_date])->get();
 
         foreach ($references as $reference) {
             $total = $total+$reference->amount;
