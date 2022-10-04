@@ -7,12 +7,12 @@
     <tbody>
         <tr>
             <td>
-                REPORTE DE PARTIDAS PENDIENTES POR FECHA
+                REPORTE DE PARTIDAS PENDIENTES POR FECHAS
             </td>
         </tr>
         <tr>
             <td>
-                Rango de fecha: {{ \Carbon\Carbon::parse($start_date)->toDateTimeString() }} -
+                Rango de fechas: {{ \Carbon\Carbon::parse($start_date)->toDateTimeString() }} -
                 {{ \Carbon\Carbon::parse($end_date)->toDateTimeString() }}
             </td>
         </tr>
