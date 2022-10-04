@@ -104,10 +104,10 @@
     </div>
     <x-jet-confirmation-modal wire:model="modal">
         <x-slot name="title">
-            ¿Estas seguro?
+            Descargar reporte
         </x-slot>
         <x-slot name="content">
-            Deseas descargar el reporte?
+            ¿Estás seguro de que quieres descargar el reporte?
         </x-slot>
         <x-slot name="footer">
             <x-jet-secondary-button class="mr-2" wire:click="$set('modal',false)">Cancelar</x-jet-secondary-button>
