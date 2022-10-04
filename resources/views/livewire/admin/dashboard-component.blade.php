@@ -103,7 +103,7 @@
         </div>
     </div>
     <x-jet-confirmation-modal wire:model="modal">
-        <x-slot name="title">
+        <x-slot name="title" class="font-bold">
             Descargar reporte
         </x-slot>
         <x-slot name="content">
