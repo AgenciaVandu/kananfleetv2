@@ -36,8 +36,8 @@
                             los costos operativos y monitorear los indicadores de desempeño de la misma. Kananfleet cuenta
                             con una versión certificada por SAP a nivel internacional e integrada al ERP SAP B1.
                         </p>
-                        <button class="btn btn-secondary btn-sm source-semibold" data-toggle="modal"
-                            data-target="#lead-kananfleet">SOLICITAR DEMO</button>
+                        <!-- <button class="btn btn-secondary btn-sm source-semibold" data-toggle="modal"
+                            data-target="#lead-kananfleet">SOLICITAR DEMO</button> -->
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
                         <div class="d-none d-sm-none d-md-none d-lg-block">
@@ -265,8 +265,8 @@
                     es un software de
                     contabilidad, CRM o ERP. Nosotros creamos las integraciones necesarias.
                 </p>
-                <a data-toggle="modal" data-target="#lead-kananfleet" class="btn btn-primary">SOLICITAR DEMO</a> <br>
-                <small class="source-light">Pónganse en contacto con nosotros</small>
+                <!-- <a data-toggle="modal" data-target="#lead-kananfleet" class="btn btn-primary">SOLICITAR DEMO</a> <br>
+                <small class="source-light">Pónganse en contacto con nosotros</small> -->
             </div>
         </div>
     </section>

@@ -26,7 +26,7 @@
             @endif
             <div class="row pt-5 pb-5">
 
-                <div class="col-lg-6 col-md-12 col-sm-12 info-1">
+               <!--  <div class="col-lg-6 col-md-12 col-sm-12 info-1">
                     <form action="{{ route('sendemail') }}" method="POST">
                         @csrf
                         <div class="form-row">
@@ -44,7 +44,7 @@
                             </div>
                         </div>
                         <div class="pt-3 source-bold" id="f-emprendedor">
-                            <!--Emprendedor-->
+                            
                             <div>
                                 <label for="formGroupExampleInput">Correo electrónico*</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1"
@@ -91,11 +91,10 @@
                                 </label>
                             </div>
                         </div>
-                        {{-- <div class="g-recaptcha" data-sitekey="6LdOUdIeAAAAAFLWIHfaLUg4VcsH4lVdOgBo-wd2"
-                            style="margin-bottom: 10px;"></div> --}}
+                       
                         <button type="submit" class="btn btn-primary mt-3">Enviar mensaje</button>
                     </form>
-                </div>
+                </div> -->
                 <div class="col-lg-6 col-md-12 col-sm-12 info-2">
                     <!--contacto-->
                     <h2 class="source-bold">
@@ -131,9 +130,7 @@
                             </div>
                             <div class="col-11 pl-5 m-auto">
                               
-                                {{-- <span><a href="tel:+529999306745"
-                                        style="color: rgb(48, 48, 48); text-decoration:none;">+52 999 9306745</a>
-                                </span> --}}
+                                
                                 <span class="source-regular" >Oficina:
                                     <a href="tel:529999306745" style="color: rgb(23, 23, 23); text-decoration:none;">+52 999 930 6745</a>
                                 </span> <br>
