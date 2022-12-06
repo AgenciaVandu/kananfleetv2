@@ -30,7 +30,7 @@ Route::get('/', [PageController::class,'index'])->name('index');
 Route::get('/aliados', [PageController::class,'aliados'])->name('aliados');
 Route::get('/empresa', [PageController::class,'empresas'])->name('empresa');
 Route::get('/sap', [PageController::class,'sap'])->name('sap');
-/* Route::post('/sendmail',[PageController::class,'sendmail'])->name('sendemail'); */
+Route::post('/sendmail',[PageController::class,'sendmail'])->name('sendemail');
 
 Route::get('/soluciones', function () {
     return view('soluciones');
