@@ -26,7 +26,7 @@
             @endif
             <div class="row pt-5 pb-5">
 
-               <!--  <div class="col-lg-6 col-md-12 col-sm-12 info-1">
+                <div class="col-lg-6 col-md-12 col-sm-12 info-1">
                     <form action="{{ route('sendemail') }}" method="POST">
                         @csrf
                         <div class="form-row">
@@ -94,7 +94,7 @@
                        
                         <button type="submit" class="btn btn-primary mt-3">Enviar mensaje</button>
                     </form>
-                </div> -->
+                </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 info-2">
                     <!--contacto-->
                     <h2 class="source-bold">
