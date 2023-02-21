@@ -43,12 +43,15 @@ class PageController extends Controller
             'policy' => 'required',
         ]);
         if ($request->policy == 'on') {
-            Mail::to('recheverria@etecno.com.mx')->send(new NewClient($request));
+            /* Mail::to('recheverria@etecno.com.mx')->send(new NewClient($request));
             Mail::to('info@administraflotilla.com')->send(new NewClient($request));
             Mail::to('alianzas@etecno.com.mx')->send(new NewClient($request));
-            Mail::to('jestefani@etecno.com.mx')->send(new NewClient($request));
+            Mail::to('jestefani@etecno.com.mx')->send(new NewClient($request)); */
+
+            Mail::to('alfredomarenco@boletea.com')->send(new NewClient($request));
+            Mail::to('ab@agenciavandu.com')->send(new NewClient($request));
         }
-        Mail::to('ripmarenko@gmail.com')->send(new NewClient($request));
+        /* Mail::to('ripmarenko@gmail.com')->send(new NewClient($request)); */
         return back();
     }
 }
