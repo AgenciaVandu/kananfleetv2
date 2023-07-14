@@ -2,7 +2,8 @@
 @section('contenido')
     @if ($header->image)
         <a href="{{ $header->image->link }}">
-            <header id="b-index" style="background-image: url({{ Storage::url($header->image->url) }}); background-repeat: no-repeat; background-position: center; background-size: cover;
+            <header id="b-index"
+                style="background-image: url({{ Storage::url($header->image->url) }}); background-repeat: no-repeat; background-position: center; background-size: cover;
                     min-height: 100vh;">
                 {{-- <div class="container">
                 <div class="cabecera-titular">
@@ -17,7 +18,8 @@
             </header>
         </a>
     @else
-        <header id="b-index" style="background-image: url(/img/banners/1-index.png); background-repeat: no-repeat; background-position: center; background-size: cover;
+        <header id="b-index"
+            style="background-image: url(/img/banners/1-index.png); background-repeat: no-repeat; background-position: center; background-size: cover;
                     min-height: 100vh;">
             <div class="container">
                 <div class="cabecera-titular">
@@ -43,26 +45,22 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-12 soluciones col-sm-12 text-center pad">
                         <a href="/soluciones">
-                            <img src="{{ asset('/img/icons/saving.svg') }}" width="50">
-                            <h5 class="source-bold pt-3">Optimizar costos de transportación</h5>
+                            <img src="{{ asset('/img/2023/saving.svg') }}" width="50">
+                            <h5 class="source-bold pt-3">Optimizar costos operativos</h5>
                             <p class="source-regular">
-                                Más del 30% del costo total de propiedad de sus vehículos, está asociado al gasto de
-                                combustible, llantas/neumáticos y mantenimientos. Al controlar adecuadamente estos tres
-                                aspectos, puede disminuir de manera importante sus costos y ahorrar mucho dinero. De igual
-                                manera se pueden reducir otros como el costo administrativo, el costo de oportunidad por
-                                tener vehículos fuera de servicio y otros que derivan de equipos en mal estado.
+                                Al controlar adecuadamente el combustible, llantas,
+                                neumáticos, mantenimientos y más, puede ahorrar hasta el 30% de los costos en su
+                                ejercicio presupuestal en activos.
                             </p>
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-12 soluciones col-sm-12 text-center pad">
                         <a href="/soluciones">
-                            <img src="{{ asset('/img/icons/servicio.svg') }}" width="50">
+                            <img src="{{ asset('/img/2023/servicio.svg') }}" width="50">
                             <h5 class="source-bold pt-3">Mejorar servicio al cliente</h5>
                             <p class="source-regular">
-                                Mantener los vehículos y activos en buen estado le permite a su empresa cumplir los
-                                compromisos de tiempo, precio y rapidez adquiridos con sus clientes. El mercado está
-                                creciendo y es cada vez más exigente, exige mayor disponibilidad, más agilidad y menor
-                                costo.
+                                Mantener los activos en buen estado le permite a su empresa
+                                cumplir los compromisos de tiempo, precio y calidad con sus clientes.
                             </p>
                         </a>
                     </div>
@@ -71,23 +69,21 @@
                             <img src="{{ asset('/img/icons/proceso.svg') }}" width="50">
                             <h5 class="source-bold pt-3">Eficientar procesos de negocio</h5>
                             <p class="source-regular">
-                                Cuando menos un 20% del tiempo de su personal puede utilizarse en generar y mantener
-                                reportes, estadísticas e indicadores en excel u obtener información de múltiples sistemas no
-                                conectados entre sí. Con las herramientas adecuadas puede optimizar muchas horas hombre y
-                                hacerlas más productivas, además de reducir el riesgo de cometer "errores de dedo" que
-                                cuestan dinero a la empresa."
+                                Con el software de Kananafleet puedes ahorrar desde un
+                                20% del tiempo utilizado en generar reportes, estadísticas e indicadores. Mantén tu
+                                productividad al máximo y reduce el riesgo de errores.
                             </p>
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-12 soluciones col-sm-12 text-center pad">
                         <a href="/soluciones">
                             <img src="{{ asset('/img/icons/gobierno.svg') }}" width="50">
-                            <h5 class="source-bold pt-3">Cumplir las regulaciones Gubernamentales</h5>
+                            <h5 class="source-bold pt-3">Cumplir con las regulaciones de gobierno</h5>
                             <p class="source-regular">
-                                Cada año surgen nuevas disposiciones gubernamentales que obligan a su negocio a realizar
-                                cambios; no responder a tiempo puede ser causal de penalizaciones, multas o bloqueos por
-                                parte de la autoridad. Nuestra tecnología le facilita reaccionar rápidamente a estas
-                                regulaciones y enfocarse en el core de su negocio.
+                                Constantemente surgen nuevas disposiciones
+                                gubernamentales relacionadas a la gestión de activos operativos, no responder a tiempo
+                                puede ser causal de penalizaciones. Nuestra tecnología les facilita estar al día con estas
+                                regulaciones.
                             </p>
                         </a>
                     </div>
@@ -104,15 +100,12 @@
                             <div class="carousel__elemento">
                                 <div class="col-12 soluciones text-center pad">
                                     <a href="/soluciones">
-                                        <img src="{{ asset('/img/icons/saving.svg') }}" width="50">
-                                        <h5 class="source-bold pt-3">Optimizar costos de transportación</h5>
+                                        <img src="{{ asset('/img/2023/saving.svg') }}" width="50">
+                                        <h5 class="source-bold pt-3">Optimizar costos operativos</h5>
                                         <p class="source-regular">
-                                            Más del 30% del costo total de propiedad de sus vehículos, está asociado al
-                                            gasto de combustible, llantas/neumáticos y mantenimientos. Al controlar
-                                            adecuadamente estos tres aspectos, puede disminuir de manera importante sus
-                                            costos y ahorrar mucho dinero. De igual manera se pueden reducir otros como el
-                                            costo administrativo, el costo de oportunidad por tener vehículos fuera de
-                                            servicio y otros que derivan de equipos en mal estado.
+                                            Al controlar adecuadamente el combustible, llantas,
+                                            neumáticos, mantenimientos y más, puede ahorrar hasta el 30% de los costos en su
+                                            ejercicio presupuestal en activos.
                                         </p>
                                     </a>
                                 </div>
@@ -121,13 +114,11 @@
                             <div class="carousel__elemento">
                                 <div class="col-12 soluciones text-center pad">
                                     <a href="/soluciones">
-                                        <img src="{{ asset('/img/icons/servicio.svg') }}" width="50">
+                                        <img src="{{ asset('/img/2023/servicio.svg') }}" width="50">
                                         <h5 class="source-bold pt-3">Mejorar servicio al cliente</h5>
                                         <p class="source-regular">
-                                            Mantener los vehículos y activos en buen estado le permite a su empresa cumplir
-                                            los compromisos de tiempo, precio y rapidez adquiridos con sus clientes. El
-                                            mercado está creciendo y es cada vez más exigente, exige mayor disponibilidad,
-                                            más agilidad y menor costo.
+                                            Mantener los activos en buen estado le permite a su empresa
+                                            cumplir los compromisos de tiempo, precio y calidad con sus clientes.
                                         </p>
                                     </a>
                                 </div>
@@ -139,11 +130,10 @@
                                         <img src="{{ asset('/img/icons/proceso.svg') }}" width="50">
                                         <h5 class="source-bold pt-3">Eficientar procesos de negocio</h5>
                                         <p class="source-regular">
-                                            Cuando menos un 20% del tiempo de su personal puede utilizarse en generar y
-                                            mantener reportes, estadísticas e indicadores en excel u obtener información de
-                                            múltiples sistemas no conectados entre sí. Con las herramientas adecuadas puede
-                                            optimizar muchas horas hombre y hacerlas más productivas, además de reducir el
-                                            riesgo de cometer "errores de dedo" que cuestan dinero a la empresa."
+                                            Con el software de Kananafleet puedes ahorrar desde un
+                                            20% del tiempo utilizado en generar reportes, estadísticas e indicadores. Mantén
+                                            tu
+                                            productividad al máximo y reduce el riesgo de errores.
                                         </p>
                                     </a>
                                 </div>
@@ -153,13 +143,13 @@
                                 <div class="col-12 soluciones text-center pad">
                                     <a href="/soluciones.html">
                                         <img src="{{ asset('/img/icons/gobierno.svg') }}" width="50">
-                                        <h5 class="source-bold pt-3">Cumplir las regulaciones Gubernamentales</h5>
+                                        <h5 class="source-bold pt-3">Cumplir con las regulaciones de gobierno</h5>
                                         <p class="source-regular">
-                                            Cada año surgen nuevas disposiciones gubernamentales que obligan a su negocio a
-                                            realizar cambios; no responder a tiempo puede ser causal de penalizaciones,
-                                            multas o bloqueos por parte de la autoridad. Nuestra tecnología le facilita
-                                            reaccionar rápidamente a estas regulaciones y enfocarse en el core de su
-                                            negocio.
+                                            Constantemente surgen nuevas disposiciones
+                                            gubernamentales relacionadas a la gestión de activos operativos, no responder a
+                                            tiempo
+                                            puede ser causal de penalizaciones. Nuestra tecnología les facilita estar al día
+                                            con estas regulaciones.
                                         </p>
                                     </a>
                                 </div>
@@ -172,7 +162,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-4 pad-1">
+            {{-- <div class="text-center mt-4 pad-1">
                 <h4 class="source-bold">Kananfleet se adapta a cualquier sistema de contabilidad, ERP, CRM.</h4>
                 <p class="source-regular " style="color: gray;">Nosotros creamos las integraciones necesarias para
                     garantizar el flujo de información. Si es usuario del ERP SAP B1, contamos con una versión certificada e
@@ -180,7 +170,7 @@
                 </p>
                 <a href="/contacto" class="btn btn-primary">SOLICITAR DEMO</a> <br>
                 <small class="source-light">Pónganse en contacto con nosotros</small>
-            </div>
+            </div> --}}
         </div>
     </section>
     <section id="informes">
@@ -195,22 +185,23 @@
                             </div>
                             <div class="carousel-item">
                                 <img src="{{ asset('/img/banners/inicio/2.png') }}" loading="lazy" class="d-block w-100"
-                                    alt="...">
+                                    alt="Kananfleet">
                             </div>
                             <div class="carousel-item">
                                 <img src="{{ asset('/img/banners/inicio/3.png') }}" loading="lazy" class="d-block w-100"
-                                    alt="...">
+                                    alt="Kananfleet">
                             </div>
                             <div class="carousel-item">
                                 <img src="{{ asset('/img/banners/inicio/4.png') }}" loading="lazy" class="d-block w-100"
-                                    alt="...">
+                                    alt="Kananfleet">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
                     <h4 class="source-bold">Informes detallados</h4>
-                    <p class="source-regular" style="color: gray;">Kananfleet® le ayudará a conocer con detalle todo lo que
+                    <p class="source-regular" style="color: gray;">Kananfleet® le ayudará a conocer con detalle todo lo
+                        que
                         necesita para llevar correctamente la administración de su flotilla y activos, ayudamos a su empresa
                         a gestionar de manera eficiente: operadores, llantas, servicios de mantenimiento preventivo y
                         correctivo, el inventario de refacciones; a obtener reportes estadísticos sobre la ejecución de los
@@ -239,82 +230,86 @@
         </div>
     </section>
     <section id="kanan-mobile">
-        <div class="container">
+        <div class="container mt-5">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 text-center">
                     <img src="{{ asset('/img/banners/inicio/3-5-fueldata.png') }}" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
-                    <h4 class="source-bold pb-3">Toda la información a su alcance</h4>
+                    <h4 class="source-bold ">KANANLEET MOBILE</h4>
+                    <p class="source-semibold">Brinde a sus choferes, operadores y supervisores las herramientas para hacer
+                        mejor su trabajo. Kananfleet Mobile es una aplicación incluida con el sistema Kananfleet, la cual
+                        puede trabajar on-line, off-line, y le permitirá:</p>
                     <li class=" source-semibold">
                         <div class="row m-auto">
                             <div class="check pr-2">
-                                <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
+                                <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold">Registro de recargas de combustible<br
-                                    class="d-block d-sm-block d-md-block d-lg-none"> en TIEMPO REAL.</p>
+                            <p class="source-semibold">Registrar recargas de combustible <br > o despacho de combustible (autoconsumo).</p>
                         </div>
                     </li>
                     <li class=" source-semibold">
                         <div class="row m-auto">
                             <div class="check pr-2">
-                                <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
+                                <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold">Registro de incidencias en TIEMPO REAL.</p>
+                            <p class="source-semibold">Reportar incidencias sobre el vehículo/activo, <br> e incidencias sobre llantas/neumáticos.</p>
                         </div>
                     </li>
                     <li class=" source-semibold">
                         <div class="row m-auto">
                             <div class="check pr-2">
-                                <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
+                                <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
                             <p class="source-semibold">
-                                Compatible con Kananfleet®.</p>
+                                Solicitar órdenes de mantenimiento</p>
                         </div>
                     </li>
                     <li class="source-semibold">
                         <div class="row m-auto">
                             <div class="check pr-2">
-                                <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
+                                <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold">Disponible para dispositivos Android.</p>
+                            <p class="source-semibold">Ver los viajes asignados y actualizar el estatus <br>   de cada uno de ellos (iniciar, pausar,
+                                finalizar,<br>  solicitar timbrado de la carta porte).</p>
                         </div>
                     </li>
                     <li class="source-semibold">
                         <div class="row m-auto">
                             <div class="check pr-2">
-                                <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
+                                <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold">Disponible en modo OFFLINE.</p>
+                            <p class="source-semibold">Registrar evidencia fotográfica y posición georreferenciada<br> de cargas de combustible,
+                                incidencias, siniestros, <br> paradas, viajes finalizados., otros eventos.</p>
                         </div>
                     </li>
                     <li class="source-semibold">
                         <div class="row m-auto">
                             <div class="check pr-2">
-                                <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
+                                <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold">Registre de forma segura sus datos.</p>
+                            <p class="source-semibold">Consultar el estatus de una orden de mantenimiento</p>
                         </div>
                     </li>
                     <li class="source-semibold">
                         <div class="row m-auto">
                             <div class="check pr-2">
-                                <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
+                                <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold">Genere estadísticas de rendimiento y consumo <br> de combustible
-                                desde Kananfleet®.</p>
+                            <p class="source-semibold">Obtener reportes de productividad, entre otras funcionalidades.</p>
                         </div>
                     </li>
-                    <li class="source-semibold">
+                    {{-- <li class="source-semibold">
                         <div class="row m-auto">
                             <div class="check pr-2">
-                                <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
+                                <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
                             <p class="source-semibold">Entre otros.</p>
                         </div>
-                    </li>
-                    <li>
-                        <a href="https://play.google.com/store/apps/details?id=etecno.agg.kananfleet.mob&hl=es" class="btn btn-google source-bold" title="Google Play">
+                    </li> --}}
+                    <li class="mt-3">
+                        <a href="https://play.google.com/store/apps/details?id=etecno.agg.kananfleet.mob&hl=es"
+                            class="btn btn-google source-bold" title="Google Play">
                             Google Play
                         </a>
                         <small class="source-light">Descárguela aquí</small>
@@ -326,12 +321,12 @@
     <section id="CTA" class="m-5">
         <div class="container text-center">
             <div class="pad-1">
-                <h2 class="source-bold">¿Ya cuenta con un sistema de control administrativo?</h2>
-                <p class="source-regular " style="color: gray;">Kananfleet ® se adapta a cualquier entorno, no importa si
+                <h2 class="source-bold mt-4">Kananfleet® cuenta con una versión certificada para SAP e integrada al ERP SAP Business One</h2>
+               {{--  <p class="source-regular " style="color: gray;">Kananfleet ® se adapta a cualquier entorno, no importa si
                     es un software de
                     contabilidad, CRM o ERP. Nosotros creamos las integraciones necesarias.
-                </p>
-                <a href="/contacto" class="btn btn-primary">SOLICITAR DEMO</a> <br>
+                </p> --}}
+                <a href="/contacto" class="btn btn-primary mt-3">SOLICITAR DEMO</a> <br>
                 <small class="source-light">Pónganse en contacto con nosotros</small>
             </div>
         </div>

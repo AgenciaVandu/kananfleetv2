@@ -13,7 +13,7 @@
                      Datos Estadísticos
                   </h1>
                   <p class="source-regular">
-                     Consulte información en TIEMPO REAL sobre el presupuesto ejercido en Mantenimiento y Combustible
+                    Conozca el comportamiento de su flota en un solo panel de control.
                   </p>
                   <a href="/contacto" class="btn btn-outline-light source-black">
                       SOLICITAR DEMO
@@ -40,7 +40,8 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">Gestione el presupuesto anual asignado a <br class="d-none d-sm-none d-md-none d-lg-block"> Mantenimiento y Combustible.</p>
+                         <p class="source-semibold">Indicadores de desempeño sobre el comportamiento <br> de su flotilla, vehícul os en uso, en
+                            mantenimiento, <br> no disponibles, etc.</p>
                      </div>
                  </li>
                  <li class=" source-semibold">
@@ -49,7 +50,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                          <p class="source-semibold">
-                             Consulte presupuestos ejercidos en los rubros<br class="d-none d-sm-none d-md-none d-lg-block"> de Mantenimiento y Combustible.</p>
+                            Indicadores de desempeño del ejercicio presupuestal <br> de su flotilla.</p>
                      </div>
                  </li>
                  <li class=" source-semibold">
@@ -58,7 +59,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                          <p class="source-semibold">
-                             Consulte información por año, mes, semana y día.</p>
+                            Indicadores de desempeño de la disponibilidad y eficiencia <br> de su flotilla.</p>
                      </div>
                  </li>
                  <li class="source-semibold">
@@ -66,7 +67,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">Exporte las gráficas a varios formatos.</p>
+                         <p class="source-semibold">Indicadores de desempeño de los viajes realizados <br> por su flotilla.</p>
                      </div>
                  </li>
                  <li class="source-semibold">
@@ -75,9 +76,36 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                          <p class="source-semibold">
-                             Entre otras bondades.</p>
+                            Indicadores causa-raíz del mantenimiento de su flotilla, <br> entre muchos otros.</p>
                      </div>
                  </li>
+                 <li class="source-semibold">
+                    <div class="row m-auto">
+                       <div class="check pr-2">
+                           <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
+                       </div>
+                        <p class="source-semibold">
+                            Reportes programables por día, semana, mes.</p>
+                    </div>
+                </li>
+                <li class="source-semibold">
+                    <div class="row m-auto">
+                       <div class="check pr-2">
+                           <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
+                       </div>
+                        <p class="source-semibold">
+                            Reportes de servicios, combustible y llantas.</p>
+                    </div>
+                </li>
+                <li class="source-semibold">
+                    <div class="row m-auto">
+                       <div class="check pr-2">
+                           <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
+                       </div>
+                        <p class="source-semibold">
+                            Reportes de mantenibles y operadores.</p>
+                    </div>
+                </li>
                  <li>
                      <a href="/contacto" class="btn btn-primary">SOLICITAR DEMO</a>
                  </li>
@@ -112,7 +140,8 @@
                <div class="carousel-item">
                  <div class="row">
                      <div class="col-lg-6 col-md-12 col-sm-12 d-flex m-auto justify-content-center">
-                         <h1 class="source-black">Estadísticas <br> Por año</h1>
+                         <h5 class="source-black">Indicadores y estadísticas por vehículo/activo, por
+                            flotilla, por empresa, por sucursal, por período de tiempo. Todo exportable a Excel, PDF, otros formatos.</h5>
                      </div>
                      <div class="col-lg-6 col-md-12 col-sm-12">
                          <img src="/img/banners/8-estadisticas/3-Slide/3-poranio.png" loading="lazy" class="d-block w-100" alt="...">
@@ -126,10 +155,7 @@
  <section id="CTA" class="m-5">
      <div class="container text-center">
          <div class="pad-1">
-             <h3 class="source-bold">¿Ya cuenta con un sistema de control administrativo?</h3>
-             <p class="source-regular" style="color: gray;">Kananfleet ® se adapta a cualquier entorno, no importa si es un software de
-                 contabilidad, CRM o ERP. Nosotros creamos las integraciones necesarias.
-             </p>
+            <h3 class="source-bold mt-4 mb-3">Kananfleet® cuenta con una versión certificada para SAP e integrada al ERP SAP Business One</h3>
              <a href="/contacto" class="btn btn-primary">SOLICITAR DEMO</a> <br>
              <small class="source-light">Pónganse en contacto con nosotros</small>
          </div>

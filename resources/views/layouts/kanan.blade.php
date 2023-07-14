@@ -64,7 +64,7 @@
                         <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/soluciones">Soluciones</a>
+                        <a class="nav-link" href="/soluciones">Sectores</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -78,8 +78,8 @@
                             <a class="dropdown-item source-regular" href="/disponibilidad">Panel de Disponibilidad</a>
                             <a class="dropdown-item source-regular" href="/carta-porte">Complemento Carta porte</a>
                             <a class="dropdown-item source-regular" href="/combustible">Combustible</a>
-                            <a class="dropdown-item source-regular" href="/estadisticas">Estadísticas</a>
-                            <a class="dropdown-item source-regular" href="/kananfleet-mobile">Kananfleet Mobile®</a>
+                            <a class="dropdown-item source-regular" href="/estadisticas">Indicadores de Desempeño y Reportes</a>
+                            <a class="dropdown-item source-regular" href="/kananfleet-mobile">KANANFLEET® MOBILE para Android</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -107,7 +107,10 @@
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="https://www.facebook.com/Kananfleet" target="blank_" style="color:#fff; font-size: 1.3em">
-                        <i class="fab fa-facebook pr-3"></i>
+                        <i class="fab fa-facebook pr-2"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kananfleet" target="blank_" style="color:#fff; font-size: 1.3em">
+                        <i class="fab fa-instagram pr-3"></i>
                     </a>
                     <a href="/contacto" class="btn btn-secondary btn-sm source-semibold">SOLICITAR DEMO</a>
                 </div>
@@ -124,12 +127,12 @@
                 <div class="col-lg-3 col-sm-6 col-sm-12">
                     <h4 class="source-bold" style="color: #fff;">Contacto</h4>
                     <li class="source-semibold pt-3" style="color: #fff;">Dirección: <br>
-                        <span class="source-regular" style="color: gray; font-size: .8em;">
+                        {{-- <span class="source-regular" style="color: gray; font-size: .8em;">
                            <a href="https://www.google.com/maps?ll=21.133268,-89.779178&z=16&t=m&hl=es-419&gl=MX&mapclient=embed&cid=8040044477750868413" target="blank_" style="color: #0b71d8; text-decoration:none;"><b>Parque Científico y Tecnológico,</b></a> Centro Heuristic Km. 5.5 Carretera Sierra Papacal, Mérida Yucatán, México. CP. 97302 <img src="{{ asset('/img/Mexico.png') }}" class="img-fluid"
                                 alt="Bandera de México">
-                        </span> <br>
+                        </span> <br> --}}
                         <span class="source-regular" style="color: gray; font-size: .8em;">
-                           <a href="https://www.google.com/maps/place/90%C2%B0+Altabrisa+Business+Center/@21.0221212,-89.5854261,15z/data=!4m5!3m4!1s0x0:0x314e396c017a9360!8m2!3d21.0221275!4d-89.5854329" target="blank_" style="color: #0b71d8; text-decoration:none;"><b>Business Center</b></a> Calle 17 # 474 por 20 y 22, Fraccionamiento Altabrisa, 97130 Mérida, Yuc. <img src="{{ asset('/img/Mexico.png') }}" class="img-fluid"
+                           <a href="https://www.google.com/maps/place/90%C2%B0+Altabrisa+Business+Center/@21.0221212,-89.5854261,15z/data=!4m5!3m4!1s0x0:0x314e396c017a9360!8m2!3d21.0221275!4d-89.5854329" target="blank_" style="color: #0b71d8; text-decoration:none;"><b>90 Grados Altabrisa Business Center </b></a> Calle 17 #474 x 20 y 22, Fraccionamiento Altabrisa, 97130 Mérida, Yucatán. <img src="{{ asset('/img/Mexico.png') }}" class="img-fluid"
                                 alt="Bandera de México">
                         </span>
                     </li>
@@ -156,8 +159,13 @@
                             </a>
                             <a href="https://www.linkedin.com/showcase/kananfleet/" target="blank_"
                                 style="color: #fff; text-decoration: none;">
-                                <i class="fab fa-linkedin"></i>
+                                <i class="fab fa-linkedin pr-3"></i>
                             </a>
+                            <a href="https://www.instagram.com/kananfleet" target="blank_"
+                            style="color: #fff; text-decoration: none;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                            
                         </span>
                     </li>
                 </div>
@@ -199,9 +207,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 col-sm-12">
                     <h4 class="source-bold pb-3" style="color: #fff;">Ubicación</h4>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1860.7463088893987!2d-89.78005230301599!3d21.132785234797836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567791c4d2d3b5%3A0x6f93f9dac2ae79bd!2sKananfleet!5e0!3m2!1ses-419!2smx!4v1640612399449!5m2!1ses-419!2smx"
-                        width="auto" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14897.055897457587!2d-89.5854261!3d21.0221212!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f56771f8517c033%3A0x314e396c017a9360!2s90%C2%B0%20Altabrisa%20Business%20Center!5e0!3m2!1ses-419!2smx!4v1689265336456!5m2!1ses-419!2smx" width="auto" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
             </div>

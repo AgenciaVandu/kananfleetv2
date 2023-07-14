@@ -15,8 +15,7 @@
             <p class="source-regular mb-4">GRUPO ETECNO, es una empresa 100% mexicana ubicada en la ciudad de Mérida,
                 Yucatán, México; propietaria de la tecnología Kananfleet®, la cuál fue desarrollada para ayudar a nuestros
                 clientes a llevar una mejor Administración y Gestión de sus Flotillas Vehiculares y Activos en general.
-                Detrás de esta tecnología hay más de 15 años de experiencia en el sector de las TICs, en la vertical de
-                logística y transporte:
+                
             </p>
             <div class="row espacio-empresa">
                 <div class="col">
@@ -34,9 +33,10 @@
                 <div class="col">
                     <img src="{{ asset('/img/icons/latin-a.svg') }}" width=90" alt="">
                     <h5 class="source-semibold pt-2">
-                        Clientes en México, Centro América, Sur América y el Caribe
+                        Clientes en Norteamérica, Centroamérica, Sudamérica y el Caribe
                     </h5>
                 </div>
+                
             </div>
         </div>
     </section>

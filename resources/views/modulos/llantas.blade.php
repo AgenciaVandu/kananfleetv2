@@ -36,13 +36,13 @@
                  <img src="/img/banners/5-llantas/2-gestionesusneumaticos.png" class="img-fluid" alt="">
              </div>
              <div class="col-lg-6 col-md-12 col-sm-12 right m-auto">
-                 <h4 class="source-bold pb">Máximo aprovechamiento de sus <br class="d-none d-sm-none d-md-none d-lg-block">neumáticos / llantas</h4>
+                 {{-- <h4 class="source-bold pb">Máximo aprovechamiento de sus <br class="d-none d-sm-none d-md-none d-lg-block">neumáticos / llantas</h4> --}}
                  <li class=" source-semibold">
                      <div class="row m-auto">
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">Módulo compatible con KANANFLEET MOBILE® (Android).</p>
+                         <p class="source-semibold">Visualización gráfica de las llantas/neumáticos <br>
                          {{-- <p class="source-semibold">Visualización gráfica de llantas.</p> --}}
                      </div>
                  </li>
@@ -51,7 +51,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">VISUALIZACIÓN GRÁFICA de neumáticos / llantas</p>
+                        <p class="source-semibold">Semáforo de colores en función al desgast <br> y estatus de cada llanta/neumático.</p>
                         {{-- <p class="source-semibold">Registro de presión y desgaste.</p> --}}
                      </div>
                  </li>
@@ -61,7 +61,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                         <p class="source-semibold">
-                            Registro de INCIDENCIAS de neumáticos / llantas <br> con FOTOGRAFÍAS y GEOPOSICIÓN</p>
+                            Consulta y registro de información detallada de cada llanta/neumático</p>
                          {{-- <p class="source-semibold">
                              Registro de incidencia de las llantas.</p> --}}
                      </div>
@@ -71,7 +71,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">CHASIS VIRTUAL para la administración de neumáticos / llantas</p> 
+                        <p class="source-semibold">Programación de alertas para cambios y/o renovación de neumáticos.</p> 
                         {{-- <p class="source-semibold">Registro de cambio de llantas en las unidades.</p> --}}
                      </div>
                  </li>
@@ -81,7 +81,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                         <p class="source-semibold">
-                            PROGRAMACIÓN DE ALERTAS para cambio <br> de neumáticos / llantas</p>
+                            Configuración del desgaste de cada llanta/neumático <br> (por milimetraje, por porcentaje)</p>
                         {{-- <p class="source-semibold">
                              Chasis virtual para la asignación de llantas.</p> --}}
                      </div>
@@ -92,7 +92,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                         <p class="source-semibold">
-                            PARAMETRIZACIÓN DEL DESGASTE por kilómetro<br> recorrido y/o por treadware</p>
+                            Clasificación de llantas/neumáticos por su estado y ciclo de vida.</p>
                          {{-- <p class="source-semibold">
                              Control de llantas de refacción en unidades.</p> --}}
                      </div>
@@ -103,7 +103,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                         <p class="source-semibold">
-                            Control eficiente por <br> REENCAUCHAMIENTO / REVESTIMIENTO / RENOVACIÓN</p>
+                            Registro de incidencias de neumáticos / llantas con fotografías</p>
                          {{-- <p class="source-semibold">
                              Programación de alertas para cambio de llantas.</p> --}}
                      </div>
@@ -114,49 +114,9 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                         <p class="source-semibold">
-                            Gestión de neumáticos / llantas por SEMÁFORO DE COLORES</p>
+                            Reportes de la inversión en llantas, ubicación, estatus, etc.</p>
                         {{-- <p class="source-semibold">
                             Parametrización del desgaste por llanta.</p> --}}
-                     </div>
-                 </li>
-                 <li class="source-semibold">
-                     <div class="row m-auto">
-                        <div class="check pr-2">
-                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                        </div>
-                        <p class="source-semibold">
-                            REPORTES informativos y estadísticos</p>
-                        {{-- <p class="source-semibold">
-                            Monitoreo con semáforo de colores.</p> --}}
-                     </div>
-                 </li>
-                 <li class="source-semibold">
-                     <div class="row m-auto">
-                        <div class="check pr-2">
-                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                        </div>
-                         {{-- <p class="source-semibold">
-                             Visualización de inventario de llantas activas.</p> --}}
-                             <p class="source-semibold">
-                                Alertas vía EMAIL y en plataforma</p>
-                     </div>
-                 </li>
-                 {{-- <li class="source-semibold">
-                     <div class="row m-auto">
-                        <div class="check pr-2">
-                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                        </div>
-                         <p class="source-semibold">
-                             Visualización de pila de desecho de llantas.</p>
-                     </div>
-                 </li> --}}
-                 <li class="source-semibold">
-                     <div class="row m-auto">
-                        <div class="check pr-2">
-                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                        </div>
-                         <p class="source-semibold">
-                             Entre otras bondades</p>
                      </div>
                  </li>
                  <li>
@@ -229,10 +189,7 @@
  <section id="CTA" class="m-5">
      <div class="container text-center">
          <div class="pad-1">
-             <h3 class="source-bold">¿Ya cuenta con un sistema de control administrativo?</h3>
-             <p class="source-regular" style="color: gray;">Kananfleet ® se adapta a cualquier entorno, no importa si es un software de
-                 contabilidad, CRM o ERP. Nosotros creamos las integraciones necesarias.
-             </p>
+            <h3 class="source-bold mt-4 mb-2">Kananfleet® cuenta con una versión certificada para SAP e integrada al ERP SAP Business One</h3>
              <a href="/contacto" class="btn btn-primary">SOLICITAR DEMO</a> <br>
              <small class="source-light">Pónganse en contacto con nosotros</small>
          </div>

@@ -14,7 +14,7 @@
          <div class="cabecera-titular-3">
           <div class="source-regular centro  pt-4">
             <h1 class="source-bold text-center">KANANFLEET MOBILE</h1>
-            <p class="source-regular text-center" style="color: #000">El objetivo de Kananfleet Mobile® es que ahorre dinero al controlar los gastos de combustible para su vehículo; adicionalmente pone a su disposición la información almacenada, la cual le permitirá llevar una administración sana en su consumo de combustible.</p>
+            <p class="source-regular text-center" style="color: #000">Brinde a sus choferes, operadores y supervisores las herramientas para ha cer mejor su trabajo. Kananfleet Mobile es una aplicación incluida con el sistema Kananfleet, la cual puede trabajar on-line, off-line, y le permitirá:</p>
           </div>
          </div>
          <div class="row pt-5">
@@ -28,7 +28,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">Módulo compatible con plataforma KANANFLEET®.</p>
+                        <p class="source-semibold">Registrar recargas de combustible o despacho de<br> combustible (autoconsumo).</p>
                     </div>
                 </li>
                 <li class=" source-semibold">
@@ -36,7 +36,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">Registro de recarga de combustible en TIEMPO REAL.</p>
+                        <p class="source-semibold">Reportar incidencias sobre el vehículo/activo, e incidencias <br> sobre llantas/neumáticos.</p>
                     </div>
                 </li>
                 <li class=" source-semibold">
@@ -45,7 +45,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                         <p class="source-semibold">
-                            Registro de incidencias en TIEMPO REAL.</p>
+                            Solicitar órdenes de mantenimiento.</p>
                     </div>
                 </li>
                 <li class="source-semibold">
@@ -53,7 +53,8 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">PETICIÓN de orden de servicio de <br> mantenimiento (basada en una incidencia).</p>
+                        <p class="source-semibold">Ver los viajes asignados y actualizar el estatus <br> de cada uno de ellos (iniciar, pausar,
+                            finalizar, solicitar timbrado <br> de la carta porte).</p>
                     </div>
                 </li>
                 <li class="source-semibold">
@@ -61,7 +62,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">GESTIÓN DE VIAJES.</p>
+                        <p class="source-semibold">Registrar evidencia fotográfica y posición  georreferenciada <br> de cargas  de combustible, incidencias, siniestros,<br> paradas, viajes finalizados  y otros eventos.</p>
                     </div>
                 </li>
                 <li class="source-semibold">
@@ -69,7 +70,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">FIRMA DIGITAL al cierre de un viaje.</p>
+                        <p class="source-semibold">Consultar el estatus de una orden de mantenimiento.</p>
                     </div>
                 </li>
                 <li class="source-semibold">
@@ -85,53 +86,20 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">Obtención de GEOPOSICIÓN del dispositivo móvil <br> desde donde se esta registrando la información.</p>
+                        <p class="source-semibold">Obtener reportes de productividad, entre otras funcionalidades.</p>
                     </div>
                 </li>
-                <li class="source-semibold">
-                    <div class="row m-auto">
-                        <div class="check pr-2">
-                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                        </div>
-                        <p class="source-semibold">Registro de datos en modo OFF-LINE y ON-LINE.</p>
-                    </div>
-                </li>
-                <li class="source-semibold">
-                    <div class="row m-auto">
-                        <div class="check pr-2">
-                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                        </div>
-                        <p class="source-semibold">REPORTES informativos y estadísticos.</p>
-                    </div>
-                </li>
-                <li class="source-semibold">
-                    <div class="row m-auto">
-                        <div class="check pr-2">
-                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                        </div>
-                        <p class="source-semibold">Alertas mediante NOTIFICACIONES PUSH.</p>
-                    </div>
-                </li>
-                <li class="source-semibold">
-                    <div class="row m-auto">
-                        <div class="check pr-2">
-                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                        </div>
-                        <p class="source-semibold">Entre otras bondades.</p>
-                    </div>
-                </li>
-                <li>
                     <a href="https://play.google.com/store/apps/details?id=etecno.agg.kananfleet.mob&hl=es" class="btn btn-google source-bold" title="Google Play">
                         Google Play
                     </a>
-                    <small class="source-light">Descárguela aquí</small>
+                    <small class="source-light mt-3">Descárguela aquí</small>
                 </li>
             </div>
         </div>
       </div>
     </div>
  </header>
- <section>
+{{--  <section>
     <div class="container pt-4 pb-4 bord">
         <div class="row p-3">
             <div class="col-lg-6 col-md-12 col-sm-12 m-auto text-center">
@@ -143,21 +111,17 @@
                     Esta certificación nos ha permitido ofrecer a clientes de Business One en toda América Latina,
                     nuestro producto para así ofrecerles un valor agregado.
                 </p>
-                {{-- <a href="/sap" class="btn btn-primary mt-3">SOLICITAR DEMO</a> --}}
             </div>
             <!--Logotipo de clientes-->
         </div>
     </div>
-</section>
+</section> --}}
  
  <section id="CTA" class="m-5">
      <div class="container text-center">
          <div class="pad-1">
-             <h3 class="source-bold">¿Ya cuenta con un sistema de control administrativo?</h3>
-             <p class="source-regular" style="color: gray;">Kananfleet ® se adapta a cualquier entorno, no importa si es un software de
-                 contabilidad, CRM o ERP. Nosotros creamos las integraciones necesarias.
-             </p>
-             <a href="/contacto" class="btn btn-primary">SOLICITAR DEMO</a> <br>
+            <h3 class="source-bold mt-4 mb-3">Kananfleet® cuenta con una versión certificada para SAP e integrada al ERP SAP Business One</h3>
+            <a href="/contacto" class="btn btn-primary">SOLICITAR DEMO</a> <br>
              <small class="source-light">Pónganse en contacto con nosotros</small>
          </div>
      </div>

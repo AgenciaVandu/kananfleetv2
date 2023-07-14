@@ -11,7 +11,7 @@
     <section id="mapa-aliados" class="mapa-aliados">
         <div class="container text-center">
             <h2 class="source-bold text-center">Kananfleet® está presente en</h2>
-            <img src="/img/mapa-kanan.png" alt="Aliados Kananfleet" class="img-fluid">
+            <img src="/img/2023/mapa.png" alt="Aliados Kananfleet" class="img-fluid">
         </div>
     </section>
     <section id="aliados">

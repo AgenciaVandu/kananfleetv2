@@ -81,7 +81,7 @@
                         <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/soluciones">Soluciones</a>
+                        <a class="nav-link" href="/soluciones">Sectores</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -95,8 +95,8 @@
                             <a class="dropdown-item source-regular" href="/disponibilidad">Panel de Disponibilidad</a>
                             <a class="dropdown-item source-regular" href="/carta-porte">Complemento Carta porte</a>
                             <a class="dropdown-item source-regular" href="/combustible">Combustible</a>
-                            <a class="dropdown-item source-regular" href="/estadisticas">Estadísticas</a>
-                            <a class="dropdown-item source-regular" href="/kananfleet-mobile">Kananfleet Mobile®</a>
+                            <a class="dropdown-item source-regular" href="/estadisticas">Indicadores de Desempeño y Reportes</a>
+                            <a class="dropdown-item source-regular" href="/kananfleet-mobile">KANANFLEET® MOBILE para Android</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -124,7 +124,10 @@
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="https://www.facebook.com/kananfleet" target="blank_" style="color:gray; font-size: 1.3em">
-                        <i class="fab fa-facebook pr-3"></i>
+                        <i class="fab fa-facebook pr-2"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kananfleet" target="blank_" style="color:gray; font-size: 1.3em">
+                        <i class="fab fa-instagram pr-3"></i>
                     </a>
                     <a href="/contacto" class="btn btn-secondary btn-sm source-semibold">SOLICITAR DEMO</a>
                 </div>
@@ -332,7 +335,7 @@
     </script>
     <script>
         $(window).scroll(function() {
-            $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 40);
         })
     </script>
     <script src="/js/carrusel.js"></script>
