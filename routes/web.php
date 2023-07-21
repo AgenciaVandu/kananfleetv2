@@ -81,6 +81,10 @@ Route::get('/politica-de-privacidad', function() {
     return view('politica-de-privacidad');
 });
 
+Route::get('/hoja-de-inspeccion', function() {
+    return view('modulos.inspeccion');
+});
+
 
 /* Route::get('/login', function () {
     return view('terminal.login');

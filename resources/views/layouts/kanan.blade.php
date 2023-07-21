@@ -50,7 +50,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-kanan fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="/">
                 <img src="{{ asset('/img/logo-kanan-bco.svg') }}" width="120" alt="">
             </a>
