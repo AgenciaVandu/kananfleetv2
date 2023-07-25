@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
                 <a>
-                 <img src="/img/icons/saving.svg" width="50">
+                 <img src="/img/2023/iconos/transporte/transporte.svg" width="50">
                  <h5 class="source-bold pt-3">Transportistas</h5>
                   <p class="source-regular">
                     Empresas con vehículos propios de diferentes tamaños para transportar mercancía de terceros.
@@ -31,7 +31,7 @@
              </div>
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
                 <a>
-                    <img src="/img/icons/drop.svg" width="50">
+                    <img src="/img/2023/iconos/comercio/comercio.svg" width="50">
                 <h5  class="source-bold pt-3">Comercializadoras</h5>
                 <p class="source-regular">
                     Empresas que venden cualquier tipo de producto (Abarrotes, alimentos, lácteos, ropa, zapatos, ferretería, combustible, etc), y que, como parte del valor agregado a la venta de su producto, proveen el transporte hacia la bodega final del cliente.
@@ -59,7 +59,7 @@
             </div>
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
                 <a>
-                    <img src="/img/icons/truck.svg"  width="50">
+                    <img src="/img/2023/iconos/industria/industria.svg"  width="50">
                 <h5  class="source-bold pt-3">Rentadoras de Autos/Maquinaria</h5>
                 <p class="source-regular">
                     Empresas con vehículos propios de diferentes tamaños para dar en renta por un periodo de tiempo.
@@ -73,7 +73,7 @@
             </div>
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
                 <a>
-                    <img src="/img/icons/chofer.svg" width="50">
+                    <img src="/img/2023/iconos/agro/agro.svg" width="50">
                 <h5  class="source-bold pt-3">Agropecuario</h5>
                 <p class="source-regular">
                     Empresas con diversos activos que utilizan para la producción, venta y/o distribución de productos agrícolas o ganaderos.
@@ -88,7 +88,7 @@
 
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
                <a>
-                <img src="/img/icons/metrics.svg" width="50">
+                <img src="/img/2023/iconos/servicios/servicios.svg" width="50">
                 <h5 class="source-bold pt-3">Logística</h5>
                  <p class="source-regular">
                     Empresas con unidades propias y de terceros (rentadas), que proveen servicios de almacenaje, maniobras, transporte de mercancías y planeación logística.
