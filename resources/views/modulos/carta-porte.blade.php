@@ -13,14 +13,14 @@
                     VIAJES / COMPLEMENTO CARTA PORTE
                   </h2>
                   <p class="source-regular">
-                     Gestione cartas porte, liquidación de viaje y caja chica
+                    Conozca la disponibilidad de sus vehículos, activos y administre fácilmente su flotilla.
                   </p>
                   <a href="/contacto" class="btn btn-outline-light source-black">
                       SOLICITAR DEMO
                   </a>
               </div>
               <div class="col-lg-7 col-md-12 col-sm-12 imagen m-auto">
-                  <img src="/img/banners/3-cartaporte/1-banner.png" class="img-fluid" alt="">
+                  <img src="/img/2023/mockups/viajes/1.png" class="img-fluid" alt="">
               </div>
           </div>
          </div>
@@ -31,10 +31,11 @@
      <div class="container-fluid">
          <div class="row pt-5">
              <div class="col-lg-7 col-md-12 col-sm-12 orden text-center m-auto">
-                 <img src="/img/banners/3-cartaporte/2-tengaelcontrol.png" class="img-fluid" alt="">
+                 <img src="/img/2023/mockups/viajes/2.png" class="img-fluid" alt="">
              </div>
              <div class="col-lg-5 col-md-12 col-sm-12 right m-auto">
-                 <h4 class="source-bold pb-3">Obtenga el control de sus viajes operativos
+                 <h4 class="source-bold pb-3">Programe viajes a partir de documentos tipo ingreso o tipo traslado, conozca y actualice el
+                    estatus de cada viaje.
                      {{-- Tenga el control sobre la Carta Porte. --}}</h4>
                  <li class=" source-semibold">
                      <div class="row m-auto">
@@ -42,7 +43,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                         <p class="source-semibold">
-                            Módulo compatible con KANANFLEET MOBILE® (Android).
+                            Asigne vehículo/activo, chofer y ayudante, ruta, <br> puntos de interés.
                         </p>
                         {{--  <p class="source-semibold">
                              Genere cartas porte.</p> --}}
@@ -54,7 +55,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                         <p class="source-semibold">
-                            Genere su DOCUMENTO DE VIAJE (Carta Porte) <br> de manera dinámica.
+                            Programe fechas y horas de salida y llegada para cada <br> punto de interés.
                         </p>
                          {{-- <p class="source-semibold">
                              Liquide gastos por viajes generados.</p> --}}
@@ -66,7 +67,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                         <p class="source-semibold">
-                            Gestión de COMPLEMENTO CARTA PORTE <br> (Documento Tipo Ingreso).
+                            Registre la carga que lleva cada viaje, términos,  seguros, sellos, <br> o si es caja fría la temperatura, si es viaje nacional <br> o internacional, si va con carga vacía, etc.
                         </p>
                          {{-- <p class="source-semibold">
                              Gestione la caja chica del viaje.</p> --}}
@@ -78,7 +79,7 @@
                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                        </div>
                        <p class="source-semibold">
-                        Gestión de COMPLEMENTO CARTA PORTE <br> (Documento Tipo Traslado).
+                        Controle los costos/gastos asociados a cada viaje <br> (casetas, pernoctas, sueldos del chofer, comisiones, etc.), <br>configure vales,  asigne caja chica al chofer.
                        </p>
                     </div>
                 </li>
@@ -88,7 +89,7 @@
                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                        </div>
                        <p class="source-semibold">
-                        DOCUMENTO DE LIQUIDACIÓN sobre gastos de viaje.
+                        Genere el documento carta porte y complemento de carta porte.
                        </p>
                     </div>
                 </li>
@@ -98,47 +99,10 @@
                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                        </div>
                        <p class="source-semibold">
-                        Administración de TRANSFER.
+                        Genere fácilmente el reporte de liquidación <br> de cada viaje y conozca la utilidad.
                        </p>
                     </div>
                 </li>
-                <li class=" source-semibold">
-                    <div class="row m-auto">
-                       <div class="check pr-2">
-                           <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                       </div>
-                       <p class="source-semibold">
-                        IMPORTACIÓN de archivo CAPUFE sobre cruce de casetas.
-                       </p>
-                    </div>
-                </li>
-                <li class="source-semibold">
-                    <div class="row m-auto">
-                       <div class="check pr-2">
-                           <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                       </div>
-                        <p class="source-semibold">
-                            Configuración de VALES.</p>
-                    </div>
-                </li>
-                <li class="source-semibold">
-                    <div class="row m-auto">
-                       <div class="check pr-2">
-                           <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                       </div>
-                        <p class="source-semibold">
-                            SEMÁFORO DE COLORES para identificar ESTATUS DE VIAJE.</p>
-                    </div>
-                </li>
-                 <li class="source-semibold">
-                     <div class="row m-auto">
-                        <div class="check pr-2">
-                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                        </div>
-                         <p class="source-semibold">
-                             Entre otras bondades.</p>
-                     </div>
-                 </li>
                  <li>
                      <a href="/contacto" class="btn btn-primary">SOLICITAR DEMO</a>
                  </li>
@@ -191,10 +155,7 @@
  <section id="CTA" class="m-5">
      <div class="container text-center">
          <div class="pad-1">
-             <h3 class="source-bold">¿Ya cuenta con un sistema de control administrativo?</h3>
-             <p class="source-regular" style="color: gray;">Kananfleet ® se adapta a cualquier entorno, no importa si es un software de
-                 contabilidad, CRM o ERP. Nosotros creamos las integraciones necesarias.
-             </p>
+            <h3 class="source-bold mt-4 mb-2">Kananfleet® cuenta con una versión certificada para SAP e integrada al ERP SAP Business One</h3>
              <a href="/contacto" class="btn btn-primary">SOLICITAR DEMO</a> <br>
              <small class="source-light">Pónganse en contacto con nosotros</small>
          </div>

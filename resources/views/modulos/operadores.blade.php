@@ -10,18 +10,17 @@
           <div class="row centro">
               <div class="col-lg-5 col-md-12 col-sm-12 m-auto">
                   <h1 class="source-bold">
-                      OPERADORES
+                      OPERADORES / CHOFERES
                   </h2>
                   <p class="source-regular">
-                    Gestione de manera fácil la información de los
-                    operadores
+                    Gestione fácilmente a los operadores / choferes a cargo de sus vehículos.
                   </p>
                   <a href="/contacto" class="btn btn-outline-light source-black">
                       SOLICITAR DEMO
                   </a>
               </div>
               <div class="col-lg-7 col-md-12 col-sm-12 imagen m-auto">
-                  <img src="/img/banners/6-operadores/1-banner.png" class="img-fluid" alt="">
+                  <img src="/img/2023/mockups/operadores/1.png" class="img-fluid" alt="">
               </div>
           </div>
          </div>
@@ -32,27 +31,18 @@
      <div class="container-fluid">
          <div class="row pt-5">
              <div class="col-lg-7 col-md-12 col-sm-12 orden text-center">
-                 <img src="/img/banners/6-operadores/2-aumentelaproductividad.png" class="img-fluid" alt="">
+                 <img src="/img/2023/mockups/operadores/2.png" class="img-fluid" alt="">
              </div>
              <div class="col-lg-5 col-md-12 col-sm-12 right m-auto">
-                 <h4 class="source-bold pb-3">Aumente la productividad, entérese de las<br class="d-none d-sm-none d-md-none d-lg-block">
-                     actividades de su personal</h4>
+                 {{-- <h4 class="source-bold pb-3">Aumente la productividad, entérese de las<br class="d-none d-sm-none d-md-none d-lg-block">
+                     actividades de su personal</h4> --}}
                  <li class=" source-semibold">
                      <div class="row m-auto">
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                          <p class="source-semibold">
-                             Catálogo de operadores.</p>
-                     </div>
-                 </li>
-                 <li class=" source-semibold">
-                     <div class="row m-auto">
-                        <div class="check pr-2">
-                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                        </div>
-                         <p class="source-semibold">
-                             Alertas por vencimientos de licencias de manejo.</p>
+                            Base de datos con información <br> detallada de operadores/choferes.</p>
                      </div>
                  </li>
                  <li class=" source-semibold">
@@ -61,7 +51,16 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                          <p class="source-semibold">
-                             Registro de cursos / actividades del operador.</p>
+                            Control de licencias y vencimientos.</p>
+                     </div>
+                 </li>
+                 <li class=" source-semibold">
+                     <div class="row m-auto">
+                        <div class="check pr-2">
+                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
+                        </div>
+                         <p class="source-semibold">
+                            Registro de observaciones administrativas.</p>
                      </div>
                  </li>
                  <li class="source-semibold">
@@ -69,7 +68,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">Gestión de la documentación del operador.</p>
+                         <p class="source-semibold">Gestión de documentación por operador/chofer.</p>
                      </div>
                  </li>
                  <li class="source-semibold">
@@ -78,7 +77,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                          <p class="source-semibold">
-                             Asignación de vehículos.</p>
+                            Asignación y desasignación de vehículos / activos.</p>
                      </div>
                  </li>
                  <li class="source-semibold">
@@ -87,7 +86,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                          <p class="source-semibold">
-                             Programación de mensajes por email.</p>
+                            Historial de infracciones de tránsito, <br> vehículos/activos asignados.</p>
                      </div>
                  </li>
                  <li class="source-semibold">
@@ -96,7 +95,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                          <p class="source-semibold">
-                             Entre otras bondades.</p>
+                            Aplicación móvil para choferes/operadores.</p>
                      </div>
                  </li>
                  <li>
@@ -160,10 +159,7 @@
  <section id="CTA" class="m-5">
      <div class="container text-center">
          <div class="pad-1">
-             <h3 class="source-bold">¿Ya cuenta con un sistema de control administrativo?</h3>
-             <p class="source-regular" style="color: gray;">Kananfleet ® se adapta a cualquier entorno, no importa si es un software de
-                 contabilidad, CRM o ERP. Nosotros creamos las integraciones necesarias.
-             </p>
+            <h3 class="source-bold mt-4 mb-2">Kananfleet® cuenta con una versión certificada para SAP e integrada al ERP SAP Business One</h3>
              <a href="/contacto" class="btn btn-primary">SOLICITAR DEMO</a> <br>
              <small class="source-light">Pónganse en contacto con nosotros</small>
          </div>

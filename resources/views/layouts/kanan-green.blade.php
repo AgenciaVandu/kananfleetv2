@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>El Software para administración de activos respaldado por SAP — Kananfleet®</title>
+    <title>El software ideal para administrar y controlar tu flota vehícular, maquinaria pesada o de construcción.‹</title>
+    <meta name="description" content="Aumenta la rentabilidad de tu flota, reduce costos de mantenimiento, combustible, llantas, choferes, viajes.">
+    <meta name="keywords" content="software de administración certificado por SAP, administración de activos, control de flotillas, gestión de activos, flotillas, flotilla, vehículos, camiones, maquinaria, software, combustible, gasolina, transporte, mantenimiento, llantas, gomas, choferes, operadores, sap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
@@ -79,7 +81,7 @@
                         <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/soluciones">Soluciones</a>
+                        <a class="nav-link" href="/sectores">Sectores</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -88,13 +90,14 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item source-regular" href="/mantenimiento">Mantenimiento</a>
+                            <a class="dropdown-item source-regular" href="/hoja-de-inspeccion">Hoja de inspección <span class="badge badge-success">Nuevo</span> </a>
                             <a class="dropdown-item source-regular" href="/llantas">Llantas</a>
                             <a class="dropdown-item source-regular" href="/operadores">Operadores</a>
                             <a class="dropdown-item source-regular" href="/disponibilidad">Panel de Disponibilidad</a>
                             <a class="dropdown-item source-regular" href="/carta-porte">Complemento Carta porte</a>
                             <a class="dropdown-item source-regular" href="/combustible">Combustible</a>
-                            <a class="dropdown-item source-regular" href="/estadisticas">Estadísticas</a>
-                            <a class="dropdown-item source-regular" href="/kananfleet-mobile">Kananfleet Mobile®</a>
+                            <a class="dropdown-item source-regular" href="/estadisticas">Indicadores de Desempeño y Reportes</a>
+                            <a class="dropdown-item source-regular" href="/kananfleet-mobile">KANANFLEET® MOBILE para Android</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -122,7 +125,10 @@
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="https://www.facebook.com/kananfleet" target="blank_" style="color:gray; font-size: 1.3em">
-                        <i class="fab fa-facebook pr-3"></i>
+                        <i class="fab fa-facebook pr-2"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kananfleet" target="blank_" style="color:gray; font-size: 1.3em">
+                        <i class="fab fa-instagram pr-3"></i>
                     </a>
                     <a href="/contacto" class="btn btn-secondary btn-sm source-semibold">SOLICITAR DEMO</a>
                 </div>
@@ -330,7 +336,7 @@
     </script>
     <script>
         $(window).scroll(function() {
-            $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 40);
         })
     </script>
     <script src="/js/carrusel.js"></script>

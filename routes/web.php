@@ -32,7 +32,7 @@ Route::get('/empresa', [PageController::class,'empresas'])->name('empresa');
 Route::get('/sap', [PageController::class,'sap'])->name('sap');
 Route::post('/sendmail',[PageController::class,'sendmail'])->name('sendemail');
 
-Route::get('/soluciones', function () {
+Route::get('/sectores', function () {
     return view('soluciones');
 });
 
@@ -79,6 +79,10 @@ Route::get('/kananfleet-mobile', function () {
 
 Route::get('/politica-de-privacidad', function() {
     return view('politica-de-privacidad');
+});
+
+Route::get('/hoja-de-inspeccion', function() {
+    return view('modulos.inspeccion');
 });
 
 

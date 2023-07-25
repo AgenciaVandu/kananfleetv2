@@ -9,12 +9,12 @@
         </style>
     @endpush
     <section id="contact-page">
-        <div class="container">
-            <div class="mapa">
+        <div class="container" style="padding-top: 5em">
+            {{-- <div class="mapa">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1860.7463088893987!2d-89.78005230301599!3d21.132785234797836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567791c4d2d3b5%3A0x6f93f9dac2ae79bd!2sKananfleet!5e0!3m2!1ses-419!2smx!4v1640612399449!5m2!1ses-419!2smx"
                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+            </div> --}}
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -26,7 +26,7 @@
             @endif
             <div class="row pt-5 pb-5">
 
-                <div class="col-lg-6 col-md-12 col-sm-12 info-1">
+                <div class="col-lg-12 col-md-12 col-sm-12 info-1">
                     <form action="{{ route('sendemail') }}" method="POST">
                         @csrf
                         <div class="form-row">
@@ -64,7 +64,7 @@
                             <input type="text" class="form-control" id="inputCity" placeholder="México" name="city" value="{{ old('city') }}">
                         </div>
                         <div class="pt-1">
-                            <label class="source-bold" for="formGroupExampleInput">¿En qué plan está interesado?*</label>
+                            <label class="source-bold" for="formGroupExampleInput">¿En qué producto está interesado?*</label>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="option" id="option1"
                                     value="Kananfleet Web" checked>
@@ -95,7 +95,7 @@
                         <button type="submit" class="btn btn-primary mt-3">Enviar mensaje</button>
                     </form>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 info-2">
+               {{--  <div class="col-lg-6 col-md-12 col-sm-12 info-2">
                     <!--contacto-->
                     <h2 class="source-bold">
                         Gracias por su interés en Kananfleet
@@ -154,7 +154,7 @@
                     </li>
                     <li>
                     </li>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>

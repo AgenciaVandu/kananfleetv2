@@ -17,57 +17,87 @@
         <div class="row">
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
                 <a>
-                 <img src="/img/icons/saving.svg" width="50">
-                 <h5 class="source-bold pt-3">Mantenimiento y órdenes <br class="d-none d-sm-none d-md-none d-lg-block"> de servicio</h5>
+                 <img src="/img/2023/iconos/transporte/transporte.svg" width="50">
+                 <h5 class="source-bold pt-3">Transportistas</h5>
                   <p class="source-regular">
-                     Lleve una adecuada programación y seguimiento de sus mantenimientos correctivos, preventivos y predictivos; administre adecuadamente órdenes de servicio, refacciones, herramientas, mecánicos, talleres, y conozca fácilmente estatus de cada órden, tiempos, costos asociados y causas más frecuentes.
+                    Empresas con vehículos propios de diferentes tamaños para transportar mercancía de terceros.
                   </p>
+                  <div class="row">
+                    <div class="col-12">
+                        <img src="{{asset('img/2023/iconos/iconos-transporte.svg')}}" class="img-fluid" alt="">
+                    </div>
+                  </div>
                 </a>
              </div>
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
                 <a>
-                    <img src="/img/icons/drop.svg" width="50">
-                <h5  class="source-bold pt-3">Recargas y despacho<br class="d-none d-sm-none d-md-none d-lg-block"> de combustible</h5>
+                    <img src="/img/2023/iconos/comercio/comercio.svg" width="50">
+                <h5  class="source-bold pt-3">Comercializadoras</h5>
                 <p class="source-regular">
-                    Mantenga un adecuado control de recargas y despachos de combustible en cada una de sus unidades. Nuestros indicadores le ayudarán a conocer de forma más sencilla el rendimiento por unidad o por flota, la frecuencia de carga, el gasto por unidad o flota, y muchas cosas más.
+                    Empresas que venden cualquier tipo de producto (Abarrotes, alimentos, lácteos, ropa, zapatos, ferretería, combustible, etc), y que, como parte del valor agregado a la venta de su producto, proveen el transporte hacia la bodega final del cliente.
                 </p>
+                <div class="row">
+                    <div class="col-12">
+                        <img src="{{asset('img/2023/iconos/iconos-comercio.svg')}}" class="img-fluid" alt="">
+                    </div>
+                  </div>
                 </a>
             </div>
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
                 <a>
                     <img src="/img/icons/tire.svg" width="50">
-                <h5  class="source-bold pt-3">Llantas, neumáticos <br class="d-none d-sm-none d-md-none d-lg-block">y baterías</h5>
+                <h5  class="source-bold pt-3">Constructoras</h5>
                 <p class="source-regular">
-                    Gestione adecuadamente el inventario de neumáticos, la ubicación por eje y por vehículo, su desgaste, su historial de desplazamientos, estado de vida del neumático, los costos asociados e información detallada de cada uno. De igual manera gestione las baterías asignadas a cada vehículo, así como su nivel de carga.
+                    Empresas con activos que pueden utilizar para sus propios proyectos para dar en renta a otras empresas de construcción.
                 </p>
+                {{-- <div class="row">
+                    <div class="col-12">
+                        <img src="{{asset('img/2023/iconos/iconos-servicios.svg')}}" class="img-fluid" alt="">
+                    </div>
+                </div> --}}
                 </a>
             </div>
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
                 <a>
-                    <img src="/img/icons/truck.svg"  width="50">
-                <h5  class="source-bold pt-3">Viajes, estatus de viaje y liquidaciones</h5>
+                    <img src="/img/2023/iconos/industria/industria.svg"  width="50">
+                <h5  class="source-bold pt-3">Rentadoras de Autos/Maquinaria</h5>
                 <p class="source-regular">
-                    Programe fácilmente cada uno de sus viajes y rutas en función a sus pedidos y clientes, conozca el estatus de cada uno de sus viajes, los costos asociados al mismo, y genere liquidaciones de viaje rápidamente. Genere automáticamente la carta de porte y su complemento para cumplir con lo requerido por el SAT (aplica para territorio Mexicano).
+                    Empresas con vehículos propios de diferentes tamaños para dar en renta por un periodo de tiempo.
                 </p>
+                <div class="row pt-4">
+                    <div class="col-12">
+                        <img src="{{asset('img/2023/iconos/iconos-industria.svg')}}" class="img-fluid" alt="">
+                    </div>
+                  </div>
                 </a>
             </div>
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
                 <a>
-                    <img src="/img/icons/chofer.svg" width="50">
-                <h5  class="source-bold pt-3">Choferes <br class="d-none d-sm-none d-md-none d-lg-block"> y operadores</h5>
+                    <img src="/img/2023/iconos/agro/agro.svg" width="50">
+                <h5  class="source-bold pt-3">Agropecuario</h5>
                 <p class="source-regular">
-                    Mantenga un expediente actualizado por chofer/operador, sus licencias, permisos, certificaciones, infracciones, vehículos que le han sido asignados, incidencias vehiculares, siniestros en los que se ha visto involucrado y en general el historial de su comportamiento.
+                    Empresas con diversos activos que utilizan para la producción, venta y/o distribución de productos agrícolas o ganaderos.
                 </p>
+                <div class="row pt-4">
+                    <div class="col-12">
+                        <img src="{{asset('img/2023/iconos/iconos-agro.svg')}}" class="img-fluid" alt="">
+                    </div>
+                  </div>
                 </a>
             </div>
 
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
                <a>
-                <img src="/img/icons/metrics.svg" width="50">
-                <h5 class="source-bold pt-3">Reportes e Indicadores de desempeño</h5>
+                <img src="/img/2023/iconos/servicios/servicios.svg" width="50">
+                <h5 class="source-bold pt-3">Logística</h5>
                  <p class="source-regular">
-                    Obtenga de manera rápida reportes y reportes programados de cada uno de los aspectos operativos de sus vehículos, activos o flota. De igual manera consulte indicadores de desempeño clave sobre el uso, desempeño y rentabilidad de cada unidad o de la flota.
+                    Empresas con unidades propias y de terceros (rentadas), que proveen servicios de almacenaje, maniobras, transporte de mercancías y planeación logística.
                  </p>
+                 <div class="row">
+                    <div class="col-12">
+                        <img src="{{asset('img/2023/iconos/iconos-servicios.svg')}}" class="img-fluid" alt="">
+                    </div>
+                  </div>
                </a>
             </div>
             <!--<div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
@@ -80,7 +110,7 @@
                 </a>
              </div>-->
 
-            <div class="col-lg-4 col-md-12 col-sm-12 text-center pad m-auto">
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center  mb-5">
                 <h2 class="source-bold">¿Quieres saber cómo funciona?</h4>
                 <a class="btn btn-primary" href="/contacto">SOLICITAR DEMO</a> <br>
                 <small class="source-light" style="color: gray;">Explore las soluciones que tenemos para usted.</small>
@@ -90,7 +120,7 @@
 </section>
 <section id="mapa-conceptual mt-5">
     <div class="container text-center pb-4">
-        <img src="/img/conceptual-kanan.jpg" class="img-fluid" alt="">
+        <img src="/img/2023/complementos/Collage-Soluciones.png" class="img-fluid" alt="">
     </div>
 </section>
 <section id="video" class="mt-5">
