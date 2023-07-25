@@ -19,7 +19,7 @@
          </div>
          <div class="row pt-5">
             <div class="col-lg-6 col-md-12 col-sm-12 text-center">
-                <img src="{{ asset('/img/banners/inicio/3-5-fueldata.png') }}" class="img-fluid" alt="">
+                <img src="{{ asset('/img/2023/mockups/k-mobile/1.png') }}" class="img-fluid" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
                 <h4 class="source-bold pb-3">Gestión simple en la palma de su mano</h4>

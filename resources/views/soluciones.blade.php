@@ -22,6 +22,11 @@
                   <p class="source-regular">
                     Empresas con vehículos propios de diferentes tamaños para transportar mercancía de terceros.
                   </p>
+                  <div class="row">
+                    <div class="col-12">
+                        <img src="{{asset('img/2023/iconos/iconos-transporte.svg')}}" class="img-fluid" alt="">
+                    </div>
+                  </div>
                 </a>
              </div>
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
@@ -31,6 +36,11 @@
                 <p class="source-regular">
                     Empresas que venden cualquier tipo de producto (Abarrotes, alimentos, lácteos, ropa, zapatos, ferretería, combustible, etc), y que, como parte del valor agregado a la venta de su producto, proveen el transporte hacia la bodega final del cliente.
                 </p>
+                <div class="row">
+                    <div class="col-12">
+                        <img src="{{asset('img/2023/iconos/iconos-comercio.svg')}}" class="img-fluid" alt="">
+                    </div>
+                  </div>
                 </a>
             </div>
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
@@ -40,6 +50,11 @@
                 <p class="source-regular">
                     Empresas con activos que pueden utilizar para sus propios proyectos para dar en renta a otras empresas de construcción.
                 </p>
+                {{-- <div class="row">
+                    <div class="col-12">
+                        <img src="{{asset('img/2023/iconos/iconos-servicios.svg')}}" class="img-fluid" alt="">
+                    </div>
+                </div> --}}
                 </a>
             </div>
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
@@ -49,6 +64,11 @@
                 <p class="source-regular">
                     Empresas con vehículos propios de diferentes tamaños para dar en renta por un periodo de tiempo.
                 </p>
+                <div class="row pt-4">
+                    <div class="col-12">
+                        <img src="{{asset('img/2023/iconos/iconos-industria.svg')}}" class="img-fluid" alt="">
+                    </div>
+                  </div>
                 </a>
             </div>
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
@@ -58,6 +78,11 @@
                 <p class="source-regular">
                     Empresas con diversos activos que utilizan para la producción, venta y/o distribución de productos agrícolas o ganaderos.
                 </p>
+                <div class="row pt-4">
+                    <div class="col-12">
+                        <img src="{{asset('img/2023/iconos/iconos-agro.svg')}}" class="img-fluid" alt="">
+                    </div>
+                  </div>
                 </a>
             </div>
 
@@ -68,6 +93,11 @@
                  <p class="source-regular">
                     Empresas con unidades propias y de terceros (rentadas), que proveen servicios de almacenaje, maniobras, transporte de mercancías y planeación logística.
                  </p>
+                 <div class="row">
+                    <div class="col-12">
+                        <img src="{{asset('img/2023/iconos/iconos-servicios.svg')}}" class="img-fluid" alt="">
+                    </div>
+                  </div>
                </a>
             </div>
             <!--<div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
@@ -90,7 +120,7 @@
 </section>
 <section id="mapa-conceptual mt-5">
     <div class="container text-center pb-4">
-        <img src="/img/conceptual-kanan.jpg" class="img-fluid" alt="">
+        <img src="/img/2023/complementos/Collage-Soluciones.png" class="img-fluid" alt="">
     </div>
 </section>
 <section id="video" class="mt-5">

@@ -20,7 +20,7 @@
                             </a>
                         </div>
                         <div class="col-lg-7 col-md-12 col-sm-12 m-auto">
-                            <img src="/img/banners/2-mantenimiento/1-banner.png" class="img-fluid" alt="">
+                            <img src="/img/2023//mockups/mantenimiento/1.png" class="img-fluid" alt="">
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
         <div class="container-fluid">
             <div class="row pt-5">
                 <div class="col-lg-7 col-md-12 col-sm-12 orden text-center m-auto">
-                    <img src="/img/banners/2-mantenimiento/2-organiceyprograme.png" class="img-fluid" alt="">
+                    <img src="/img/2023//mockups/mantenimiento/2.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-5 col-md-12 col-sm-12 right m-auto">
                     {{-- <h4 class="source-bold pb-3">Organice y programe<br class="d-none d-sm-none d-md-none d-lg-block">

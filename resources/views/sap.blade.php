@@ -45,16 +45,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="padding-top: 3em">
                     <div class="col-lg-7 col-md-12 col-sm-12">
-                        <img src="/img/rubros.png" alt="" class="img-fluid">
+                        <img src="{{asset('/img/2023/complementos/sap.png')}}" alt="" class="img-fluid">
                     </div>
                     <div class="col-lg-5 col-md-12 col-sm-12 m-auto">
                         <h2 class="source-black">
-                            Kananfleet es para usted sin importar la vertical de su empresa.
+                            Kananfleet es para usted sin importar a que se dedique su empresa.
                         </h2>
                         <p class="source-regular text-justify">
-                            El ADDON Kananfleet® para SAP Business ONE, es una solución que le ayuda a incorporar herramientas para Administrar y Gestionar sus Vehículos y Activos en general, ya sean tractocamiones, vehículos automotores, vehículos utilitarios, montacargas, grúas, cajas secas, dollys, plataformas, pipas, maquinaria, etc. Cambiar segunda imagen por diseño sectores.
+                            El ADDON Kananfleet® para SAP Business ONE, es una solución que le ayuda a incorporar herramientas para Administrar y Gestionar sus Vehículos y Activos en general, ya sean tractocamiones, vehículos automotores, vehículos utilitarios, montacargas, grúas, cajas secas, dollys, plataformas, pipas, <b>maquinaria</b>, etc.
                         </p>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                 <div class="row pt-5">
                     <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
                         <figure>
-                            <img src="{{ asset('./img/img-4.png') }}" class="img-fluid" alt="Picture Kananfleet">
+                            <img src="{{ asset('./img/2023/complementos/Collage-SAP.png') }}" class="img-fluid" alt="Picture Kananfleet">
                         </figure>
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
@@ -124,9 +124,7 @@
                                 <div class="check pr-2">
                                     <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                                 </div>
-                                <p class="source-semibold">Administrar la disponibilidad y<br
-                                        class="d-none d-sm-none d-md-none d-lg-block"> estatus de sus vehículos y 
-                                    mantenibles.</p>
+                                <p class="source-semibold">Visualizar la disponibilidad y estatus de <br> sus vehículos y mantenibles</p>
                             </div>
                         </li>
                         <li class=" source-semibold">
@@ -134,7 +132,7 @@
                                 <div class="check pr-2">
                                     <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                                 </div>
-                                <p class="source-semibold">Controlar las recargas y despacho de combustible.</p>
+                                <p class="source-semibold">Administrar el mantenimiento preventivo, <br> correctivo y órdenes de servicio.</p>
                             </div>
                         </li>
                         <li class=" source-semibold">
@@ -143,7 +141,7 @@
                                     <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                                 </div>
                                 <p class="source-semibold">
-                                    Gestionar la ubicación, desgaste e historial de llantas.</p>
+                                    Controlar las recargas y despacho de combustible.</p>
                             </div>
                         </li>
                         <li class="source-semibold">
@@ -151,7 +149,7 @@
                                 <div class="check pr-2">
                                     <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                                 </div>
-                                <p class="source-semibold">Organizar la asignación y conocer el historial<br>  de choferes y operadores.</p>
+                                <p class="source-semibold">Gestionar la ubicación, desgaste <br> e historial de llantas.</p>
                             </div>
                         </li>
                         <li class="source-semibold">
@@ -159,7 +157,16 @@
                                 <div class="check pr-2">
                                     <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                                 </div>
-                                <p class="source-semibold">Programar viajes y actualizar sus estatus,<br>  liquidaciones de viaje y carta porte.
+                                <p class="source-semibold">Organizar la asignación y conocer el  historial de choferes <br> y operadores.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="source-semibold">
+                            <div class="row m-auto">
+                                <div class="check pr-2">
+                                    <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
+                                </div>
+                                <p class="source-semibold">Programar viajes y actualizar sus estatus, liquidaciones <br> de viaje y carta porte.
                                 </p>
                             </div>
                         </li>

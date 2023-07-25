@@ -19,8 +19,8 @@
                       SOLICITAR DEMO
                   </a>
               </div>
-              <div class="col-lg-7 col-md-12 col-sm-12 imagen m-auto">
-                  <img src="/img/banners/7-disponibilidad/1-banner.png" class="img-fluid" alt="">
+              <div class="col-lg-7 col-md-12 col-sm-12 imagen m-auto" style="padding-top: 3.5em; padding-bottom:1em;">
+                  <img src="/img/2023/mockups/disponibilidad/panel-1.png" class="img-fluid" alt="">
               </div>
           </div>
          </div>
@@ -31,7 +31,7 @@
      <div class="container-fluid">
          <div class="row pt-5">
              <div class="col-lg-7 col-md-12 col-sm-12 orden text-center">
-                 <img src="/img/banners/7-disponibilidad/2-conozcalacantidad.png" class="img-fluid" alt="">
+                 <img src="/img/2023/mockups/disponibilidad/2.png" class="img-fluid" alt="">
              </div>
              <div class="col-lg-5 col-md-12 col-sm-12 right m-auto">
                  {{-- <h4 class="source-bold pb-3">Toda su información a un solo “CLICK”.</h4> --}}

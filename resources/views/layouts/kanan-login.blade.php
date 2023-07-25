@@ -45,7 +45,7 @@
                         <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/soluciones">Soluciones</a>
+                        <a class="nav-link" href="/sectores">Soluciones</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -53,14 +53,15 @@
                             Módulos
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/mantenimiento">Mantenimiento</a>
-                            <a class="dropdown-item" href="/llantas">Llantas</a>
-                            <a class="dropdown-item" href="/operadores">Operadores</a>
-                            <a class="dropdown-item" href="/disponibilidad">Disponibilidad</a>
-                            <a class="dropdown-item" href="/carta-porte">Carta porte</a>
-                            <a class="dropdown-item" href="/combustible">Combustible</a>
-                            <a class="dropdown-item" href="/estadisticas">Estadísticas</a>
-
+                            <a class="dropdown-item source-regular" href="/mantenimiento">Mantenimiento</a>
+                            <a class="dropdown-item source-regular" href="/hoja-de-inspeccion">Hoja de inspección <span class="badge badge-success">Nuevo</span> </a>
+                            <a class="dropdown-item source-regular" href="/llantas">Llantas</a>
+                            <a class="dropdown-item source-regular" href="/operadores">Operadores</a>
+                            <a class="dropdown-item source-regular" href="/disponibilidad">Panel de Disponibilidad</a>
+                            <a class="dropdown-item source-regular" href="/carta-porte">Complemento Carta porte</a>
+                            <a class="dropdown-item source-regular" href="/combustible">Combustible</a>
+                            <a class="dropdown-item source-regular" href="/estadisticas">Indicadores de Desempeño y Reportes</a>
+                            <a class="dropdown-item source-regular" href="/kananfleet-mobile">KANANFLEET® MOBILE para Android</a>
                         </div>
                     </li>
                     <li class="nav-item">

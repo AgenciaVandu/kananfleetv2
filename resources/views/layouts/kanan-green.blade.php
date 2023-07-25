@@ -81,7 +81,7 @@
                         <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/soluciones">Sectores</a>
+                        <a class="nav-link" href="/sectores">Sectores</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -90,6 +90,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item source-regular" href="/mantenimiento">Mantenimiento</a>
+                            <a class="dropdown-item source-regular" href="/hoja-de-inspeccion">Hoja de inspección <span class="badge badge-success">Nuevo</span> </a>
                             <a class="dropdown-item source-regular" href="/llantas">Llantas</a>
                             <a class="dropdown-item source-regular" href="/operadores">Operadores</a>
                             <a class="dropdown-item source-regular" href="/disponibilidad">Panel de Disponibilidad</a>

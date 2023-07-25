@@ -20,7 +20,7 @@
                   </a>
               </div>
               <div class="col-lg-7 col-md-12 col-sm-12 m-auto">
-                  <img src="/img/banners/5-llantas/1-banner.png" class="img-fluid" alt="">
+                  <img src="/img/2023/mockups/combustible/1.png" class="img-fluid" alt="">
               </div>
           </div>
          </div>
@@ -31,7 +31,7 @@
      <div class="container-fluid">
          <div class="row pt-5">
              <div class="col-lg-7 col-md-12 col-sm-12 orden text-center m-auto">
-                 <img src="/img/banners/5-llantas/2-gestionesusneumaticos.png" class="img-fluid" alt="">
+                 <img src="/img/2023/mockups/combustible/2.png" class="img-fluid" alt="">
              </div>
              <div class="col-lg-5 col-md-12 col-sm-12 right m-auto">
                  {{-- <h4 class="source-bold pb-3">Funciones que provee el módulo de combustible <br> <span class="source-regular" style="color: gray; font-size: .7em;">Este módulo permite registrar las cargas de combustible, generar cálculos de rendimiento y consumo, así como proveer reportes estadísticos.</span></h4> --}}
@@ -87,7 +87,7 @@
                             combustible, entre otros.</p>
                      </div>
                  </li>
-                 <li class="source-semibold">
+                {{--  <li class="source-semibold">
                      <div class="row m-auto">
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
@@ -122,7 +122,7 @@
                              Entre otras bondades.</p>
                      </div>
                  </li>
-                 <li>
+                 <li> --}}
                      <a href="/contacto" class="btn btn-primary">SOLICITAR DEMO</a>
                  </li>
              </div>
