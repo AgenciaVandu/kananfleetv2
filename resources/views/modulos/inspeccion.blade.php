@@ -42,7 +42,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">
+                         <p class="source-semibold" style="padding-top: 1px">
                             Registro digital de salidas y llegadas de sus vehículos.</p>
                      </div>
                  </li>
@@ -77,7 +77,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">
+                         <p class="source-semibold" style="padding-top: 1px">
                             Manejo de firmas digitales.</p>
                      </div>
                  </li>

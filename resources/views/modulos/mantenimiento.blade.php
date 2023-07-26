@@ -62,7 +62,7 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                             </div>
-                            <p class="source-semibold">
+                            <p class="source-semibold" style="padding-top: 1px">
                                 Registro de costos asociados y tiempos de cumplimiento.
                             </p>
                             {{--  <p class="source-semibold">
@@ -120,7 +120,7 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                             </div>
-                            <p class="source-semibold">
+                            <p class="source-semibold" style="padding-top: 1px">
                                 Reportes detallados.
                             </p>
                         </div>

@@ -85,7 +85,7 @@
                        <div class="check pr-2">
                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                        </div>
-                        <p class="source-semibold">
+                        <p class="source-semibold" style="padding-top: 1px">
                             Reportes programables por día, semana, mes.</p>
                     </div>
                 </li>
@@ -94,7 +94,7 @@
                        <div class="check pr-2">
                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                        </div>
-                        <p class="source-semibold">
+                        <p class="source-semibold" style="padding-top: 1px">
                             Reportes de servicios, combustible y llantas.</p>
                     </div>
                 </li>
@@ -103,7 +103,7 @@
                        <div class="check pr-2">
                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                        </div>
-                        <p class="source-semibold">
+                        <p class="source-semibold" style="padding-top: 1px">
                             Reportes de mantenibles y operadores.</p>
                     </div>
                 </li>

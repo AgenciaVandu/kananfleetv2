@@ -40,7 +40,7 @@
                        <div class="check pr-2">
                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                        </div>
-                       <p class="source-semibold">Rendimiento de combustible por vehículo/activo.</p>
+                       <p class="source-semibold" style="padding-top: 1px">Rendimiento de combustible por vehículo/activo.</p>
                     </div>
                 </li>
                 <li class=" source-semibold">
@@ -57,7 +57,7 @@
                        <div class="check pr-2">
                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                        </div>
-                       <p class="source-semibold">Registro MÓVIL/WEB de recargas de combustible.</p>
+                       <p class="source-semibold" style="padding-top: 1px">Registro MÓVIL/WEB de recargas de combustible.</p>
                     </div>
                 </li>
                  <li class=" source-semibold">

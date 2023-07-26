@@ -31,7 +31,7 @@
      <div class="container-fluid">
          <div class="row pt-5">
              <div class="col-lg-7 col-md-12 col-sm-12 orden text-center">
-                 <img src="/img/2023/mockups/operadores/2.png" class="img-fluid" alt="">
+                 <img src="/img/2023/mockups/operadores/2 style="padding-top: 1px".png" class="img-fluid" alt="">
              </div>
              <div class="col-lg-5 col-md-12 col-sm-12 right m-auto">
                  {{-- <h4 class="source-bold pb-3">Aumente la productividad, entérese de las<br class="d-none d-sm-none d-md-none d-lg-block">
@@ -50,7 +50,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">
+                         <p class="source-semibold" style="padding-top: 1px">
                             Control de licencias y vencimientos.</p>
                      </div>
                  </li>
@@ -59,7 +59,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">
+                         <p class="source-semibold" style="padding-top: 1px">
                             Registro de observaciones administrativas.</p>
                      </div>
                  </li>
@@ -68,7 +68,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">Gestión de documentación por operador/chofer.</p>
+                         <p class="source-semibold" style="padding-top: 1px">Gestión de documentación por operador/chofer.</p>
                      </div>
                  </li>
                  <li class="source-semibold">
@@ -76,7 +76,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">
+                         <p class="source-semibold" style="padding-top: 1px">
                             Asignación y desasignación de vehículos / activos.</p>
                      </div>
                  </li>
@@ -94,7 +94,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">
+                         <p class="source-semibold" style="padding-top: 1px">
                             Aplicación móvil para choferes/operadores.</p>
                      </div>
                  </li>

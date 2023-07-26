@@ -42,7 +42,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">Visualización gráfica de las llantas/neumáticos. <br>
+                         <p class="source-semibold" style="padding-top: 1px">Visualización gráfica de las llantas/neumáticos <br> asignados a los ejes del vehículo.  <br>
                          {{-- <p class="source-semibold">Visualización gráfica de llantas.</p> --}}
                      </div>
                  </li>
@@ -51,7 +51,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">Semáforo de colores en función al desgast <br> y estatus de cada llanta/neumático.</p>
+                        <p class="source-semibold">Semáforo de colores en función al desgaste y estatus <br> de cada llanta/neumático.</p>
                         {{-- <p class="source-semibold">Registro de presión y desgaste.</p> --}}
                      </div>
                  </li>
@@ -60,7 +60,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">
+                        <p class="source-semibold" style="padding-top: 1px">
                             Consulta y registro de información detallada de cada llanta/neumático.</p>
                          {{-- <p class="source-semibold">
                              Registro de incidencia de las llantas.</p> --}}
@@ -71,7 +71,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">Programación de alertas para cambios y/o renovación de neumáticos.</p> 
+                        <p class="source-semibold" style="padding-top: 1px">Programación de alertas para cambios y/o renovación de neumáticos.</p> 
                         {{-- <p class="source-semibold">Registro de cambio de llantas en las unidades.</p> --}}
                      </div>
                  </li>
@@ -91,7 +91,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">
+                        <p class="source-semibold" style="padding-top: 1px">
                             Clasificación de llantas/neumáticos por su estado y ciclo de vida.</p>
                          {{-- <p class="source-semibold">
                              Control de llantas de refacción en unidades.</p> --}}
@@ -102,7 +102,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">
+                        <p class="source-semibold" style="padding-top: 1px">
                             Registro de incidencias de neumáticos / llantas con fotografías.</p>
                          {{-- <p class="source-semibold">
                              Programación de alertas para cambio de llantas.</p> --}}
@@ -113,7 +113,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">
+                        <p class="source-semibold" style="padding-top: 1px">
                             Reportes de la inversión en llantas, ubicación, estatus, etc.</p>
                         {{-- <p class="source-semibold">
                             Parametrización del desgaste por llanta.</p> --}}
