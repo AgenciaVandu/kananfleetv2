@@ -236,7 +236,7 @@
                     <img src="{{ asset('/img/banners/inicio/3-5-fueldata.png') }}" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
-                    <h4 class="source-bold ">KANANLEET MOBILE</h4>
+                    <h4 class="source-bold ">KANANFLEET MOBILE</h4>
                     <p class="source-semibold">Brinde a sus choferes, operadores y supervisores las herramientas para hacer
                         mejor su trabajo. Kananfleet Mobile es una aplicación incluida con el sistema Kananfleet, la cual
                         puede trabajar on-line, off-line, y le permitirá:</p>
@@ -261,8 +261,8 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold">
-                                Solicitar órdenes de mantenimiento</p>
+                            <p class="source-semibold" style="padding-top: 1px">
+                                Solicitar órdenes de mantenimiento.</p>
                         </div>
                     </li>
                     <li class="source-semibold">
@@ -280,7 +280,7 @@
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
                             <p class="source-semibold">Registrar evidencia fotográfica y posición georreferenciada<br> de cargas de combustible,
-                                incidencias, siniestros, <br> paradas, viajes finalizados., otros eventos.</p>
+                                incidencias, siniestros, <br> paradas, viajes finalizados, otros eventos.</p>
                         </div>
                     </li>
                     <li class="source-semibold">
@@ -288,7 +288,7 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold">Consultar el estatus de una orden de mantenimiento</p>
+                            <p class="source-semibold" style="padding-top: 1px">Consultar el estatus de una orden de mantenimiento.</p>
                         </div>
                     </li>
                     <li class="source-semibold">
@@ -296,7 +296,7 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold">Obtener reportes de productividad, entre otras funcionalidades.</p>
+                            <p class="source-semibold" style="padding-top: 1px">Obtener reportes de productividad, entre otras funcionalidades.</p>
                         </div>
                     </li>
                     {{-- <li class="source-semibold">
@@ -333,7 +333,7 @@
     </section>
     <section id="reel-aliados" class="mb-4">
         <div class="container text-center">
-            <h2 class="source-bold pt-3 pb-4">Nuestros Aliados</h2>
+            <h2 class="source-bold pt-3 pb-4">Nuestros clientes</h2>
             <div>
                 <div class="glider-contain">
                     <div class="glider">

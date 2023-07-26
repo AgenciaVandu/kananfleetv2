@@ -11,7 +11,7 @@
     <div class="container">
         <div class="text-center">
             <h4 class="source-bold pt-5 pb-3">
-                Sin importar el giro de su negocio, Kananfleet® le ayudará a <br class="d-none d-sm-none d-md-none d-lg-block"> controlar aspectos clave de su operación
+                Sin importar a que se dedique su empresa, Kananfleet® le ayudará a <br class="d-none d-sm-none d-md-none d-lg-block"> controlar aspectos clave de su operación
             </h4>
         </div>
         <div class="row">

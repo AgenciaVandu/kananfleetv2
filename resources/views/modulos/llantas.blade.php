@@ -42,7 +42,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">Visualización gráfica de las llantas/neumáticos <br>
+                         <p class="source-semibold">Visualización gráfica de las llantas/neumáticos. <br>
                          {{-- <p class="source-semibold">Visualización gráfica de llantas.</p> --}}
                      </div>
                  </li>
@@ -61,7 +61,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                         <p class="source-semibold">
-                            Consulta y registro de información detallada de cada llanta/neumático</p>
+                            Consulta y registro de información detallada de cada llanta/neumático.</p>
                          {{-- <p class="source-semibold">
                              Registro de incidencia de las llantas.</p> --}}
                      </div>
@@ -81,7 +81,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                         <p class="source-semibold">
-                            Configuración del desgaste de cada llanta/neumático <br> (por milimetraje, por porcentaje)</p>
+                            Configuración del desgaste de cada llanta/neumático <br> (por milimetraje, por porcentaje).</p>
                         {{-- <p class="source-semibold">
                              Chasis virtual para la asignación de llantas.</p> --}}
                      </div>
@@ -103,7 +103,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                         <p class="source-semibold">
-                            Registro de incidencias de neumáticos / llantas con fotografías</p>
+                            Registro de incidencias de neumáticos / llantas con fotografías.</p>
                          {{-- <p class="source-semibold">
                              Programación de alertas para cambio de llantas.</p> --}}
                      </div>

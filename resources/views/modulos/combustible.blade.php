@@ -40,7 +40,7 @@
                        <div class="check pr-2">
                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                        </div>
-                       <p class="source-semibold">Rendimiento de combustible por vehículo/activo</p>
+                       <p class="source-semibold">Rendimiento de combustible por vehículo/activo.</p>
                     </div>
                 </li>
                 <li class=" source-semibold">

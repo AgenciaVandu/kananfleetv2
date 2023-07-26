@@ -52,7 +52,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                          <p class="source-semibold">
-                            Verificación digital de llantas / neumáticos <br> asignados al vehículo</p>
+                            Verificación digital de llantas / neumáticos <br> asignados al vehículo.</p>
                      </div>
                  </li>
                  <li class=" source-semibold">
@@ -61,7 +61,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                          <p class="source-semibold">
-                            Verificación de puntos de control <br> (documentación, aditamentos, equipamiento, otros)</p>
+                            Verificación de puntos de control <br> (documentación, aditamentos, equipamiento, otros).</p>
                      </div>
                  </li>
                  <li class="source-semibold">
@@ -69,7 +69,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                         <p class="source-semibold">Verificación de chasis <br> (abolladuras, rayones, golpes)</p>
+                         <p class="source-semibold">Verificación de chasis <br> (abolladuras, rayones, golpes).</p>
                      </div>
                  </li>
                  <li class="source-semibold">
@@ -78,7 +78,7 @@
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                          <p class="source-semibold">
-                            Manejo de firmas digitales</p>
+                            Manejo de firmas digitales.</p>
                      </div>
                  </li>
                  <li>
