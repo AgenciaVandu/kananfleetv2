@@ -91,7 +91,7 @@
                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                        </div>
                        <p class="source-semibold">
-                        Habilite/deshabilite vehículos/activos <br> del panel de disponibilidad</p>
+                        Habilite/deshabilite vehículos/activos <br> del panel de disponibilidad.</p>
                     </div>
                 </li>
                  <li>

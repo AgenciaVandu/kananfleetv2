@@ -34,7 +34,7 @@
                  <img src="/img/2023/mockups/viajes/2.png" class="img-fluid" alt="">
              </div>
              <div class="col-lg-5 col-md-12 col-sm-12 right m-auto">
-                 <h4 class="source-bold pb-3">Programe viajes a partir de documentos tipo ingreso o tipo traslado, conozca y actualice el
+                 <h4 class="source-bold pb-3">Programe viajes a partir de  documentos<br> tipo ingreso o tipo traslado, conozca<br>  y actualice el
                     estatus de cada viaje.
                      {{-- Tenga el control sobre la Carta Porte. --}}</h4>
                  <li class=" source-semibold">
@@ -98,7 +98,7 @@
                        <div class="check pr-2">
                            <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                        </div>
-                       <p class="source-semibold">
+                       <p class="source-semibold" style="padding-top: 1px">
                         Genere fácilmente el reporte de liquidación <br> de cada viaje y conozca la utilidad.
                        </p>
                     </div>

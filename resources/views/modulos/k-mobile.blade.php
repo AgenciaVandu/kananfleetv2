@@ -44,7 +44,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">
+                        <p class="source-semibold" style="padding-top: 1px">
                             Solicitar órdenes de mantenimiento.</p>
                     </div>
                 </li>
@@ -70,7 +70,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">Consultar el estatus de una orden de mantenimiento.</p>
+                        <p class="source-semibold" style="padding-top: 1px">Consultar el estatus de una orden de mantenimiento.</p>
                     </div>
                 </li>
                 <li class="source-semibold">
@@ -86,7 +86,7 @@
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
-                        <p class="source-semibold">Obtener reportes de productividad, entre otras funcionalidades.</p>
+                        <p class="source-semibold" style="padding-top: 1px">Obtener reportes de productividad, entre otras funcionalidades.</p>
                     </div>
                 </li>
                     <a href="https://play.google.com/store/apps/details?id=etecno.agg.kananfleet.mob&hl=es" class="btn btn-google source-bold" title="Google Play">

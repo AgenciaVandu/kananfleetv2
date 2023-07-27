@@ -62,7 +62,7 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                             </div>
-                            <p class="source-semibold">
+                            <p class="source-semibold" style="padding-top: 1px">
                                 Registro de costos asociados y tiempos de cumplimiento.
                             </p>
                             {{--  <p class="source-semibold">
@@ -87,7 +87,7 @@
                             </div>
                             <p class="source-semibold">
                                 Consulta de estatus de órdenes de trabajo<br class="d-none d-sm-none d-md-block d-lg-block"> (programadas, en proceso, con retraso,
-                                finalizas, otros)</p>
+                                finalizas, otros).</p>
                                 {{-- <p class="source-semibold">
                                 Panel de disponibilidad según estatus.</p> --}}
                         </div>
@@ -120,7 +120,7 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                             </div>
-                            <p class="source-semibold">
+                            <p class="source-semibold" style="padding-top: 1px">
                                 Reportes detallados.
                             </p>
                         </div>
@@ -133,19 +133,18 @@
             </div>
         </div>
     </section>
-    <section id="hightlights-1">
+   {{--  <section id="hightlights-1">
         <div class="container-fluid pt-5">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 left m-auto">
                     <h4 class="source-bold pb-3">REGISTRO DIGITAL <br> (hoja inspección / hoja recepción de taller)
-                        {{-- <br> <span class="source-regular" style="color: gray; font-size: .7em;">En el módulo de mantenimiento es posible generar reportes de todo tipo, así como la información de mayor importancia para la toma de decisiones.</span> --}}</h4>
                     <li class=" source-semibold">
                         <div class="row m-auto">
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                             </div>
                             <p class="source-semibold">HOJA DE INSPECCIÓN para <br> documentar salidas y llegadas</p>
-                            {{-- <p class="source-semibold">Registro de mantenimiento y sus costos.</p> --}}
+                          
                         </div>
                     </li>
                     <li class=" source-semibold">
@@ -153,7 +152,6 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                             </div>
-                            {{-- <p class="source-semibold">Reporte de costos por tipo de mantenimiento.</p> --}}
                             <p class="source-semibold">HOJA DE RECEPCIÓN / ENTREGA de taller.</p>
                         </div>
                     </li>
@@ -164,8 +162,7 @@
                             </div>
                             <p class="source-semibold">
                                 CHECKLIST parametrizable.</p>
-                            {{--  <p class="source-semibold">
-                                Reporte de historial de mantenimiento.</p> --}}
+                           
                         </div>
                     </li>
                     <li class=" source-semibold">
@@ -175,7 +172,6 @@
                             </div>
                             <p class="source-semibold">
                                 Registro y/o marcación de daños en CHASIS DIGITAL</p>
-                            {{-- <p class="source-semibold"> Reporte de próximos servicios a vencer.</p> --}}
                         </div>
                     </li>
                     <li class=" source-semibold">
@@ -233,15 +229,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section id="CTA" class="m-5">
         <div class="container text-center">
             <div class="pad-1">
                 <h3 class="source-bold mt-4 mb-2">Kananfleet® cuenta con una versión certificada para SAP e integrada al ERP SAP Business One</h3>
-                {{-- <p class="source-regular" style="color: gray;">Kananfleet ® se adapta a cualquier entorno, no importa si
-                    es un software de
-                    contabilidad, CRM o ERP. Nosotros creamos las integraciones necesarias.
-                </p> --}}
+               
                 <a href="/contacto" class="btn btn-primary">SOLICITAR DEMO</a> <br>
                 <small class="source-light">Pónganse en contacto con nosotros</small>
             </div>

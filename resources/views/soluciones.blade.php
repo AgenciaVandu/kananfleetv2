@@ -11,7 +11,7 @@
     <div class="container">
         <div class="text-center">
             <h4 class="source-bold pt-5 pb-3">
-                Sin importar el giro de su negocio, Kananfleet® le ayudará a <br class="d-none d-sm-none d-md-none d-lg-block"> controlar aspectos clave de su operación
+                Sin importar a que se dedique su empresa, Kananfleet® le ayudará a <br class="d-none d-sm-none d-md-none d-lg-block"> controlar aspectos clave de su operación
             </h4>
         </div>
         <div class="row">
@@ -43,20 +43,16 @@
                   </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
+          {{--   <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
                 <a>
                     <img src="/img/icons/tire.svg" width="50">
                 <h5  class="source-bold pt-3">Constructoras</h5>
                 <p class="source-regular">
                     Empresas con activos que pueden utilizar para sus propios proyectos para dar en renta a otras empresas de construcción.
                 </p>
-                {{-- <div class="row">
-                    <div class="col-12">
-                        <img src="{{asset('img/2023/iconos/iconos-servicios.svg')}}" class="img-fluid" alt="">
-                    </div>
-                </div> --}}
+              
                 </a>
-            </div>
+            </div> --}}
             <div class="col-lg-4 col-md-12 soluciones col-sm-12 text-center pad">
                 <a>
                     <img src="/img/2023/iconos/industria/industria.svg"  width="50">
@@ -64,7 +60,7 @@
                 <p class="source-regular">
                     Empresas con vehículos propios de diferentes tamaños para dar en renta por un periodo de tiempo.
                 </p>
-                <div class="row pt-4">
+                <div class="row ">
                     <div class="col-12">
                         <img src="{{asset('img/2023/iconos/iconos-industria.svg')}}" class="img-fluid" alt="">
                     </div>
@@ -110,7 +106,7 @@
                 </a>
              </div>-->
 
-            <div class="col-lg-12 col-md-12 col-sm-12 text-center  mb-5">
+            <div class="col-lg-4 col-md-12 col-sm-12 text-center  m-auto">
                 <h2 class="source-bold">¿Quieres saber cómo funciona?</h4>
                 <a class="btn btn-primary" href="/contacto">SOLICITAR DEMO</a> <br>
                 <small class="source-light" style="color: gray;">Explore las soluciones que tenemos para usted.</small>
@@ -118,7 +114,7 @@
         </div>
     </div>
 </section>
-<section id="mapa-conceptual mt-5">
+<section id="mapa-conceptual " style="padding-top: 6em">
     <div class="container text-center pb-4">
         <img src="/img/2023/complementos/Collage-Soluciones.png" class="img-fluid" alt="">
     </div>
