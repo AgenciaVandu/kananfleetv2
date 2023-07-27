@@ -235,16 +235,16 @@
                 <div class="col-lg-3 col-sm-6 col-sm-12">
                     <h4 class="source-bold" style="color: #fff;">Contacto</h4>
                     <li class="source-semibold pt-3" style="color: #fff;">Dirección: <br>
+                        {{-- <span class="source-regular" style="color: gray; font-size: .8em;">
+                           <a href="https://www.google.com/maps?ll=21.133268,-89.779178&z=16&t=m&hl=es-419&gl=MX&mapclient=embed&cid=8040044477750868413" target="blank_" style="color: #0b71d8; text-decoration:none;"><b>Parque Científico y Tecnológico,</b></a> Centro Heuristic Km. 5.5 Carretera Sierra Papacal, Mérida Yucatán, México. CP. 97302 <img src="{{ asset('/img/Mexico.png') }}" class="img-fluid"
+                                alt="Bandera de México">
+                        </span> <br> --}}
                         <span class="source-regular" style="color: gray; font-size: .8em;">
-                            <a href="https://www.google.com/maps?ll=21.133268,-89.779178&z=16&t=m&hl=es-419&gl=MX&mapclient=embed&cid=8040044477750868413" target="blank_" style="color: #0b71d8; text-decoration:none;"><b>Parque Científico y Tecnológico,</b></a> Centro Heuristic Km. 5.5 Carretera Sierra Papacal, Mérida Yucatán, México. CP. 97302 <img src="{{ asset('/img/Mexico.png') }}" class="img-fluid"
-                                 alt="Bandera de México">
-                         </span> <br>
-                         <span class="source-regular" style="color: gray; font-size: .8em;">
-                            <a href="https://www.google.com/maps/place/90%C2%B0+Altabrisa+Business+Center/@21.0221212,-89.5854261,15z/data=!4m5!3m4!1s0x0:0x314e396c017a9360!8m2!3d21.0221275!4d-89.5854329" target="blank_" style="color: #0b71d8; text-decoration:none;"><b>Business Center</b></a> Calle 17 # 474 por 20 y 22, Fraccionamiento Altabrisa, 97130 Mérida, Yuc. <img src="{{ asset('/img/Mexico.png') }}" class="img-fluid"
-                                 alt="Bandera de México">
-                         </span>
+                           <a href="https://www.google.com/maps/place/90%C2%B0+Altabrisa+Business+Center/@21.0221212,-89.5854261,15z/data=!4m5!3m4!1s0x0:0x314e396c017a9360!8m2!3d21.0221275!4d-89.5854329" target="blank_" style="color: #0b71d8; text-decoration:none;"><b>90 Grados Altabrisa Business Center </b></a><br> Calle 17 #474 x 20 y 22, Fraccionamiento Altabrisa, 97130 Mérida, Yucatán. <img src="{{ asset('/img/Mexico.png') }}" class="img-fluid"
+                                alt="Bandera de México">
+                        </span>
                     </li>
-                    <li class="source-semibold" style="color: #fff;">Teléfono: <br>
+                    <li class="source-semibold" style="color: #fff;">Teléfonos: <br>
                         <span class="source-regular" style="color: gray; font-size: .8em;">Oficina:
                             <a href="tel:529999306745" style="color: gray;">+52 999 930 6745</a>
                         </span> <br>
@@ -260,11 +260,6 @@
                         </span>
                     </li>
                     <li class="source-semibold m-auto" style="color: #fff;">Síguenos: <br>
-                        <span class="source-regular pr-3" style="color: gray; font-size: 1.3em;">
-                            <a href="#" style="color: #fff; text-decoration: none;">
-                                <span class="icon-facebook"></span>
-                            </a>
-                        </span>
                         <span class="source-regular pt-3" style="color: gray; font-size: 1.3em;">
                             <a href="https://www.facebook.com/Kananfleet" target="blank_"
                                 style="color: #fff; text-decoration: none;">
@@ -272,8 +267,13 @@
                             </a>
                             <a href="https://www.linkedin.com/showcase/kananfleet/" target="blank_"
                                 style="color: #fff; text-decoration: none;">
-                                <i class="fab fa-linkedin"></i>
+                                <i class="fab fa-linkedin pr-3"></i>
                             </a>
+                            <a href="https://www.instagram.com/kananfleet" target="blank_"
+                            style="color: #fff; text-decoration: none;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                            
                         </span>
                     </li>
                 </div>
