@@ -13,7 +13,7 @@
                      Combustible
                   </h2>
                   <p class="source-regular">
-                    Administre eficientemente el consumo de combustible
+                    Administre eficientemente el consumo de combustible.
                   </p>
                   <a href="/contacto" class="imagen btn btn-outline-light source-black">
                       SOLICITAR DEMO

@@ -13,7 +13,7 @@
                                 MANTENIMIENTO
                             </h1>
                             <p class="source-regular">
-                                Organice y programe los servicios de mantenimiento
+                                Organice y programe los servicios de mantenimiento.
                             </p>
                             <a href="/contacto" class="btn btn-outline-light source-black">
                                 SOLICITAR DEMO
@@ -87,7 +87,7 @@
                             </div>
                             <p class="source-semibold">
                                 Consulta de estatus de órdenes de trabajo<br class="d-none d-sm-none d-md-block d-lg-block"> (programadas, en proceso, con retraso,
-                                finalizas, otros).</p>
+                                finalizada, otros).</p>
                                 {{-- <p class="source-semibold">
                                 Panel de disponibilidad según estatus.</p> --}}
                         </div>

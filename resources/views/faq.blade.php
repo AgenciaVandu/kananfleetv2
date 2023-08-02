@@ -63,15 +63,15 @@
                                     </p>
                                     <ul>
                                         <li class="source-regular">Falta de visibilidad de la disponibilidad de mis
-                                            vehículos activos.</li>
-                                        <li class="source-regular">Falta de conocimiento de que unidades estánfuera de
-                                            servicio y porque razón.</li>
+                                            vehículos o activos.</li>
+                                        <li class="source-regular">Falta de conocimiento de que unidades están fuera de
+                                            servicio y porqué razón.</li>
                                         <li class="source-regular">Descontrol de los costos de operar cada unidad. </li>
                                         <li class="source-regular">Pérdida de dinero en combustible, llantas y
                                             mantenimientos. </li>
                                         <li class="source-regular">Falta de visibilidad de las unidades que están asignadas
                                             a viajes.</li>
-                                        <li class="source-regular">Descontrol de costos cada viaje.</li>
+                                        <li class="source-regular">Descontrol de costos de cada viaje.</li>
                                     </ul>
                                 </div>
 
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+             {{--    <div class="card">
                     <div class="card-header" id="headingThree1">
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left collapsed source-bold" style="color: #fff;"
@@ -139,7 +139,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="card">
                     <div class="card-header" id="headingFour">
                         <h2 class="mb-0">
@@ -177,11 +177,10 @@
                         <div class="card-body">
                             <p class="source-regular">
                                 Cualquiera que sea su giro y tipo de activo, requiere de una adecuada administración para no
-                                perder el control del costo asociado y mantener su rentabilidad. *Imagen actualizada con
-                                activos*
+                                perder el control del costo asociado y mantener su rentabilidad. 
                             </p>
                             <div class="text-center">
-                                <img src="/img/Imagen-5-activos.jpg" class="img-fluid">
+                                <img src="/img/2023/imagen-5-activos.png" class="img-fluid">
                             </div>
                         </div>
                     </div>

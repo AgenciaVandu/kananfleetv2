@@ -13,9 +13,7 @@
                     NEUMÁTICOS / LLANTAS
                   </h2>
                   <p class="source-regular">
-                     Obtenga el máximo aprovechamiento de
-                     sus neumáticos gestionando de manera gráfica
-                     sus posiciones
+                    Obtenga el máximo aprovechamiento de sus neumáticos / llantas.
                   </p>
                   <a href="/contacto" class="btn btn-outline-light source-black">
                       SOLICITAR DEMO
