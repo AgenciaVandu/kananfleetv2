@@ -22,7 +22,7 @@
                 <img src="{{ asset('/img/2023/mockups/k-mobile/1.png') }}" class="img-fluid" alt="">
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
-                <h4 class="source-bold pb-3">Gestión simple en la palma de su mano</h4>
+               {{--  <h4 class="source-bold pb-3">Gestión simple en la palma de su mano</h4> --}}
                 <li class=" source-semibold">
                     <div class="row m-auto">
                         <div class="check pr-2">
@@ -73,14 +73,14 @@
                         <p class="source-semibold" style="padding-top: 1px">Consultar el estatus de una orden de mantenimiento.</p>
                     </div>
                 </li>
-                <li class="source-semibold">
+               {{--  <li class="source-semibold">
                     <div class="row m-auto">
                         <div class="check pr-2">
                             <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                         </div>
                         <p class="source-semibold">Registro de FOTOGRAFÍAS (evidencia de incidencia, <br> de recarga combustible, gastos de viaje, etc.).</p>
                     </div>
-                </li>
+                </li> --}}
                 <li class="source-semibold">
                     <div class="row m-auto">
                         <div class="check pr-2">

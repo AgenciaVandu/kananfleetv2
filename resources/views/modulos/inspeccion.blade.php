@@ -14,7 +14,7 @@
                       CHECK LIST DIGITAL
                   </h2>
                   <p class="source-regular">
-                    Lleve un registro digital de la entrega y devolución de sus unidades
+                    Lleve un registro digital de la entrega y devolución de sus unidades.
                   </p>
                   <a href="/contacto" class="btn btn-outline-light source-black">
                       SOLICITAR DEMO

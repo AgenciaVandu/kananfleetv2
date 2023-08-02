@@ -95,7 +95,7 @@
                             <a class="dropdown-item source-regular" href="/llantas">Llantas</a>
                             <a class="dropdown-item source-regular" href="/operadores">Operadores</a>
                             <a class="dropdown-item source-regular" href="/disponibilidad">Panel de Disponibilidad</a>
-                            <a class="dropdown-item source-regular" href="/carta-porte">Complemento Carta porte</a>
+                            <a class="dropdown-item source-regular" href="/carta-porte">Viajes / Carta Porte</a>
                             <a class="dropdown-item source-regular" href="/combustible">Combustible</a>
                             <a class="dropdown-item source-regular" href="/estadisticas">Indicadores de Desempeño y Reportes</a>
                             <a class="dropdown-item source-regular" href="/kananfleet-mobile">KANANFLEET® MOBILE para Android</a>

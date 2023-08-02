@@ -33,8 +33,7 @@
                         </h1>
                         <p class="source-regular ">
                             Ayudamos a administrar y gestionar la flota vehicular o activos en general, mantener controlados
-                            los costos operativos y monitorear los indicadores de desempeño de la misma. Kananfleet cuenta
-                            con una versión certificada por SAP a nivel internacional e integrada al ERP SAP B1.
+                            los costos operativos y monitorear los indicadores de desempeño de la misma. El ADDON Kananfleet® cuenta con una versión certificada por SAP a nivel internacional e integrado al ERP SAP BUSINESS ONE (SAP B1).
                         </p>
                         <button class="btn btn-secondary btn-sm source-semibold" data-toggle="modal"
                             data-target="#lead-kananfleet">SOLICITAR DEMO</button> 
@@ -54,7 +53,7 @@
                             Kananfleet es para usted sin importar a que se dedique su empresa.
                         </h2>
                         <p class="source-regular text-justify">
-                            El ADDON Kananfleet® para SAP Business ONE, es una solución que le ayuda a incorporar herramientas para Administrar y Gestionar sus Vehículos y Activos en general, ya sean tractocamiones, vehículos automotores, vehículos utilitarios, montacargas, grúas, cajas secas, dollys, plataformas, pipas, <b>maquinaria</b>, etc.
+                            El ADDON Kananfleet® para SAP Business ONE, es una solución que le ayuda a incorporar herramientas para Administrar y Gestionar sus Vehículos y Activos en general, ya sean tractocamiones, vehículos automotores, vehículos utilitarios, montacargas, grúas, cajas secas, dollys, plataformas, pipas, maquinaria, etc.
                         </p>
                     </div>
                 </div>
