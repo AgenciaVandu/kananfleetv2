@@ -10,7 +10,7 @@
           <div class="row centro">
               <div class="col-lg-5 col-md-12 col-sm-12 m-auto">
                   <h1 class="source-bold">
-                    VIAJES / COMPLEMENTO CARTA PORTE
+                    VIAJES / CARTA PORTE
                   </h2>
                   <p class="source-regular">
                     Gestione eficientemente sus viajes, carta porte y liquidaciones.
