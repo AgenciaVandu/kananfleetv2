@@ -120,7 +120,7 @@
     <div class="bg-azul">
         <div class="container text-center">
             <h3 class="source-bold pb-4 pt-5">¿Por qué elegir Kananfleet® como su administrador de activos?</h4>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/v9Gu9VvFKEg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DFW70CaR2xk?si=H-tuR3FEjZcfygLe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p class="source-semibold pt-3" style="color: #fff;">
                 Comience a optimizar los recursos y gastos de su empresa, reduzca costos,<br class="d-none d-sm-none d-md-none d-lg-block"> aumente la productividad de su organización.
             </p>
