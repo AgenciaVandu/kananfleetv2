@@ -11,12 +11,16 @@
         @endif
 
         <div class="mb-2">
-            <x-jet-label value="Name" />
+            <x-jet-label value="Text" />
             <x-jet-input type="text" class="w-full" wire:model="name" />
         </div>
         <div class="mb-2">
             <x-jet-label value="Link" />
             <x-jet-input type="text" class="w-full" wire:model="link" />
+        </div>
+        <div class="mb-2">
+            <x-jet-label value="Text Button" />
+            <x-jet-input type="text" class="w-full" wire:model="text_button" />
         </div>
         <div
             class="relative h-40 rounded-lg border-dashed border-2 border-gray-200 bg-white flex justify-center items-center cursor-pointer">
@@ -79,13 +83,18 @@
 
                 </div>
                 <div>
-                    <x-jet-label value="Nombre" />
-                    <x-jet-input wire:model="editForm.name" type="text" placeholder="Nombre de aliado"
+                    <x-jet-label value="Text" />
+                    <x-jet-input wire:model="editForm.name" type="text" placeholder="Texto del banner"
                         class="w-full" />
                     <x-jet-input-error for="editForm.link" />
+
                     <x-jet-label value="Link" />
                     <x-jet-input wire:model="editForm.link" type="text" placeholder="link" class="w-full" />
                     <x-jet-input-error for="editForm.link" />
+
+                    <x-jet-label value="Text button" />
+                    <x-jet-input wire:model="editForm.text_button" type="text" placeholder="text button" class="w-full" />
+                    <x-jet-input-error for="editForm.text_button" />
                 </div>
                 <div>
                     <x-jet-label value="Imagen" />

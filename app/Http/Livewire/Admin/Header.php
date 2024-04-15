@@ -11,12 +11,13 @@ use Livewire\WithFileUploads;
 class Header extends Component
 {
     use WithFileUploads;
-    public $header,$file,$name,$open=false,$rand,$image,$link;
+    public $header,$file,$name,$open=false,$rand,$image,$link,$text_button;
     public $editImage;
     public $editForm = [
         'open' => false,
         'name' => null,
         'link' => null,
+        'text_button' => null,
         'url' => null,
     ];
 
@@ -30,10 +31,11 @@ class Header extends Component
         $this->header->images()->create([
             'url'=> $url,
             'name' => $this->name,
-            'link' => $this->link
+            'link' => $this->link,
+            'text_button' => $this->text_button
         ]);
 
-        $this->reset('name','file');
+        $this->reset('name','link','text_button','file');
         $this->header = Section::where('name','header')->where('page','index')->first();
     }
 
@@ -43,6 +45,7 @@ class Header extends Component
         $this->editForm['open'] = true;
         $this->editForm['name'] = $image->name;
         $this->editForm['link'] = $image->link;
+        $this->editForm['text_button'] = $image->text_button;
         $this->editForm['url'] = $image->url;
     }
 
