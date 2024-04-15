@@ -1,11 +1,11 @@
 @extends('layouts.kanan')
 @section('contenido')
-    @if ($header->image)
-        <a href="{{ $header->image->link }}">
+    @if ($headers->image)
+        {{-- <a href="{{ $header->image->link }}">
             <header id="b-index"
                 style="background-image: url({{ Storage::url($header->image->url) }}); background-repeat: no-repeat; background-position: center; background-size: cover;
                     min-height: 100vh;">
-                {{-- <div class="container">
+                <div class="container">
                 <div class="cabecera-titular">
                     <h1 class="source-bold">
                         Administre sus activos <br class="d-none d-sm-none d-md-none d-lg-block"> en un sólo lugar
@@ -14,9 +14,26 @@
                         SOLICITAR DEMO
                     </a>
                 </div>
-            </div> --}}
+            </div>
             </header>
-        </a>
+        </a> --}}
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                @foreach ($headers->images as $header)
+                    <div class="carousel-item {{ $loop->iteration == (1) ? 'active' : '' ; }}">
+                        <img src="{{ Storage::url($header->url) }}" class="d-block w-100" alt="...">
+                    </div>
+                @endforeach
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </button>
+        </div>
     @else
         <header id="b-index"
             style="background-image: url(/img/banners/1-index.png); background-repeat: no-repeat; background-position: center; background-size: cover;
@@ -245,7 +262,8 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold">Registrar recargas de combustible <br > o despacho de combustible (autoconsumo).</p>
+                            <p class="source-semibold">Registrar recargas de combustible <br> o despacho de combustible
+                                (autoconsumo).</p>
                         </div>
                     </li>
                     <li class=" source-semibold">
@@ -253,7 +271,8 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold">Reportar incidencias sobre el vehículo/activo, <br> e incidencias sobre llantas/neumáticos.</p>
+                            <p class="source-semibold">Reportar incidencias sobre el vehículo/activo, <br> e incidencias
+                                sobre llantas/neumáticos.</p>
                         </div>
                     </li>
                     <li class=" source-semibold">
@@ -270,8 +289,9 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold">Ver los viajes asignados y actualizar el estatus <br>   de cada uno de ellos (iniciar, pausar,
-                                finalizar,<br>  solicitar timbrado de la carta porte).</p>
+                            <p class="source-semibold">Ver los viajes asignados y actualizar el estatus <br> de cada uno de
+                                ellos (iniciar, pausar,
+                                finalizar,<br> solicitar timbrado de la carta porte).</p>
                         </div>
                     </li>
                     <li class="source-semibold">
@@ -279,7 +299,8 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold">Registrar evidencia fotográfica y posición georreferenciada<br> de cargas de combustible,
+                            <p class="source-semibold">Registrar evidencia fotográfica y posición georreferenciada<br> de
+                                cargas de combustible,
                                 incidencias, siniestros, <br> paradas, viajes finalizados, otros eventos.</p>
                         </div>
                     </li>
@@ -288,7 +309,8 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold" style="padding-top: 1px">Consultar el estatus de una orden de mantenimiento.</p>
+                            <p class="source-semibold" style="padding-top: 1px">Consultar el estatus de una orden de
+                                mantenimiento.</p>
                         </div>
                     </li>
                     <li class="source-semibold">
@@ -296,7 +318,8 @@
                             <div class="check pr-2">
                                 <img src="{{ asset('/img/icons/check.svg') }}" width="20" alt="">
                             </div>
-                            <p class="source-semibold" style="padding-top: 1px">Obtener reportes de productividad, entre otras funcionalidades.</p>
+                            <p class="source-semibold" style="padding-top: 1px">Obtener reportes de productividad, entre
+                                otras funcionalidades.</p>
                         </div>
                     </li>
                     {{-- <li class="source-semibold">
@@ -321,8 +344,9 @@
     <section id="CTA" class="m-5">
         <div class="container text-center">
             <div class="pad-1">
-                <h2 class="source-bold mt-4">Kananfleet® cuenta con una versión certificada para SAP e integrada al ERP SAP Business One</h2>
-               {{--  <p class="source-regular " style="color: gray;">Kananfleet ® se adapta a cualquier entorno, no importa si
+                <h2 class="source-bold mt-4">Kananfleet® cuenta con una versión certificada para SAP e integrada al ERP SAP
+                    Business One</h2>
+                {{--  <p class="source-regular " style="color: gray;">Kananfleet ® se adapta a cualquier entorno, no importa si
                     es un software de
                     contabilidad, CRM o ERP. Nosotros creamos las integraciones necesarias.
                 </p> --}}
