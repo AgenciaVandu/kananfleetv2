@@ -19,13 +19,11 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-                    @foreach ($headers->images as $header)
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                        </ol>
-                    @endforeach
+                    <ol class="carousel-indicators">
+                        @foreach ($headers->images as $header)
+                            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="{{ $loop->iteration == 1 ? 'active' : '' }}"></li>
+                        @endforeach
+                    </ol>
                     <div class="carousel-inner">
                         @foreach ($headers->images as $header)
                             <div class="carousel-item {{ $loop->iteration == 1 ? 'active' : '' }}">
