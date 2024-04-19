@@ -97,7 +97,7 @@ class TerminalController extends Controller
             // Create a PaymentIntent with amount and currency
             $paymentIntent = \Stripe\PaymentIntent::create([
                 'amount' => calculateOrderAmount($jsonObj->items),
-                'currency' => 'mxn',
+                'currency' => 'usd',
                 'automatic_payment_methods' => [
                     'enabled' => true,
                 ],
