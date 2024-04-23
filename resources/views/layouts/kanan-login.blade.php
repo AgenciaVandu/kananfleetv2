@@ -10,7 +10,7 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="stylesheet" href="{{ asset('css/fleet-style.css') }}">
-    
+
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -107,9 +107,9 @@
         })
     </script>
     <script src="/js/carrusel.js"></script>
+    @livewireScripts
     @stack('scripts')
 
-    @livewireScripts
 
     {{-- <script>
         // Set your publishable key: remember to change this to your live publishable key in production

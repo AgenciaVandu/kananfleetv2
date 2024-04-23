@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\Redirect;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class TerminalController extends Controller
@@ -25,66 +26,81 @@ class TerminalController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function index()
+    {
         /* $orders = Order::where('user_id',auth()->user()->id)->get(); */
         return view('terminal.dashboard');
     }
 
-    public function order(Order $order){
-        $this->authorize('show',$order);
-        $splits = $order->references->where('status',1);
-        return view('terminal.bill',compact('splits','order'));
+    public function order(Order $order)
+    {
+        $this->authorize('show', $order);
+        $splits = $order->references->where('status', 1);
+        return view('terminal.bill', compact('order', 'splits'));
     }
 
-    public function checkout(Request $request){
-
+    public function checkout(Request $request)
+    {
         $request->validate([
-            'splits'=> 'required'
+            'splits' => 'required'
         ]);
         $total = 0;
-        $description="";
-        $order= json_decode($request->order);
+        $description = "";
+        $order = json_decode($request->order);
         $splits = $request->splits;
         $references = [];
+        $currency = Reference::find($request->splits[0]);
+        $x = $currency->currency;
+
+        foreach ($request->splits as $split) {
+            $y = Reference::find($split);
+            $y = $y->currency;
+            if ($x != $y) {
+                return Redirect::back()->withErrors(['currency_error' => 'Los conceptos deben ser de la misma divisa para poder realizar la orden de pago']);
+            }
+        }
 
 
         foreach ($request->splits as $split) {
             $reference = Reference::find($split);
-            array_push($references,$reference);
-            $total = $reference->amount+$total;
+            array_push($references, $reference);
+            $total = $reference->amount + $total;
         }
 
         session([
             'description' => $order->contract,
-            'references'=> $references,
-            'total' => $total
+            'references' => $references,
+            'total' => $total,
+            'currency' => $currency->currency
         ]);
 
-        return view('terminal.checkout',compact('total','splits','references','order'));
+        return view('terminal.checkout', compact('total', 'splits', 'references', 'order','x'));
     }
 
-    public function payment(){
+    public function payment()
+    {
 
         // This is a public sample test API key.
         // Don’t submit any personally identifiable information in requests made with this key.
         // Sign in to see your own test API key embedded in code samples.
         \Stripe\Stripe::setApiKey(config('stripe.stripe_secret'));
 
-        function calculateOrderAmount(array $items): int {
-            $currency_base = Currency::find(1);
-            $conversion = Http::get("https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF60653/datos/".now()->format('Y-m-d')."/".now()->format('Y-m-d')."/?token=570f63e4e5caaa0a8848bcc07e31ba64774bfb9838a9940cba6b5003cb6bcfc8");//SF43784
+        function calculateOrderAmount(array $items): int
+        {
+            /* $currency_base = Currency::find(1);
+            $conversion = Http::get("https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF60653/datos/" . now()->format('Y-m-d') . "/" . now()->format('Y-m-d') . "/?token=570f63e4e5caaa0a8848bcc07e31ba64774bfb9838a9940cba6b5003cb6bcfc8"); //SF43784
             $conversion = json_decode($conversion);
             $valor = $currency_base->mxn;
             foreach ($conversion->bmx->series as $valor) {
-                foreach($valor->datos as $dato){
+                foreach ($valor->datos as $dato) {
                     $valor = $dato->dato;
                 }
             }
-
+ */
             // Replace this constant with a calculation of the order's amount
             // Calculate the order total on the server to prevent
             // people from directly manipulating the amount on the client
-            return (session()->get('total')*100)*$valor;
+            return (session()->get('total') * 100);
         }
 
         header('Content-Type: application/json');
@@ -97,7 +113,7 @@ class TerminalController extends Controller
             // Create a PaymentIntent with amount and currency
             $paymentIntent = \Stripe\PaymentIntent::create([
                 'amount' => calculateOrderAmount($jsonObj->items),
-                'currency' => 'usd',
+                'currency' => ''.session()->get('currency'),
                 'automatic_payment_methods' => [
                     'enabled' => true,
                 ],
@@ -169,7 +185,6 @@ class TerminalController extends Controller
 
             return redirect()->route('terminal.aproved');
         }
-
     }
 
 
