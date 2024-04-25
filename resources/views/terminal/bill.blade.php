@@ -24,7 +24,6 @@
             .btn-outline-dark:hover {
                 color: #fff;
             }
-
         </style>
     @endpush
     <header class="bill">
@@ -41,11 +40,11 @@
                             Empresa: <span class="source-regular">{{ auth()->user()->company_name }}</span>
                         </li>
                         <li class="source-semibold">
-                            Representante legal: <span class="source-regular">{{ auth()->user()->legal_representative_name  }}</span>
+                            Representante legal: <span
+                                class="source-regular">{{ auth()->user()->legal_representative_name }}</span>
                         </li>
                         <li class="source-semibold">
-                            TAX ID (RFC, RUC, RTN, NIT, etc.): <span
-                                class="source-regular">{{ auth()->user()->RFC }}</span>
+                            TAX ID (RFC, RUC, RTN, NIT, etc.): <span class="source-regular">{{ auth()->user()->RFC }}</span>
                         </li>
                         <li class="source-regular" style="color: green">
                             <img src="{{ asset('/img/circle-info-solid.svg') }}" class="mr-2" width="15">
@@ -54,14 +53,10 @@
                         </li>
                     </div>
                 </div>
-                {{-- <div class="col-6 text-right m-auto">
-                    <figure>
-                         <img src="{{asset('/img/logoetecno-3.png')}}" class="img-fluid" alt="">
-                    </figure>
-                 </div> --}}
             </div>
         </div>
     </header>
+    {{-- @livewire('table-split', ['order' => $order]) --}}
     <section id="info-bill">
         <div class="container-fluid">
             <div class="col-lg-12">
@@ -84,7 +79,7 @@
                                     <td class="source-regular text-center">
                                         ${{ $split->amount }} <br> <small class="source-regular"
                                             style="font-size: .65rem;">Importe en
-                                            USD</small>
+                                            <span class="text-uppercase">{{ $split->currency }}</span></small>
                                     </td>
                                     <td class="text-center">
                                         <div class="form-check">
@@ -102,8 +97,10 @@
             @error('splits')
                 <div class="alert alert-danger text-center">Seleccione una partida para continuar</div>
             @enderror
+            @error('currency_error')
+                <div class="alert alert-danger text-center">{{ $message }}</div>
+            @enderror
             <div class="boton-pagar">
-                {{-- <a href="{{ route('terminal.checkout', $reference) }}" class="btn btn-primary btn-block">Pagar conceptos</a> --}}
                 <input type="hidden" name="order" value="{{ $order }}">
                 <button type="submit" class="btn btn-primary btn-block">Pagar conceptos</button>
                 <div class="text-center mt-2">
@@ -114,98 +111,6 @@
         </div>
         </form>
     </section>
-    {{-- <section class="info-bill">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12" style="background-color: #fbfcfc">
-                    <h4 class="source-bold text-center pt-3 pb-2">
-                        Referencias pendientes
-                    </h4>
-                    <div class="bill-content p-2">
-                        @foreach ($references_pend as $reference)
-                            <div class="card mb-3">
-                                <!--Card de referencia pendiente-->
-                                <h5 class="source-semibold">
-                                    Referencia: <span class="source-light">{{ $reference->reference }}</span>
-                                    </h4>
-                                    <p class="source-regular" style="">
-                                        {{ $reference->description }}
-                                    </p>
-                                    <div class="total-card mb-2">
-                                        <li class="source-semibold">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    TOTAL:
-                                                </div>
-                                                <div class="col-6 text-right">
-                                                    ${{ number_format($reference->amount, 2) }} <span>USD</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </div>
-
-                                    <a href="{{ route('terminal.checkout', $reference) }}"
-                                        class="btn btn-primary source-semibold">Pagar referencia</a>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <h4 class="source-bold text-center pt-3 pb-2">
-                        Referencias pagadas
-                    </h4>
-                    <div class="bill-content p-2">
-                        <div class="bill-pagado">
-                            @foreach ($references_pay as $reference)
-                                <div class="card mb-3">
-                                    <!--Card de referencia pagada-->
-                                    <h5 class="source-semibold">
-                                        Referencia: <span class="source-light">{{ $reference->reference }}</span>
-                                        </h4>
-                                        <p class="source-regular" style="">
-                                            {{ $reference->description }}
-                                        </p>
-                                        <div class="total-card mb-2">
-                                            <li class="source-semibold">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        TOTAL:
-                                                    </div>
-                                                    <div class="col-6 text-right">
-                                                        ${{ number_format($reference->amount, 2) }} <span>USD</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12" style="background-color: #fbfcfc">
-                    <h4 class="source-bold text-center pt-3 pb-2">
-                        Descargar archivos
-                    </h4>
-                    <div class="bill-content p-2">
-                        @foreach ($references_pay as $reference)
-                            @if ($reference->document)
-                                <div class="card">
-                                    <h5 class="source-semibold">
-                                        Contrato de servicio
-                                    </h5>
-                                    <p class="source-regular" style="color: gray;">
-                                        {{ $reference->description }}
-                                    </p>
-                                    <a href="{{ Storage::url($reference->document->url) }}" target="_blank"
-                                        class="btn btn-outline-dark source-semibold">Descargar archivo</a>
-                                </div>
-                            @endif
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
     <secion>
         <div class="container">
             <p class="pt-4 source-regular text-center">Recuerde comprobar que todos los datos incluidos son correctos, en
@@ -220,8 +125,10 @@
             <div class="col m-auto text-center">
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <a href="" class="btn btn-outline-dark" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                this.closest('form').submit();">Cerrar sesión</a>
+                    <a href="" class="btn btn-outline-dark" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                                this.closest('form').submit();">Cerrar
+                        sesión</a>
                 </form>
             </div>
         </div>

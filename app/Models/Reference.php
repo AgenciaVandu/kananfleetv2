@@ -9,7 +9,7 @@ class Reference extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['reference','amount','description','user_id','status','id_openpay'];
+    protected $fillable = ['reference','amount','description','user_id','status','id_openpay','currency'];
     const PENDIENTE = 1, PAGADO = 2 , CANCELADA = 3;
 
     public function order(){

@@ -1,7 +1,3 @@
-@extends('layouts.kanan-login')
-<?php
-
-?>
 @push('css')
     <style>
         .bg-kanan {
@@ -184,7 +180,7 @@
         }
     </style>
 @endpush
-@section('contenido')
+<div>
     <div id="checkout-f" class="container mb-3">
         <div class="py-5 text-center">
             <h2 class="source-bold">Terminal de pago Virtual <br>
@@ -193,7 +189,8 @@
             <p class="source-regular">Recuerde comprobar que todos los datos incluidos son correctos, en caso contrario
                 comuniquese al
                 <span class="source-regular" style="color: gray;">
-                    <a href="https://api.whatsapp.com/send/?phone=5219992005672" style="color: gray;">+52 1 999 200 5672</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5219992005672" style="color: gray;">+52 1 999 200
+                        5672</a>
                 </span> <br> o por correo electrónico a <span class="source-regular" style="color: gray; ">
                     <a href="mailto:info@administraflotilla.com" style="color: gray;">info@administraflotilla.com</a>
                 </span> para solicitar ajustes.
@@ -246,8 +243,8 @@
                         </div>
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
-                        <span>Total <span class="text-uppercase">({{$x}})</span></span>
-                        <strong>${{ number_format($total,2) }}</strong>
+                        <span>Total (USD)</span>
+                        <strong>${{ number_format($total) }}</strong>
                     </li>
                 </ul>
             </div>
@@ -269,4 +266,4 @@
                 </form>
             </div>
         </div>
-    @endsection
+    </div>

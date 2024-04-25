@@ -106,7 +106,8 @@
                         <div class="space-y-4">
                             <div>
                                 <x-jet-label for="name" value="{{ __('Name') }}" />
-                                <x-jet-input id="name" class="block mt-1 w-full" type="text" wire:model="name" />
+                                <x-jet-input id="name" class="block mt-1 w-full" type="text"
+                                    wire:model="name" />
                                 <x-jet-input-error for="name" />
                             </div>
 
@@ -119,19 +120,22 @@
 
                             <div class="mt-4">
                                 <x-jet-label for="email" value="{{ __('Email') }}" />
-                                <x-jet-input id="email" class="block mt-1 w-full" type="email" wire:model="email" />
+                                <x-jet-input id="email" class="block mt-1 w-full" type="email"
+                                    wire:model="email" />
                                 <x-jet-input-error for="email" />
                             </div>
 
                             <div class="mt-4">
                                 <x-jet-label for="password" value="{{ __('Password') }}" />
                                 <div class="flex items-center ">
-                                    <x-jet-input id="password" class="block mt-1 w-full" type="{{ $showPass ? 'text' : 'password' ; }}"
-                                        wire:model="password" />
+                                    <x-jet-input id="password" class="block mt-1 w-full"
+                                        type="{{ $showPass ? 'text' : 'password' }}" wire:model="password" />
                                     @if ($showPass)
-                                        <i class="fas fa-eye-slash ml-2 cursor-pointer" wire:click="$set('showPass', false)"></i>
+                                        <i class="fas fa-eye-slash ml-2 cursor-pointer"
+                                            wire:click="$set('showPass', false)"></i>
                                     @else
-                                        <i class="fas fa-eye ml-2 cursor-pointer" wire:click="$set('showPass', true)"></i>
+                                        <i class="fas fa-eye ml-2 cursor-pointer"
+                                            wire:click="$set('showPass', true)"></i>
                                     @endif
                                 </div>
                                 <x-jet-input-error for="password" />
@@ -146,7 +150,8 @@
 
                             <div class="mt-4">
                                 <x-jet-label for="name" value="{{ __('RFC') }}" />
-                                <x-jet-input id="name" class="block mt-1 w-full" type="text" wire:model="RFC" />
+                                <x-jet-input id="name" class="block mt-1 w-full" type="text"
+                                    wire:model="RFC" />
                                 <x-jet-input-error for="RFC" />
                             </div>
 
@@ -264,7 +269,7 @@
                                                                     </div>
                                                                 </td>
                                                                 <td class="px-6 py-4 whitespace-nowrap text-center">
-                                                                    <div x-data="{open:false}"
+                                                                    <div x-data="{ open: false }"
                                                                         class="text-sm text-gray-900">
                                                                         {{ $order->references->count() }}
                                                                         <i class="fas fa-eye cursor-pointer hover:text-gray-400"
@@ -283,7 +288,8 @@
                                                                                         </p>
                                                                                     </div>
                                                                                     <div class="text-center border-2">
-                                                                                        USD
+                                                                                        <span
+                                                                                            class="uppercase">{{ $reference->currency }}</span>
                                                                                         {{ number_format($reference->amount, 2) }}
                                                                                     </div>
                                                                                     <div
@@ -294,8 +300,7 @@
                                                                                                     class="far fa-clock text-orange-300"></i>
                                                                                                 <a wire:click="editReference({{ $reference }})"
                                                                                                     class="text-indigo-600 hover:text-indigo-900 cursor-pointer mx-1">
-                                                                                                    <i
-                                                                                                        class="fas fa-pen"></i>
+                                                                                                    <i class="fas fa-pen"></i>
                                                                                                 </a>
                                                                                                 <i class="fas fa-trash cursor-pointer hover:text-red-600"
                                                                                                     wire:click="deleteReference({{ $reference }})"></i>
@@ -380,13 +385,66 @@
                                     <x-jet-label for="description" value="{{ __('Description') }}" />
                                     <x-jet-input id="description" class="block mt-1 w-full" type="text"
                                         wire:model="description" />
-                                    <x-jet-input-error for="reference" />
+                                    <x-jet-input-error for="description" />
+                                </div>
+                                <div>
+                                    <x-jet-label for="currency" value="{{ __('Currency') }}" />
+                                    <select wire:model="currency"
+                                        class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                                        {{-- Crear options con codigos ISO en minusculas de las siguientes monedas
+                                            Estados Unidos: Dólar Estadounidense
+                                            Guatemala: Quetzal
+                                            *no lo acepta stripe - El Salvador: Colon Salvadoreño
+                                            Honduras: Lempira
+                                            Nicaragua: Córdoba
+                                            Costa Rica: Colón
+                                            República Dominicana: Peso Dominicano
+                                            Perú: Sol Peruano
+                                            --}}
+                                        <option value="gtq">{{ __('Select a currency') }}</option>
+                                        <option value="usd">USD (Dólar Estadounidense)</option>
+                                        <option value="mxn">MXN (Peso Mexicano)</option>
+                                        <option value="gtq">GTQ (Quetzal Guatemala)</option>
+                                        <option value="hnl">HNL (Lempira Honduras)</option>
+                                        <option value="nio">NIO (Córdoba Nicaragua)</option>
+                                        <option value="crc">CRC (Colón Costa Rica)</option>
+                                        <option value="dop">DOP (Peso Dominicano)</option>
+                                        <option value="pen">PEN (Sol Peruano)</option>
+                                    </select>
+                                    <x-jet-input-error for="currency" />
                                 </div>
                                 <div>
                                     <x-jet-label for="amount" value="{{ __('Amount') }}" />
                                     <x-jet-input id="amount" class="block mt-1 w-full" type="number"
                                         wire:model="amount" />
                                     <x-jet-input-error for="amount" />
+                                </div>
+                                <div class="text-xs text-red-500">
+                                    Considerar montos minimos de  lo contrario la pasarela de pagos no funcionara
+                                    <p>
+                                        USD = $1 USD MIN
+                                    </p>
+                                    <p>
+                                        MXN = $10 MXN MIN
+                                    </p>
+                                    <p>
+                                        GTQ = $5 GTQ MIN
+                                    </p>
+                                    <p>
+                                        HNL = $15 HNL MIN
+                                    </p>
+                                    <p>
+                                        NIO = $22 NIO MIN
+                                    </p>
+                                    <p>
+                                        CRC = $293 CRC MIN
+                                    </p>
+                                    <p>
+                                        DOP = $35 DOP MIN
+                                    </p>
+                                    <p>
+                                        PEN = $3 PEN MIN
+                                    </p>
                                 </div>
                             </div>
                         </x-slot>
@@ -408,30 +466,69 @@
                                     <x-jet-input-error for="editReference.description" />
                                 </div>
                                 <div>
+                                    <x-jet-label for="currency" value="{{ __('Currency') }}" />
+                                    <select wire:model="editReference.currency"
+                                        class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                                        {{-- Crear options con codigos ISO en minusculas de las siguientes monedas
+                                            Estados Unidos: Dólar Estadounidense
+                                            Guatemala: Quetzal
+                                            *no lo acepta stripe - El Salvador: Colon Salvadoreño
+                                            Honduras: Lempira
+                                            Nicaragua: Córdoba
+                                            Costa Rica: Colón
+                                            República Dominicana: Peso Dominicano
+                                            Perú: Sol Peruano
+                                            --}}
+                                        <option value="">{{ __('Select a currency') }}</option>
+                                        <option value="usd">USD (Dólar Estadounidense)</option>
+                                        <option value="mxn">MXN (Peso Mexicano)</option>
+                                        <option value="gtq">GTQ (Quetzal Guatemala)</option>
+                                        <option value="hnl">HNL (Lempira Honduras)</option>
+                                        <option value="nio">NIO (Córdoba Nicaragua)</option>
+                                        <option value="crc">CRC (Colón Costa Rica)</option>
+                                        <option value="dop">DOP (Peso Dominicano)</option>
+                                        <option value="pen">PEN (Sol Peruano)</option>
+                                    </select>
+                                    <x-jet-input-error for="currency" />
+                                </div>
+                                <div>
                                     <x-jet-label for="amount" value="{{ __('Amount') }}" />
                                     <x-jet-input id="amount" class="block mt-1 w-full" type="number"
                                         wire:model="editReference.amount" />
                                     <x-jet-input-error for="editReference.amount" />
-                                </div>
-                                {{-- <div class="mt-4">
-                                    @if ($editReference['contract'])
-                                        <div class="flex items-center space-y-2 mb-4">
-                                            <div>
-                                                <i class="far fa-file-pdf text-3xl text-red-700"></i>
-                                            </div>
-                                            <div>
-                                                <a href="{{ Storage::url($editReference['contract']) }}"
-                                                    class="block text-lg ml-2 text-blue-600"
-                                                    target="_blank">Contrato</a>
-                                            </div>
+                                    @if (session()->has('currency_errors'))
+                                        <div class="alert alert-success">
+                                            {{ session('message') }}
                                         </div>
                                     @endif
-                                    <x-jet-label for="contract"
-                                        value="{{ __('Contract') }} ({{ __('Optional') }})" />
-                                    <x-jet-input id="contract" class="block mt-1 w-full" type="file"
-                                        wire:model="editContract" id="{{ $rand }}" />
-                                    <x-jet-input-error for="editReferencecontract" />
-                                </div> --}}
+                                </div>
+                                <div class="text-xs text-red-500">
+                                    Considerar montos minimos de  lo contrario la pasarela de pagos no funcionara
+                                    <p>
+                                        USD = $1 USD MIN
+                                    </p>
+                                    <p>
+                                        MXN = $10 MXN MIN
+                                    </p>
+                                    <p>
+                                        GTQ = $5 GTQ MIN
+                                    </p>
+                                    <p>
+                                        HNL = $15 HNL MIN
+                                    </p>
+                                    <p>
+                                        NIO = $22 NIO MIN
+                                    </p>
+                                    <p>
+                                        CRC = $293 CRC MIN
+                                    </p>
+                                    <p>
+                                        DOP = $35 DOP MIN
+                                    </p>
+                                    <p>
+                                        PEN = $3 PEN MIN
+                                    </p>
+                                </div>
                             </div>
                         </x-slot>
                         <x-slot name="footer">

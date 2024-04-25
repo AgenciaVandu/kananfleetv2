@@ -739,5 +739,7 @@
     "Add Split":"Agregar partida",
     "Config currencies":"Configuración de divisa",
     "RFC":"TAX ID (RFC, RUC, RTN, NIT ,ETC.)",
-    "Users":"Usuarios"
+    "Users":"Usuarios",
+    "Currency": "Divisa",
+    "Select a currency": "-Selecciona una divisa-"
 }

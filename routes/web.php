@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\TerminalController;
+use App\Http\Livewire\Chekout;
 use App\Mail\OrderShipped;
 use App\Models\Currency;
 use App\Models\Order;
@@ -91,10 +92,12 @@ Route::get('/hoja-de-inspeccion', function() {
 }); */
 Route::get('/orders',[TerminalController::class,'index'])->name('terminal.index');
 Route::get('/bill/{order}',[TerminalController::class,'order'])->name('terminal.order');
-Route::any('/checkout', [TerminalController::class,'checkout'])->name('terminal.checkout');
+Route::any('/checkout/', [TerminalController::class,'checkout'])->name('terminal.checkout');
 Route::any('/payment',[TerminalController::class,'payment'])->name('terminal.payment');
 Route::post('/updatePassword', [TerminalController::class, 'updatePassword'])->name('user.update.password');
 Route::get('checkout/directChargeOpenpay/responsepayment/', [TerminalController::class, 'validateChargeOpenPay']);
+
+Route::get('/test/{order}/{total}',Chekout::class)->name('test');
 
 Route::get('/gracias-por-tu-pago', function () {
     $r = $_GET['redirect_status'];
