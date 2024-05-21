@@ -1,7 +1,7 @@
 @extends('layouts.kanan')
 @section('contenido')
-@if ($headers->image)
-{{-- <a href="{{ $header->image->link }}">
+    @if ($headers->image)
+        {{-- <a href="{{ $header->image->link }}">
 <header id="b-index" style="background-image: url({{ Storage::url($header->image->url) }}); background-repeat: no-repeat; background-position: center; background-size: cover;
                     min-height: 100vh;">
     <div class="container">
@@ -16,12 +16,14 @@
     </div>
 </header>
 </a> --}}
+
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         @foreach ($headers->images as $header)
-                            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="{{ $loop->iteration == 1 ? 'active' : '' }}"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="0"
+                                class="{{ $loop->iteration == 1 ? 'active' : '' }}"></li>
                         @endforeach
                     </ol>
                     <div class="carousel-inner">
