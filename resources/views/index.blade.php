@@ -30,11 +30,13 @@
                         @foreach ($headers->images as $header)
                             <div class="carousel-item {{ $loop->iteration == 1 ? 'active' : '' }}">
                                 <img src="{{ Storage::url($header->url) }}" class="d-block w-100" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>{{ $header->name }}</h5>
-                                    <a href="{{ $header->link }}" class="btn btn-outline-light source-black">
-                                        {{ $header->text_button }}
-                                    </a>
+                                <div class="carousel-caption">
+                                    <div class="contenido">
+                                        <h5>{{ $header->name }}</h5>
+                                        <a href="{{ $header->link }}" class="btn btn-outline-light source-black">
+                                            {{ $header->text_button }}
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         @endforeach
