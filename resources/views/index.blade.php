@@ -1,5 +1,6 @@
 @extends('layouts.kanan')
 @section('contenido')
+
     @if ($headers->image)
         {{-- <a href="{{ $header->image->link }}">
 <header id="b-index" style="background-image: url({{ Storage::url($header->image->url) }}); background-repeat: no-repeat; background-position: center; background-size: cover;
@@ -17,7 +18,8 @@
 </header>
 </a> --}}
 
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+        <div id="carouselExampleControls" class="carousel slide carousel-spacio" data-ride="carousel">
             <div class="carousel-inner">
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -28,8 +30,9 @@
                     </ol>
                     <div class="carousel-inner">
                         @foreach ($headers->images as $header)
-                            <div class="carousel-item carousel-banner {{ $loop->iteration == 1 ? 'active' : '' }}">
-                                <img src="{{ Storage::url($header->url) }}" class="d-block w-100 bannercarrusel" alt="...">
+                            <div class="carousel-item  {{ $loop->iteration == 1 ? 'active' : '' }}">
+                                <img src="{{ Storage::url($header->url) }}" class="d-block w-100 "
+                                    alt="...">
                                 <div class="carousel-caption">
                                     <div class="contenido">
                                         <h5>{{ $header->name }}</h5>
@@ -46,11 +49,11 @@
             <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
-              </button>
+            </button>
         </div>
     @else
         <header id="b-index"
@@ -79,7 +82,7 @@
             <div class="d-none d-sm-none d-md-block d-lg-block">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 soluciones col-sm-12 text-center pad">
-                        <a >
+                        <a>
                             <img src="{{ asset('/img/2023/saving.svg') }}" width="50">
                             <h5 class="source-bold pt-3">Optimizar costos operativos</h5>
                             <p class="source-regular">
@@ -100,7 +103,7 @@
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-12 soluciones col-sm-12 text-center pad">
-                        <a >
+                        <a>
                             <img src="{{ asset('/img/icons/proceso.svg') }}" width="50">
                             <h5 class="source-bold pt-3">Eficientar procesos de negocio</h5>
                             <p class="source-regular">
@@ -111,7 +114,7 @@
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-12 soluciones col-sm-12 text-center pad">
-                        <a >
+                        <a>
                             <img src="{{ asset('/img/icons/gobierno.svg') }}" width="50">
                             <h5 class="source-bold pt-3">Cumplir con las regulaciones de gobierno</h5>
                             <p class="source-regular">

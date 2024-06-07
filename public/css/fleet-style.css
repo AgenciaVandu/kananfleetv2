@@ -246,7 +246,7 @@ li {
 
 .carousel-caption {
 text-align: left;
-top: 35%;
+top: 39%;
 width: 100%;
 }
 .carousel-caption .contenido {
@@ -254,18 +254,26 @@ width: 100%;
 } @media (max-width:990px) {
     .carousel-caption {
         text-align: center;
-        top: 20%;
+        top: 30%;
         width: 100%;
         transition: .5s;
+        left: 1%;
     }
     .carousel-caption .contenido {
         transition: .5s;
         width: 70%;
     }
+    .carousel-spacio {
+        padding-top: 3.7em;
+    }
 }
 
 .carousel-caption h5 {
     font-size: 2.6em;
+} @media (max-width:990px) {
+   .carousel-caption h5 {
+    font-size: 2em;
+}
 }
 
 /*<![CDATA[*/
