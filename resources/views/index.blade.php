@@ -79,7 +79,7 @@
             <div class="d-none d-sm-none d-md-block d-lg-block">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 soluciones col-sm-12 text-center pad">
-                        <a href="/soluciones">
+                        <a >
                             <img src="{{ asset('/img/2023/saving.svg') }}" width="50">
                             <h5 class="source-bold pt-3">Optimizar costos operativos</h5>
                             <p class="source-regular">
@@ -90,7 +90,7 @@
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-12 soluciones col-sm-12 text-center pad">
-                        <a href="/soluciones">
+                        <a>
                             <img src="{{ asset('/img/2023/servicio.svg') }}" width="50">
                             <h5 class="source-bold pt-3">Mejorar servicio al cliente</h5>
                             <p class="source-regular">
@@ -100,7 +100,7 @@
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-12 soluciones col-sm-12 text-center pad">
-                        <a href="/soluciones">
+                        <a >
                             <img src="{{ asset('/img/icons/proceso.svg') }}" width="50">
                             <h5 class="source-bold pt-3">Eficientar procesos de negocio</h5>
                             <p class="source-regular">
@@ -111,7 +111,7 @@
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-12 soluciones col-sm-12 text-center pad">
-                        <a href="/soluciones">
+                        <a >
                             <img src="{{ asset('/img/icons/gobierno.svg') }}" width="50">
                             <h5 class="source-bold pt-3">Cumplir con las regulaciones de gobierno</h5>
                             <p class="source-regular">
