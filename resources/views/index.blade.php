@@ -24,13 +24,13 @@
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         @foreach ($headers->images as $header)
-                            <li data-target="#carouselExampleCaptions" data-slide-to="0"
-                                class="{{ $loop->iteration == 1 ? 'active' : '' }}"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="{{ $loop->index }}"
+                                class="{{ $loop->index == 0 ? 'active' : '' }}"></li>
                         @endforeach
                     </ol>
                     <div class="carousel-inner">
                         @foreach ($headers->images as $header)
-                            <div class="carousel-item  {{ $loop->iteration == 1 ? 'active' : '' }}">
+                            <div class="carousel-item  {{ $loop->index == 0 ? 'active' : '' }}">
                                 <img src="{{ Storage::url($header->url) }}" class="d-block w-100 "
                                     alt="...">
                                 <div class="carousel-caption">
