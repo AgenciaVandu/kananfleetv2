@@ -15,5 +15,8 @@ Has recibido una solicitud de DEMO
     Página Web: {{ $web }}
 </p>
 <p>
+    Ciudad: {{ $city }}
+</p>
+<p>
     Servicio: {{ $option }}
 </p>

@@ -40,6 +40,7 @@ class NewClient extends Mailable
             'bussines' => $this->request->bussines,
             'email' => $this->request->email,
             'web' => $this->request->web,
+            'city' => $this->request->city,
             'option'=> $this->request->option,
         ]);
     }
