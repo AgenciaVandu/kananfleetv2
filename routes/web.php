@@ -33,9 +33,14 @@ Route::get('/empresa', [PageController::class,'empresas'])->name('empresa');
 Route::get('/sap', [PageController::class,'sap'])->name('sap');
 Route::post('/sendmail',[PageController::class,'sendmail'])->name('sendemail');
 
+Route::get('/landing', function () {
+    return view('landing');
+});
+
 Route::get('/sectores', function () {
     return view('soluciones');
 });
+
 
 Route::get('/mantenimiento', function () {
     return view('modulos.mantenimiento');
