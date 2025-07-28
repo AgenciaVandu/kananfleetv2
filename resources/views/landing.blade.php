@@ -130,7 +130,7 @@
             <div class="container pt-4 pb-4">
                 <div class="glider-contain">
                     <div class="glider">
-                        @foreach ($clientes ?? ''->images as $cliente)
+                       {{--  @foreach ($clientes ?? ''->images as $cliente)
                             <div class="px-2 text-center">
                                 <a href="">
                                     <div class="col aliado-elemento">
@@ -138,7 +138,7 @@
                                     </div>
                                 </a>
                             </div>
-                        @endforeach
+                        @endforeach --}}
                     </div>
                     <button aria-label="Previous" class="glider-prev">«</button>
                     <button aria-label="Next" class="glider-next">»</button>
