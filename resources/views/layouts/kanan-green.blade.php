@@ -71,8 +71,11 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
+  /* Google Ads */
   gtag('config', 'AW-11481092733');
+
+  /* Analytics */
+  gtag('config', 'G-4T85FTJWZD');
 </script>
 </head>
 

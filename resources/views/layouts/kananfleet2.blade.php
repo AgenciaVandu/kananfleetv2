@@ -29,6 +29,19 @@
     <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon">
     
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11481092733"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  /* Google Ads */
+  gtag('config', 'AW-11481092733');
+
+  /* Analytics */
+  gtag('config', 'G-4T85FTJWZD');
+</script>
 </head>
 
 <body id="page-top" class="index">
