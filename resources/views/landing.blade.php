@@ -115,7 +115,7 @@
                     </div>
                     <div class="col-lg-5 col-md-12 col-sm-12 m-auto">
                         <h2 class="source-black">
-                            Gracias a KPIs detallados y reportes detallados.
+                            Gracias a KPIs y reportes detallados.
                         </h2>
                         <p class="source-regular text-justify">
                             KANANFLEET te permite tomar decisiones informadas y alineadas con los objetivos de tu negocio, generando con ello eficiencia, control y ayudando a garantizar crecimiento sostenido.
