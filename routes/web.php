@@ -37,6 +37,10 @@ Route::get('/landing', function () {
     return view('landing');
 });
 
+Route::get('/gracias-por-contactarnos', function () {
+    return view('typ');
+});
+
 Route::get('/sectores', function () {
     return view('soluciones');
 });
