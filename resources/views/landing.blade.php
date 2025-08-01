@@ -113,67 +113,33 @@
                     <div class="col-lg-7 col-md-12 col-sm-12">
                         <img src="{{asset('/img/2023/foto-sap.png')}}" alt="" class="img-fluid">
                     </div>
-                    <div class="col-lg-5 col-md-12 col-sm-12 m-auto">
+                    <div class="col-lg-5 col-md-12 col-sm-12 m-auto pt-3">
                         <h2 class="source-black">
-                            Gracias a KPIs y reportes detallados.
+                            LLANTAS Y COMBUSTIBLE
                         </h2>
                         <p class="source-regular text-justify">
-                            KANANFLEET te permite tomar decisiones informadas y alineadas con los objetivos de tu negocio, generando con ello eficiencia, control y ayudando a garantizar crecimiento sostenido.
+                            Clasificación de llantas por tipo de activo; Configuración del desgaste por tipo de llanta (por treadwear o distancia recorrida); Semáforo de colores según el estatus y desgaste de la llanta; Asignación y ubicación de llantas por eje y por vehículo; Costo total en llantas; Registro de recargas combustible con evidencia fotográfica del ticket y del odómetro; Manejo de inventario de combustible; Cálculo de rendimiento por distancia recorrida, costo de consumo por vehículo o por distancia recorrida, otros.
                         </p>
                     </div>
+                    
                 </div>
             </div>
         </div>
     </header>
+    <section id="CTA" class="mt-5">
+        <div class="container text-center">
+            <div class=""style="display: flex; flex-direction: column; justify-content:center; align-items:center; width:100%;">
+                <h3 class="source-bold mt-4 mb-2" style="max-width: 650px">CARTA PORTE Y LIQUIDACIONES DE VIAJE</h3>
+                <p>Asignación de vehículos y choferes/operadores; Checklist digital; Generar viajes a partir de un documento tipo ingreso; Asignar viaje al chofer; Actualizar estatus de viaje (iniciado, pausado, finalizado con evidencia fotográfica de la entrega); Identificación de cruce de casetas; Registrar gastos de viaje con evidencia fotográfica, registrar sueldo o comisiones del chofer; Elaborar reporte de liquidación.
+                </p>
+                </div>
+             </div>
+        </div>
+    </section>
     <section id="clientes">
         <div>
             <div class="container pt-4 pb-4">
-                <div class="glider-contain">
-                    <div class="glider">
-                       {{--  @foreach ($clientes ?? ''->images as $cliente)
-                            <div class="px-2 text-center">
-                                <a href="">
-                                    <div class="col aliado-elemento">
-                                        <img src="{{ Storage::url($cliente->url) }}" class="img-fluid">
-                                    </div>
-                                </a>
-                            </div>
-                        @endforeach --}}
-                    </div>
-                    <button aria-label="Previous" class="glider-prev">«</button>
-                    <button aria-label="Next" class="glider-next">»</button>
-                    <div role="tablist" class="dots"></div>
-                </div>
-                {{-- <div class="row pt-5">
-                    <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
-                        <h4 class="source-light">M Ó D U L O S</h4>
-                        <h2 class="source-black">
-                            Administración y gestión de la flota vehicular/activos
-                        </h2>
-                        <p class="source-regular">
-                            Conozca la disponibilidad y estatus de sus activos en todo momento, y evite perder dinero
-                            tenerlos en desuso.
-                        </p>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 text-center">
-                        <img src="/img/1-img.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 text-center">
-                        <!--modulos-->
-                        <img src="/img/2-img.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
-                        <h4 class="source-light">M Ó D U L O S</h4>
-                        <h2 class="source-black">
-                            Administración del mantenimiento.
-                        </h2>
-                        <p class="source-regular">
-                            Lleve el control de sus mantenimientos correctivos, preventivos y predictivos, así como el
-                            seguimiento de las órdenes de servicio y los costos asociados. Consulte en un solo click.
-                        </p>
-                    </div>
-                </div> --}}
-                {{-- lista --}}
+                
                 <div class="row pt-5">
                     <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
                         <figure>
