@@ -98,7 +98,7 @@
                             Potencia la gestión de tu flota con KANANFLEET
                         </h1>
                         <p class="source-regular ">
-                            Nuestro software líder en el mercado está diseñado para ofrecerte una visión integral y estratégica de tus activos. Reduce costos operativos, garantiza el mantenimiento preventivo de vehículos y maquinaria, y evalúa la rentabilidad de cada recurso con datos precisos. 
+                            <b>MANTENIMIENTO PREVENTIVO Y CORRECTIVO:</b> Alertas para todo tipo de mantenimientos; Reporte de incidencias o fallas mecánicas con evidencia fotográfica; Gestión de órdenes de trabajo; Control de repuestos utilizados; Asignación de mecánicos o talleres externos; Medición de tiempo en taller; registro de presupuestos y costos asociados (repuestos, mano de obra, otros).
 
                         </p>
                         <a class="btn btn-secondary btn-sm source-semibold" href="#formulario-landing">SOLICITAR DEMO</a> 
@@ -113,81 +113,47 @@
                     <div class="col-lg-7 col-md-12 col-sm-12">
                         <img src="{{asset('/img/2023/foto-sap.png')}}" alt="" class="img-fluid">
                     </div>
-                    <div class="col-lg-5 col-md-12 col-sm-12 m-auto">
+                    <div class="col-lg-5 col-md-12 col-sm-12 m-auto pt-3">
                         <h2 class="source-black">
-                            Gracias a KPIs y reportes detallados.
+                            LLANTAS Y COMBUSTIBLE
                         </h2>
                         <p class="source-regular text-justify">
-                            KANANFLEET te permite tomar decisiones informadas y alineadas con los objetivos de tu negocio, generando con ello eficiencia, control y ayudando a garantizar crecimiento sostenido.
+                            Clasificación de llantas por tipo de activo; Configuración del desgaste por tipo de llanta (por treadwear o distancia recorrida); Semáforo de colores según el estatus y desgaste de la llanta; Asignación y ubicación de llantas por eje y por vehículo; Costo total en llantas; Registro de recargas combustible con evidencia fotográfica del ticket y del odómetro; Manejo de inventario de combustible; Cálculo de rendimiento por distancia recorrida, costo de consumo por vehículo o por distancia recorrida, otros.
                         </p>
                     </div>
+                    
                 </div>
             </div>
         </div>
     </header>
+    <section id="CTA" class="mt-5">
+        <div class="container text-center">
+            <div class=""style="display: flex; flex-direction: column; justify-content:center; align-items:center; width:100%;">
+                <h3 class="source-bold mt-4 mb-2" style="max-width: 650px">CARTA PORTE Y LIQUIDACIONES DE VIAJE</h3>
+                <p>Asignación de vehículos y choferes/operadores; Checklist digital; Generar viajes a partir de un documento tipo ingreso; Asignar viaje al chofer; Actualizar estatus de viaje (iniciado, pausado, finalizado con evidencia fotográfica de la entrega); Identificación de cruce de casetas; Registrar gastos de viaje con evidencia fotográfica, registrar sueldo o comisiones del chofer; Elaborar reporte de liquidación.
+                </p>
+                </div>
+             </div>
+        </div>
+    </section>
     <section id="clientes">
         <div>
             <div class="container pt-4 pb-4">
-                <div class="glider-contain">
-                    <div class="glider">
-                       {{--  @foreach ($clientes ?? ''->images as $cliente)
-                            <div class="px-2 text-center">
-                                <a href="">
-                                    <div class="col aliado-elemento">
-                                        <img src="{{ Storage::url($cliente->url) }}" class="img-fluid">
-                                    </div>
-                                </a>
-                            </div>
-                        @endforeach --}}
-                    </div>
-                    <button aria-label="Previous" class="glider-prev">«</button>
-                    <button aria-label="Next" class="glider-next">»</button>
-                    <div role="tablist" class="dots"></div>
-                </div>
-                {{-- <div class="row pt-5">
-                    <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
-                        <h4 class="source-light">M Ó D U L O S</h4>
-                        <h2 class="source-black">
-                            Administración y gestión de la flota vehicular/activos
-                        </h2>
-                        <p class="source-regular">
-                            Conozca la disponibilidad y estatus de sus activos en todo momento, y evite perder dinero
-                            tenerlos en desuso.
-                        </p>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 text-center">
-                        <img src="/img/1-img.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 text-center">
-                        <!--modulos-->
-                        <img src="/img/2-img.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
-                        <h4 class="source-light">M Ó D U L O S</h4>
-                        <h2 class="source-black">
-                            Administración del mantenimiento.
-                        </h2>
-                        <p class="source-regular">
-                            Lleve el control de sus mantenimientos correctivos, preventivos y predictivos, así como el
-                            seguimiento de las órdenes de servicio y los costos asociados. Consulte en un solo click.
-                        </p>
-                    </div>
-                </div> --}}
-                {{-- lista --}}
+                
                 <div class="row pt-5">
                     <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
                         <figure>
-                            <img src="{{ asset('./img/2023/complementos/Collage-SAP.png') }}" class="img-fluid" alt="Picture Kananfleet">
+                            <img src="{{ asset('./img/2025/imagen-vehiculos.png') }}" class="img-fluid" alt="Picture Kananfleet">
                         </figure>
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 m-auto">
-                        <h4 class="source-bold pb-3" style="font-size: 1.3rem">En KANANFLEET, ofrecemos una plataforma integral diseñada para optimizar la gestión de su flota vehicular y maquinaria. Nuestra solución les permite:</h4>
+                        <h4 class="source-bold pb-3" style="font-size: 1.3rem">Kananfleet cuenta con una amplia gama de reportes, mismos que se pueden personalizar a las necesidades de cada empresa, por citar algunos:</h4>
                         <li class=" source-semibold">
                             <div class="row m-auto">
                                 <div class="check pr-2">
                                     <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                                 </div>
-                                <p class="source-semibold">Visualizar en tiempo real la disponibilidad <br> y el estado de sus vehículos y maquinaria.</p>
+                                <p class="source-semibold">Reporte de disponibilidad de activos.</p>
                             </div>
                         </li>
                         <li class=" source-semibold">
@@ -195,7 +161,7 @@
                                 <div class="check pr-2">
                                     <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                                 </div>
-                                <p class="source-semibold">Administrar el mantenimiento preventivo y correctivo, <br> así como llevar un control preciso de las órdenes de servicio.</p>
+                                <p class="source-semibold">Reporte de catálogo choferes, histórico de vehículos asignados,<br> histórico de infracciones, etc.</p>
                             </div>
                         </li>
                         <li class=" source-semibold">
@@ -204,7 +170,8 @@
                                     <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                                 </div>
                                 <p class="source-semibold">
-                                    Gestionar recargas y despachos de combustible<br>  de manera eficiente.</p>
+                                    Reportes de mantenimiento por tipo de vehículo,<br> por rangos de fechas,  por tipo de mantenimiento,<br> reporte de repuestos utilizados, costos de mano obra, etc.
+</p>
                             </div>
                         </li>
                         <li class="source-semibold">
@@ -212,7 +179,7 @@
                                 <div class="check pr-2">
                                     <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                                 </div>
-                                <p class="source-semibold">Controlar la ubicación, el desgaste y el historial<br> de las llantas.</p>
+                                <p class="source-semibold">Reportes de llantas por tipo de vehículo,<br> por ubicación actual, histórico de ubicación,<br> reporte de desgaste por kilómetro, etc.</p>
                             </div>
                         </li>
                         <li class="source-semibold">
@@ -220,7 +187,8 @@
                                 <div class="check pr-2">
                                     <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                                 </div>
-                                <p class="source-semibold">Supervisar la asignación de vehículos y operadores, <br>además de su historial de uso.
+                                <p class="source-semibold">Reporte de rendimiento de combustible por vehículo,<br> por distancia recorrida, costo por kilómetro,<br> por rango de fechas, por vehículo, etc.
+
                                 </p>
                             </div>
                         </li>
@@ -238,25 +206,9 @@
                                 <div class="check pr-2">
                                     <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
                                 </div>
-                                <p class="source-semibold">Programar viajes, actualizar su estatus, 
-                                    <br> gestionar liquidaciones y cartas porte.
+                                <p class="source-semibold">Reporte de cartas porte – viajes por vehículo, por rango de fechas, <br>reportes de liquidación, gastos de viaje, viáticos,<br> consumo de combustible por viaje,<br> rendimiento de combustible por viaje, etc.
+
                                 </p>
-                            </div>
-                        </li>
-                        <li class="source-semibold">
-                            <div class="row m-auto">
-                                <div class="check pr-2">
-                                    <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                                </div>
-                                <p class="source-semibold">Monitorear el gasto asociado a la flota y a cada<br>  vehículo de forma individual. Generar reportes  e indicadores <br>de rendimiento configurables,que le permitirán<br>   tomar decisiones basadas en datos precisos.</p>
-                            </div>
-                        </li>
-                        <li class="source-semibold">
-                            <div class="row m-auto">
-                                <div class="check pr-2">
-                                    <img src="{{ asset('/img/icons/check.svg') }}" width="25" alt="">
-                                </div>
-                                <p class="source-semibold">Con KANANFLEET, optimice sus recursos, <br> reduzca costos y aumente la productividad de su flota<br>  de manera sencilla y efectiva.</p>
                             </div>
                         </li>
                        {{--  <li class="source-semibold">
