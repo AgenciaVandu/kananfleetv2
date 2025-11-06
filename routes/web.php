@@ -9,6 +9,7 @@ use App\Models\Order;
 use App\Models\Reference;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Password;
@@ -211,4 +212,13 @@ Route::get('/dolar',function(){
         }
     }
     return $valor;
+});
+
+
+Route::get('/app-down', function () {
+    Artisan::call('down');
+});
+
+Route::get('/app-up', function () {
+    Artisan::call('up');
 });
