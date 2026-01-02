@@ -33,6 +33,10 @@ class PageController extends Controller
     }
 
     public function sendmail(Request $request){
+        // Honeypot check: If the hidden field 'fax' is filled, it's likely a bot.
+        if ($request->filled('fax')) {
+            return back();
+        }
 
         $request->validate([
             'name' => 'required',
