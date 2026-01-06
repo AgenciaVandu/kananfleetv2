@@ -38,6 +38,14 @@ class PageController extends Controller
             return back();
         }
 
+        // Time Trap check: If submission is too fast (< 3 seconds), it's a bot.
+        if ($request->filled('started_at')) {
+            $submissionTime = now()->timestamp - $request->started_at;
+            if ($submissionTime < 3) {
+                return back();
+            }
+        }
+
         $request->validate([
             'name' => 'required',
             'lastname' => 'required',
@@ -47,6 +55,7 @@ class PageController extends Controller
             'city' => 'required',
             'option' => 'required',
             'policy' => 'required',
+            'g-recaptcha-response' => 'recaptcha',
         ]);
         if ($request->policy == 'on') {
             Mail::to('recheverria@etecno.com.mx')->send(new NewClient($request));
