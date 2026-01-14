@@ -218,9 +218,9 @@ class ComposerStaticInit898daff7514937b02e636d4adbfc6c4d
         ),
         'phpDocumentor\\Reflection\\' => 
         array (
-            0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            0 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
         ),
         'ZipStream\\' => 
         array (
@@ -674,6 +674,7 @@ class ComposerStaticInit898daff7514937b02e636d4adbfc6c4d
         'App\\Http\\Livewire\\Admin\\DashboardComponent' => __DIR__ . '/../..' . '/app/Http/Livewire/Admin/DashboardComponent.php',
         'App\\Http\\Livewire\\Admin\\Header' => __DIR__ . '/../..' . '/app/Http/Livewire/Admin/Header.php',
         'App\\Http\\Livewire\\Admin\\Users' => __DIR__ . '/../..' . '/app/Http/Livewire/Admin/Users.php',
+        'App\\Http\\Livewire\\Chekout' => __DIR__ . '/../..' . '/app/Http/Livewire/Chekout.php',
         'App\\Http\\Livewire\\TableSplit' => __DIR__ . '/../..' . '/app/Http/Livewire/TableSplit.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
