@@ -322,7 +322,7 @@
                 <div class="col-lg-3 col-sm-6 col-sm-12">
                     <h4 class="source-bold pb-3" style="color: #fff;">Ubicación</h4>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1860.7463088893987!2d-89.78005230301599!3d21.132785234797836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567791c4d2d3b5%3A0x6f93f9dac2ae79bd!2sKananfleet!5e0!3m2!1ses-419!2smx!4v1640612399449!5m2!1ses-419!2smx"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.2597017798425!2d-89.62325521780456!3d21.0222922380637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567791c4d2d3b5%3A0x6f93f9dac2ae79bd!2sKananfleet%20-%20Etecno%20(Of%20Col.%20Benito%20Ju%C3%A1rez%20Norte)!5e0!3m2!1ses!2smx!4v1768426469376!5m2!1ses!2smx"
                         width="auto" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
