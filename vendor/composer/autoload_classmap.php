@@ -29,6 +29,7 @@ return array(
     'App\\Http\\Livewire\\Admin\\DashboardComponent' => $baseDir . '/app/Http/Livewire/Admin/DashboardComponent.php',
     'App\\Http\\Livewire\\Admin\\Header' => $baseDir . '/app/Http/Livewire/Admin/Header.php',
     'App\\Http\\Livewire\\Admin\\Users' => $baseDir . '/app/Http/Livewire/Admin/Users.php',
+    'App\\Http\\Livewire\\Chekout' => $baseDir . '/app/Http/Livewire/Chekout.php',
     'App\\Http\\Livewire\\TableSplit' => $baseDir . '/app/Http/Livewire/TableSplit.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',

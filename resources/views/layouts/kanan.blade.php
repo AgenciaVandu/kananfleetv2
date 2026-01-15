@@ -139,26 +139,19 @@
         <div class="container">
             <div class="row pt-5 pb-5">
                 <div class="col-lg-3 col-sm-6 col-sm-12 m-auto">
-                    <img src="{{ asset('/img/logoetecno.png') }}" class="img-fluid">
+                    <img src="{{ asset('/img/cuartoparadigma.png') }}" class="img-fluid" alt="Etecno SA de CV">
                 </div>
                 <div class="col-lg-3 col-sm-6 col-sm-12">
                     <h4 class="source-bold" style="color: #fff;">Contacto</h4>
                     <li class="source-semibold pt-3" style="color: #fff;">Dirección: <br>
-                        {{-- <span class="source-regular" style="color: gray; font-size: .8em;">
-                           <a href="https://www.google.com/maps?ll=21.133268,-89.779178&z=16&t=m&hl=es-419&gl=MX&mapclient=embed&cid=8040044477750868413" target="blank_" style="color: #0b71d8; text-decoration:none;"><b>Parque Científico y Tecnológico,</b></a> Centro Heuristic Km. 5.5 Carretera Sierra Papacal, Mérida Yucatán, México. CP. 97302 <img src="{{ asset('/img/Mexico.png') }}" class="img-fluid"
-                                alt="Bandera de México">
-                        </span> <br> --}}
                         <span class="source-regular" style="color: gray; font-size: .8em;">
-                           <a href="https://www.google.com/maps/place/90%C2%B0+Altabrisa+Business+Center/@21.0221212,-89.5854261,15z/data=!4m5!3m4!1s0x0:0x314e396c017a9360!8m2!3d21.0221275!4d-89.5854329" target="blank_" style="color: #0b71d8; text-decoration:none;"><b>90 Grados Altabrisa Business Center </b></a><br> Calle 17 #474 x 20 y 22, Fraccionamiento Altabrisa, 97130 Mérida, Yucatán. <img src="{{ asset('/img/Mexico.png') }}" class="img-fluid"
-                                alt="Bandera de México">
+                            CALLE 67-a NO. 293 int. 1 X 128 Y 128 - b C.P. 97246 COL. BOSQUES DEL PONIENTE<img src="{{ asset('/img/Mexico.png') }}"
+                                class="img-fluid" alt="Bandera de México">
                         </span>
                     </li>
-                    <li class="source-semibold" style="color: #fff;">Teléfonos: <br>
-                        <span class="source-regular" style="color: gray; font-size: .8em;">Oficina:
-                            <a href="tel:529999306745" style="color: gray;">+52 999 930 6745</a>
-                        </span> <br>
-                        <span class="source-regular" style="color: gray; font-size: .8em;">Celular:
-                            <a href="https://api.whatsapp.com/send/?phone=5219992005672" style="color: gray;">+52 999
+                    <li class="source-semibold" style="color: #fff;">Teléfono: <br>
+                        <span class="source-regular" style="color: gray; font-size: .8em;">
+                            <a href="https://api.whatsapp.com/send/?phone=5219992005672" style="color: gray;">+52 1 999
                                 200 5672</a>
                         </span>
                     </li>
@@ -169,6 +162,11 @@
                         </span>
                     </li>
                     <li class="source-semibold m-auto" style="color: #fff;">Síguenos: <br>
+                        <span class="source-regular pr-3" style="color: gray; font-size: 1.3em;">
+                            <a href="#" style="color: #fff; text-decoration: none;">
+                                <span class="icon-facebook"></span>
+                            </a>
+                        </span>
                         <span class="source-regular pt-3" style="color: gray; font-size: 1.3em;">
                             <a href="https://www.facebook.com/Kananfleet" target="blank_"
                                 style="color: #fff; text-decoration: none;">
@@ -176,13 +174,8 @@
                             </a>
                             <a href="https://www.linkedin.com/showcase/kananfleet/" target="blank_"
                                 style="color: #fff; text-decoration: none;">
-                                <i class="fab fa-linkedin pr-3"></i>
+                                <i class="fab fa-linkedin"></i>
                             </a>
-                            <a href="https://www.instagram.com/kananfleet" target="blank_"
-                            style="color: #fff; text-decoration: none;">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                            
                         </span>
                     </li>
                 </div>
@@ -200,7 +193,7 @@
                                 <a href="/llantas" style="color: #fff; text-decoration: none;">Llantas</a>
                             </li>
                             <li class="source-regular" style="font-size: 1em;">
-                                <a href="/operadores" style="color: #fff; text-decora tion: none;">Operadores</a>
+                                <a href="/operadores" style="color: #fff; text-decoration: none;">Operadores</a>
                             </li>
                             <li class="source-regular" style="font-size: 1em;">
                                 <a href="/disponibilidad" style="color: #fff; text-decoration: none;">Disponibilidad</a>
@@ -224,12 +217,15 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 col-sm-12">
                     <h4 class="source-bold pb-3" style="color: #fff;">Ubicación</h4>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14897.055897457587!2d-89.5854261!3d21.0221212!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f56771f8517c033%3A0x314e396c017a9360!2s90%C2%B0%20Altabrisa%20Business%20Center!5e0!3m2!1ses-419!2smx!4v1689265336456!5m2!1ses-419!2smx" width="auto" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.2597017798425!2d-89.62325521780456!3d21.0222922380637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567791c4d2d3b5%3A0x6f93f9dac2ae79bd!2sKananfleet%20-%20Etecno%20(Of%20Col.%20Benito%20Ju%C3%A1rez%20Norte)!5e0!3m2!1ses!2smx!4v1768426469376!5m2!1ses!2smx"
+                        width="auto" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
-
             </div>
             <div class="text-center pb-2">
-                <span class="source-regular" style="color: #8f8f8f" >Todos los derechos reservados Kananfleet® 2022<a href="/politica-de-privacidad" style="color: #8f8f8f" target="blank_"> Consulte nuestro aviso de privacidad.</a>
+                <span class="source-regular" style="color: #8f8f8f">Todos los derechos reservados Kananfleet® 2022<a
+                        href="/politica-de-privacidad" style="color: #8f8f8f" target="blank_"> Consulte nuestro aviso de
+                        privacidad.</a>
                 </span>
             </div>
         </div>

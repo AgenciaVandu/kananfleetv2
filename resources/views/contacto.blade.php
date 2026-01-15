@@ -29,6 +29,9 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 info-1">
                     <form action="{{ route('sendemail') }}" method="POST">
                         @csrf
+                        <input type="text" name="fax" style="display:none !important" tabindex="-1" autocomplete="off">
+                        <input type="hidden" name="started_at" value="{{ now()->timestamp }}">
+                        {!! htmlScriptTagJsApi() !!}
                         <div class="form-row">
                             <div class="col source-bold">
                                 <label for="formGroupExampleInput">Nombres*</label>

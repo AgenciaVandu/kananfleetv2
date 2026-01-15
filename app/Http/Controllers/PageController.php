@@ -33,6 +33,18 @@ class PageController extends Controller
     }
 
     public function sendmail(Request $request){
+        // Honeypot check: If the hidden field 'fax' is filled, it's likely a bot.
+        if ($request->filled('fax')) {
+            return back();
+        }
+
+        // Time Trap check: If submission is too fast (< 3 seconds), it's a bot.
+        if ($request->filled('started_at')) {
+            $submissionTime = now()->timestamp - $request->started_at;
+            if ($submissionTime < 3) {
+                return back();
+            }
+        }
 
         $request->validate([
             'name' => 'required',
@@ -43,6 +55,7 @@ class PageController extends Controller
             'city' => 'required',
             'option' => 'required',
             'policy' => 'required',
+            'g-recaptcha-response' => 'recaptcha',
         ]);
         if ($request->policy == 'on') {
             Mail::to('recheverria@etecno.com.mx')->send(new NewClient($request));
