@@ -97,4 +97,24 @@
             &copy;2022</p>
     </form>
 
+
+
+    @push('scripts')
+        <script>
+            document.querySelector('.form-signin').addEventListener('submit', function(e) {
+                e.preventDefault();
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('{{ env('RECAPTCHA_SITE_KEY') }}', {action: 'login'}).then(function(token) {
+                        let form = e.target;
+                        let input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = 'g-recaptcha-response';
+                        input.value = token;
+                        form.appendChild(input);
+                        form.submit();
+                    });
+                });
+            });
+        </script>
+    @endpush
 @endsection

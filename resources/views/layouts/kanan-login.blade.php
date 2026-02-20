@@ -26,7 +26,7 @@
     @stack('stripe')
     @stack('css')
     @include('sweetalert::alert')
-
+    <script src="https://www.google.com/recaptcha/api.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
 </head>
 
 <body>

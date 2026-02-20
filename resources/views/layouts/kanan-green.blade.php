@@ -64,6 +64,10 @@
     'callback_then' => 'callbackThen',
     'callback_catch' => 'callbackCatch',
 ]) !!}
+<script src="https://www.google.com/recaptcha/api.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
+
+
+
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11481092733"></script>
@@ -347,6 +351,25 @@
         })
     </script>
     <script src="/js/carrusel.js"></script>
+
+    <script>
+        const leadForm = document.querySelector('#lead-kananfleet form');
+        if(leadForm){
+            leadForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('{{ env('RECAPTCHA_SITE_KEY') }}', {action: 'contact'}).then(function(token) {
+                        let input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = 'g-recaptcha-response';
+                        input.value = token;
+                        leadForm.appendChild(input);
+                        leadForm.submit();
+                    });
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>

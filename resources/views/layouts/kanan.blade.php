@@ -49,6 +49,10 @@
         'callback_then' => 'callbackThen',
         'callback_catch' => 'callbackCatch'
     ]) !!}
+    <script src="https://www.google.com/recaptcha/api.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
+
+
+
 
    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11481092733"></script>
