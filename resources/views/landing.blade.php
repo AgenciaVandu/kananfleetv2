@@ -423,7 +423,7 @@
         document.querySelector('.formulario-landing form').addEventListener('submit', function(e) {
             e.preventDefault();
             grecaptcha.ready(function() {
-                grecaptcha.execute('{{ env('RECAPTCHA_SITE_KEY') }}', {action: 'contact'}).then(function(token) {
+                grecaptcha.execute('{{ config('services.recaptcha.site_key') }}', {action: 'contact'}).then(function(token) {
                     let form = e.target;
                     let input = document.createElement('input');
                     input.type = 'hidden';

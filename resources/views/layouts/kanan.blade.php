@@ -49,7 +49,7 @@
         'callback_then' => 'callbackThen',
         'callback_catch' => 'callbackCatch'
     ]) !!}
-    <script src="https://www.google.com/recaptcha/api.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
 
 
 

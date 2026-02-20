@@ -64,7 +64,7 @@
     'callback_then' => 'callbackThen',
     'callback_catch' => 'callbackCatch',
 ]) !!}
-<script src="https://www.google.com/recaptcha/api.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
+<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
 
 
 
@@ -358,7 +358,7 @@
             leadForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 grecaptcha.ready(function() {
-                    grecaptcha.execute('{{ env('RECAPTCHA_SITE_KEY') }}', {action: 'contact'}).then(function(token) {
+                    grecaptcha.execute('{{ config('services.recaptcha.site_key') }}', {action: 'contact'}).then(function(token) {
                         let input = document.createElement('input');
                         input.type = 'hidden';
                         input.name = 'g-recaptcha-response';
